@@ -1,0 +1,230 @@
+.header {
+    &__top {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        .container {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &--left {
+            gap: 25px;
+            grid-column: 5 span;
+        }
+
+        &--center {
+            grid-column: 2 span;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--navigation {
+            grid-column: 5 span;
+        }
+
+        &--list {
+            justify-content: end;
+        }
+    }
+
+    &__location {
+        &--popup {
+            position: relative;
+        }
+
+        &--selection {
+            background: #fff;
+            position: absolute;
+            top: 0;
+            margin-top: 37px;
+            z-index: 999;
+        }
+
+        &--selectionOff {
+            display: none;
+        }
+
+        &--inner {
+            padding: 32px 0px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        &--input {
+            width: 260px;
+            position: relative;
+            
+            input {
+                height: 35px;
+                margin-top: 10px;
+                padding: 8px 80px 8px 10px;
+                outline: none;
+                border: none;
+                background: #e6e6e6;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+
+            svg {
+                position: absolute;
+                top: 16px;
+                right: 4px;
+                cursor: pointer;
+            }
+        }
+
+        &--container {
+            padding: 0;
+        }
+    }
+
+    svg {
+        cursor: pointer;
+    }
+
+    &__location--name {
+        margin-right: 7px;
+        cursor: pointer;
+    }
+
+    &__telephone {
+        cursor: pointer;
+    }
+
+    &__call-or-write {
+        margin-right: 7px;
+        cursor: pointer;
+    }
+
+    &__top--list {
+        gap: 40px;
+    }
+
+    &__top--item {
+        cursor: pointer;
+    }
+
+    &__bottom {
+        margin-top: 16px;
+        font-size: 14px;
+        justify-content: space-between;
+
+        &--list {
+            grid-column: 5 span;
+            gap: 36px;
+            align-items: center;
+        }
+
+        &--center {
+            justify-content: center;
+            grid-column: 2 span;
+        }
+
+        &--item {
+            cursor: pointer;
+        }
+
+        &--right {
+            grid-column: 5 span;
+            justify-content: end;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &--page {
+            align-items: center;
+            gap: 16px;
+        }
+
+        &--count {
+            padding: 1px 3px;
+            position: relative;
+            bottom: 12px;
+            background: #A6331C;
+            color: #fff;
+            border-radius: 60px;
+            border: 1px solid #A6331C;
+            font-size: 12px;
+        }
+    }
+
+    &__you--profile {
+        cursor: pointer;
+    }
+
+    &__bottom--navigation {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navigation--list {
+        gap: 24px;
+    }
+
+    &__navigation--item {
+        cursor: pointer;
+    }
+
+    &__input {
+        position: relative;
+
+        input {
+            width: 329px;
+            padding: 10px 208px 10px 15px;
+            border-radius: 4px;
+            border: none;
+            color: rgba(0, 0, 0, 0.60);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            outline: none;
+            background: #D9D9D9;
+        }
+
+        svg {
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            top: 8px;
+            right: 4px;
+            cursor: pointer;
+            border: none;
+        }
+    }
+}
+
+.count {
+    font-size: 12px;
+}
+
+.city {
+    &__list {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    &__block {
+        min-width: 120px;
+    }
+
+    &__item {
+        font-size: 13px;
+        line-height: 16px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
