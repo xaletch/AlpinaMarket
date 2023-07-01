@@ -15,7 +15,7 @@ export const LocationPopup = () => {
 
   const handleCityClick = (cityName: string) => {
     setSelectedCity(cityName)
-    setIsMenuOpen(true)
+    setIsMenuOpen(false)
   }
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,7 +41,7 @@ export const LocationPopup = () => {
           <path d="M2.11658 0.549715L1.93981 0.373324L1.76322 0.549908L0.823223 1.48991L0.646447 1.66668L0.823223 1.84346L4.82322 5.84346L5 6.02024L5.17678 5.84346L9.17678 1.84346L9.35355 1.66668L9.17678 1.48991L8.23678 0.549908L8.06019 0.373324L7.88342 0.549715L5 3.42685L2.11658 0.549715Z" fill="black" stroke="white" stroke-width="0.5"/>
         </svg>
       </div>
-      <div className={!isMenuOpen ? 'header__location--selection header__location' : 'header__location--selectionOff'}>
+      <div className={isMenuOpen ? 'header__location--selection header__location' : 'header__location--selectionOff'}>
         <div className='header__location--container container'>
         <div className='header__location--inner'>
           <div className='header__location--input'>
