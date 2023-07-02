@@ -7,7 +7,7 @@ html {
     --container-width:  calc(var(var(--container) + (var(var(--padding-container) * 2))));
     box-sizing: border-box;
     position: relative;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
     // colors
     --primary-hight: #000;

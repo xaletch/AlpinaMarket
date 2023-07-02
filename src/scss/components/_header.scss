@@ -1,4 +1,6 @@
 .header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     &__top {
         padding: 10px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -163,14 +165,36 @@
         line-height: 24px;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
 
-    &__navigation--list {
-        gap: 24px;
-    }
+    &__navigation {
+        &--product {
+            width: 100vw;
+            background: #fff;
+            position: absolute;
+            margin-top: 16px;
+            box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
+            z-index: 99;
+        }
 
-    &__navigation--item {
-        cursor: pointer;
+        &--list {
+            gap: 24px;
+        }
+
+        &--item {
+            cursor: pointer;
+        }
+
+        &--inner {
+            padding: 32px 0;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        &--productOff {
+            display: none;
+        }
     }
 
     &__input {
@@ -199,6 +223,24 @@
             border: none;
         }
     }
+
+    &__navigation--item {
+        position: relative;
+        &:hover {
+            &::before {
+                content: '';
+                width: 64px;
+                height: 2px;
+                background: #000;
+                position: absolute;
+                top: 45px;
+            }
+        }
+    }
+
+    &__navigation--card {
+        width: 216px;
+    }
 }
 
 .count {
@@ -226,5 +268,64 @@
         &:hover {
             opacity: 1;
         }
+    }
+
+    &__found {
+        color: #000;
+    }
+}
+
+.navigation {
+    &__product-list {
+        gap: 16px;
+    }
+
+    &--product__block {
+        width: 197px;
+    }
+
+    &__product--title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__product--item {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 24px;
+        opacity: 0.9;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__card {
+        height: 56px;
+        position: relative;
+        margin-bottom: 9px;
+    }
+
+    &__card--img {
+        cursor: pointer;
+    }
+
+    &__card--title {
+        padding: 4px 6px;
+        height: auto;
+        position: absolute;
+        top:16px;
+        left: 16px;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+        background: #fff;
+        color: #000;
+        border-radius: 4px;
+        cursor: pointer;
     }
 }

@@ -1,12 +1,15 @@
-import React from 'react'
-import { PageNavigation } from './headerComponents/PageNavigation'
-import { Navigation } from './headerComponents/Navigation'
-import { ProductNavigation } from './headerComponents/ProductNavigation'
-import { Search } from './headerComponents/Search'
-import { LocationPopup } from './headerComponents/LocationPopup'
-import { CallOrWrite } from './headerComponents/CallOrWrite'
+import React, {useState} from 'react';
+import { PageNavigation } from './headerComponents/PageNavigation';
+import { Navigation } from './headerComponents/Navigation';
+import { ProductNavigation } from './headerComponents/ProductNavigation';
+import { Search } from './headerComponents/Search';
+import { LocationPopup } from './headerComponents/LocationPopup';
+import { CallOrWrite } from './headerComponents/CallOrWrite';
+import { ProductMenuTest } from './headerComponents/ProductMenuTest';
 
 export const Header = () => {
+  const [isProductMenuOpen, setIsProductMenuOpen] = useState<boolean>(false);
+
   return (
     <div className='header'>
       <div className='header__top'>
@@ -25,7 +28,7 @@ export const Header = () => {
       <div className='header__bottom grid'>
         <Navigation />
         <div className='header__bottom--center logo flex'>
-        <svg width="82" height="32" viewBox="0 0 82 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="82" height="32" viewBox="0 0 82 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.57747 12.9409V11.7319C4.57747 11.527 4.7435 11.361 4.94835 11.361H10.9245V13.3118H4.94835C4.7435 13.3118 4.57747 13.1457 4.57747 12.9409ZM12.2102 4.85818H1.84036V7.44454H10.5536C10.7584 7.44454 10.9245 7.61046 10.9245 7.81543V9.16285H3.29418C1.99617 9.16285 0.945312 10.2161 0.945312 11.5118V13.7445C0.945312 15.0418 1.99699 16.0934 3.29418 16.0934H14.5591V7.20711C14.5591 5.90981 13.5075 4.85818 12.2102 4.85818Z" fill="black"/>
           <path d="M35.7638 7.50355C35.689 7.45971 35.5466 7.43607 35.3383 7.43607H28.7677V13.3126H35.3383C35.5484 13.3126 35.689 13.287 35.7638 13.234C35.8388 13.1812 35.8771 13.0588 35.8771 12.8652V7.88521C35.8771 7.67531 35.8388 7.54918 35.7638 7.50355ZM28.7677 20.4894H25.1338V4.85749H35.6305C36.3171 4.85749 36.9088 4.90312 37.4019 4.99259C37.8949 5.08221 38.2986 5.25007 38.6126 5.49664C38.9268 5.7432 39.1549 6.08836 39.2974 6.52837C39.438 6.97048 39.5092 7.53467 39.5092 8.22124V12.7301C39.5092 13.4332 39.438 14.0011 39.2974 14.4339C39.1549 14.8686 38.9268 15.2082 38.6126 15.4547C38.2986 15.7012 37.8949 15.8692 37.4019 15.9588C36.9088 16.0481 36.3171 16.0939 35.6305 16.0939H28.7677V20.4894Z" fill="black"/>
           <path d="M60.1892 7.88507C60.1892 7.67516 60.1509 7.54904 60.0759 7.5034C60.0011 7.45957 59.8587 7.43593 59.6506 7.43593H54.0423V16.0938H50.4102V4.85734H59.941C60.6295 4.85734 61.2193 4.90298 61.7142 4.99244C62.2073 5.08206 62.6108 5.24993 62.9249 5.49649C63.2389 5.74305 63.4672 6.08821 63.6078 6.52823C63.7503 6.97033 63.8215 7.53452 63.8215 8.2211V16.0938H60.1892V7.88507Z" fill="black"/>
@@ -38,7 +41,7 @@ export const Header = () => {
           <path d="M51.9986 31.0551L47.1341 27.8691V31.0551H44.6162V22.8799H47.1341V25.8175L51.7034 22.8799H55.3712L49.2478 26.7812L55.9463 31.0551H51.9986Z" fill="black"/>
           <path d="M58.6533 31.0551V22.8799H68.0716V24.6053H61.171V26.0818H65.8336V27.6048H61.171V29.2678H68.1494V31.0551H58.6533Z" fill="black"/>
           <path d="M74.5374 31.0547V24.6049H70.5586V22.8796H81.0339V24.6049H77.0553V31.0547H74.5374Z" fill="black"/>
-        </svg>
+          </svg>
         </div>
         <div className='header__bottom--right flex'>
             <span className='header__you--profile'>Andrew Shapin</span>
@@ -71,9 +74,12 @@ export const Header = () => {
         </div>
       </div>
       <div className='header__bottom--navigation header__navigation flex'>
-        <ProductNavigation />
+        <ProductNavigation isProductMenuOpen={isProductMenuOpen} setIsProductMenuOpen={setIsProductMenuOpen}/>
         <Search />
       </div>
+      </div>
+      <div className='header__navigation--product--block'>
+        <ProductMenuTest isProductMenuOpen={isProductMenuOpen} />
       </div>
     </div>
   )

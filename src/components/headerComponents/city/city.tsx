@@ -1,6 +1,6 @@
 const city = [
     {
-        "letter": "A",
+        "letter": "А",
         "cityName" : [
             "Азов",
             "Анапа",
