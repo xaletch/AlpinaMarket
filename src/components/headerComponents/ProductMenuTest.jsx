@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { SetStateAction, Dispatch } from 'react';
 
 import productNavigate, {productNavigateCard} from './productNavigate/index'
 
 interface MenuProps {
-  isProductMenuOpen: boolean;
+  setSelectedCategoryId: Dispatch<SetStateAction<number | null>>;
 }
 
-export const ProductMenuTest: React.FS<MenuProps> = ({ isProductMenuOpen }) => {
+export const ProductMenuTest: React.FS<MenuProps> = ({ selectedCategoryId, setSelectedCategoryId }) => {
+  const handleMouseLeave = () => {
+    setSelectedCategoryId(null);
+  };
+
   return (
-    <div className={isProductMenuOpen ? 'header__navigation--product' : 'header__navigation--productOff'}>
+    <div className='header__navigation--product'>
     <div className='header__navigation--inner flex'>
       <ul className='navigation__product-list flex'>
         {productNavigate.map((product) => (
-          <div className='navigation--product__block'>
+          product.id === selectedCategoryId ? (
+            <div className='navigation--product__block'>
             <p className='navigation__product--title'>{product.title}</p>  
             <ul className='navigation__product--list'>
               {product.nameFurniture.map((name) => (
@@ -20,6 +25,7 @@ export const ProductMenuTest: React.FS<MenuProps> = ({ isProductMenuOpen }) => {
               ))}
             </ul>
           </div>
+          ) : null
         ))}
       </ul>
       <div className='header__navigation--card'>

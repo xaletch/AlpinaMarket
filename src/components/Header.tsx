@@ -6,16 +6,23 @@ import { Search } from './headerComponents/Search';
 import { LocationPopup } from './headerComponents/LocationPopup';
 import { CallOrWrite } from './headerComponents/CallOrWrite';
 import { ProductMenuTest } from './headerComponents/ProductMenuTest';
+import { LocationMenu } from './headerComponents/LocationMenu';
 
 export const Header = () => {
-  const [isProductMenuOpen, setIsProductMenuOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedCity, setSelectedCity] = useState('Санкт-Петербург')
+  const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
+
+  const handleMouseLeave = () => {
+    setSelectedCategoryId(null);
+  };
 
   return (
     <div className='header'>
       <div className='header__top'>
         <div className='container grid'>
         <div className='header__top--left header__location flex'>
-          <LocationPopup />
+          <LocationPopup isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} selectedCity={selectedCity} />
             <p className='header__telephone'>8 800 700 40 24</p>
           </div>
           <CallOrWrite />
@@ -23,6 +30,7 @@ export const Header = () => {
             <PageNavigation />
           </div>
         </div>
+        <LocationMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} setSelectedCity={setSelectedCity} />
       </div>
       <div className='container'>
       <div className='header__bottom grid'>
@@ -74,13 +82,15 @@ export const Header = () => {
         </div>
       </div>
       <div className='header__bottom--navigation header__navigation flex'>
-        <ProductNavigation isProductMenuOpen={isProductMenuOpen} setIsProductMenuOpen={setIsProductMenuOpen}/>
+        <ProductNavigation setSelectedCategoryId={setSelectedCategoryId} />
         <Search />
       </div>
       </div>
-      <div className='header__navigation--product--block'>
-        <ProductMenuTest isProductMenuOpen={isProductMenuOpen} />
-      </div>
+      {selectedCategoryId &&(
+        <div className='header__navigation--product--block' onMouseLeave={handleMouseLeave} >
+          <ProductMenuTest selectedCategoryId={selectedCategoryId} setSelectedCategoryId={setSelectedCategoryId} />
+        </div>
+      )}
     </div>
   )
 }

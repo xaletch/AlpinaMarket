@@ -1,22 +1,27 @@
 import React, { SetStateAction, Dispatch } from 'react';
 
 interface MenuPropsTest {
-  isProductMenuOpen: boolean;
-  setIsProductMenuOpen: Dispatch<SetStateAction<boolean>>;
+  setSelectedCategoryId: Dispatch<SetStateAction<number | null>>;
 }
 
-export const ProductNavigation: React.FC<MenuPropsTest> = ({isProductMenuOpen, setIsProductMenuOpen}) => {
-  const navigationProduct = ['Мебель', 'Мебельная фурнитура и комплектующие', 'Товары для дома', 'Плитка, керамогранит и мозаика', 'Акции'];
+export const ProductNavigation: React.FC<MenuPropsTest> = ({ setSelectedCategoryId }) => {
+  const navigationProduct = [
+    {"title": 'Мебель', "id": 1, "className": "header__navigation--item"},
+    {"title": 'Мебельная фурнитура и комплектующие', "id": 2, "className": "header__navigation--item"},
+    {"title": 'Товары для дома', "id": 3, "className": "header__navigation--item"},
+    {"title": 'Плитка, керамогранит и мозаика', "id": 4, "className": "header__navigation--item"},
+    {"title": 'Акции', "id": 5, "className": "stock header__navigation--item"}
+  ];
 
-  const handleClickProduct = () => {
-    setIsProductMenuOpen(!isProductMenuOpen)
-  }
+  const handleClickProduct = (categoryId: number) => {
+    setSelectedCategoryId(categoryId);
+  };
 
   return (
     <>
       <ul className='header__navigation--list flex'>
-        {navigationProduct.map((navigationName, i) =>
-          <li key={i} className='header__navigation--item' onMouseOver={handleClickProduct}>{navigationName}</li>
+        {navigationProduct.map((category, i) =>
+          <li key={i} className={category.className} onMouseEnter={() => handleClickProduct(category.id)} >{category.title}</li>
         )}
       </ul>
     </>
