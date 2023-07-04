@@ -5,6 +5,7 @@ import classic from '../../assets/img/Classic_style.png';
 import modern from '../../assets/img/Modern_style.png';
 
 import { HomeCatalog } from '../HomeCatalog';
+import { HomeCategory } from '../HomeCategory';
 
 export const Home = () => {
   return (
@@ -28,6 +29,9 @@ export const Home = () => {
             </div>
             <div className='room--catalog'>
                 <HomeCatalog />
+            </div>
+            <div className='popular--categories'>
+                <HomeCategory />
             </div>
         </div>
     </div>

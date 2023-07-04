@@ -1,6 +1,6 @@
-.home {
+// .home {
 
-}
+// }
 
 .product--style {
     gap: 16px;
@@ -53,6 +53,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
+        user-select: none;
     }
 
     &__button--slide {
@@ -94,4 +95,58 @@
             width: 100px;
         }
     }
+}
+
+.popular--categories {
+    margin-top: 64px;
+    margin-bottom: 2000px;
+    &__top {
+        justify-content: space-between;
+
+        &--title {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+    }
+
+    &--bottom {
+        margin-top: 32px;
+        gap: 16px;
+    }
+
+    &__bottom--card {
+        flex-direction: column;
+        gap: 16px;
+        cursor: pointer;
+        opacity: 0.9;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--img {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 216px;
+            height: 203px;
+            background: #F6F6F6;
+        }
+
+        &__bottom {
+            text-align: center;
+        }
+    }
+
+    &__button {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+
+.imageCategoryChairs {
+    width: 159px;
+    height: 159px;
 }

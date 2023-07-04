@@ -3,13 +3,14 @@ import React, { SetStateAction, Dispatch } from 'react';
 import productNavigate, {productNavigateCard} from './productNavigate/index'
 
 interface MenuProps {
+  selectedCategoryId: number | null;
   setSelectedCategoryId: Dispatch<SetStateAction<number | null>>;
 }
 
-export const ProductMenuTest: React.FS<MenuProps> = ({ selectedCategoryId, setSelectedCategoryId }) => {
-  const handleMouseLeave = () => {
-    setSelectedCategoryId(null);
-  };
+export const ProductMenuTest: React.FC<MenuProps> = ({ selectedCategoryId, setSelectedCategoryId }) => {
+  // const handleMouseLeave = () => {
+  //   setSelectedCategoryId(null);
+  // };
 
   return (
     <div className='header__navigation--product'>
