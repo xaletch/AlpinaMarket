@@ -6,6 +6,8 @@ import modern from '../../assets/img/Modern_style.png';
 
 import { HomeCatalog } from '../HomeCatalog';
 import { HomeCategory } from '../HomeCategory';
+import { HomeFurniture } from '../HomeFurniture';
+import { HomeBestOffes } from '../HomeBestOffes';
 
 export const Home = () => {
   return (
@@ -32,6 +34,12 @@ export const Home = () => {
             </div>
             <div className='popular--categories'>
                 <HomeCategory />
+            </div>
+            <div className='home__furniture flex'>
+                <HomeFurniture />
+            </div>
+            <div className='home__best--offer'>
+                <HomeBestOffes />
             </div>
         </div>
     </div>
