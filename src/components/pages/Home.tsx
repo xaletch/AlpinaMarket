@@ -8,6 +8,8 @@ import { HomeCatalog } from '../HomeCatalog';
 import { HomeCategory } from '../HomeCategory';
 import { HomeFurniture } from '../HomeFurniture';
 import { HomeBestOffes } from '../HomeBestOffes';
+import { HomeTileCollections } from '../HomeTileCollections';
+import { HomeProductionSection } from '../HomeProductionSection';
 
 export const Home = () => {
   return (
@@ -40,6 +42,12 @@ export const Home = () => {
             </div>
             <div className='home__best--offer'>
                 <HomeBestOffes />
+            </div>
+            <div className='home__tile--collections'>
+                <HomeBestOffes />
+            </div>
+            <div className='home__production--section grid'>
+                <HomeProductionSection />
             </div>
         </div>
     </div>
