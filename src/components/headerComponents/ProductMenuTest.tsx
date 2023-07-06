@@ -4,14 +4,9 @@ import productNavigate, {productNavigateCard} from './productNavigate/index'
 
 interface MenuProps {
   selectedCategoryId: number | null;
-  setSelectedCategoryId: Dispatch<SetStateAction<number | null>>;
 }
 
-export const ProductMenuTest: React.FC<MenuProps> = ({ selectedCategoryId, setSelectedCategoryId }) => {
-  // const handleMouseLeave = () => {
-  //   setSelectedCategoryId(null);
-  // };
-
+export const ProductMenuTest: React.FC<MenuProps> = ({ selectedCategoryId }) => {
   return (
     <div className='header__navigation--product'>
     <div className='header__navigation--inner flex'>

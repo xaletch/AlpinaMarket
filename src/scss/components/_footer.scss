@@ -1,0 +1,108 @@
+.footer {
+    margin-top: 52px;
+    border-top: 1px solid var(--divider);
+
+    &__top {
+
+        &--inner {
+            padding: 32px 0px;
+        }
+
+        &--list {
+            gap: 16px;
+            &__block {
+                width: 332px;
+            }
+
+            &__title {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.15px;
+                margin-bottom: 16px;
+            }
+
+            &--your--opinion {
+                margin-top: 32px;
+            }
+
+            &__button {
+                width: 192px;
+                margin-top: 12px;
+                padding: 8px;
+                border-radius: 2px;
+                border: 1px solid var(--primary-hight);
+
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 0.25px;
+                transition: 0.3s ease-out;
+
+                &:hover {
+                    background: var(--primary-hight);
+                    color: var(--light-color);
+                }
+            }
+        }
+
+        &__social--media--item {
+            margin-top: 18px;
+        }
+
+        &--social--media {
+            margin-top: 9px;
+            align-items: center;
+            gap: 7px;
+        }
+
+        &--list {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        &--item {
+            margin-bottom: 8px;
+        }
+
+        &--about--item {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.4px;
+
+            &--tel {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__line {
+        width: 100%;
+        border-top: 1px solid var(--divider);
+    }
+
+    &__bottom {
+        &--inner {
+            padding: 16px 0px;
+            justify-content: space-between;
+        }
+
+        &--left {
+            gap: 74px;
+        }
+
+        &--title {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.4px;
+        }
+
+        &--right--title {
+            margin-right: 157px;
+        }
+    }
+}

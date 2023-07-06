@@ -43,9 +43,6 @@ export const Home = () => {
             <div className='home__best--offer'>
                 <HomeBestOffes />
             </div>
-            <div className='home__tile--collections'>
-                <HomeBestOffes />
-            </div>
             <div className='home__production--section grid'>
                 <HomeProductionSection />
             </div>

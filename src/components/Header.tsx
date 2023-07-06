@@ -88,7 +88,7 @@ export const Header = () => {
       </div>
       {selectedCategoryId &&(
         <div className='header__navigation--product--block' onMouseLeave={handleMouseLeave} >
-          <ProductMenuTest selectedCategoryId={selectedCategoryId} setSelectedCategoryId={setSelectedCategoryId} />
+          <ProductMenuTest selectedCategoryId={selectedCategoryId} />
         </div>
       )}
     </div>
