@@ -1,5 +1,5 @@
 import React from 'react'
-import { homeBestDealArray } from './arrays/homeBestDeal'
+import { homeBestDealArray } from '../arrays/homeBestDeal'
 
 export const HomeBestOffes = () => {
   return (

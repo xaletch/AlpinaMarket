@@ -1,7 +1,7 @@
 import React from 'react'
 
-import productionSection1 from "../../src/assets/img/production-section_1.png"
-import productionSection2 from "../../src/assets/img/production-section_2.png"
+import productionSection1 from "../../../src/assets/img/production-section_1.png"
+import productionSection2 from "../../../src/assets/img/production-section_2.png"
 
 export const HomeProductionSection = () => {
   return (

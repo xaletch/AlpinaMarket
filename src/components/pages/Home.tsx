@@ -4,12 +4,12 @@ import React from 'react'
 import classic from '../../assets/img/Classic_style.png';
 import modern from '../../assets/img/Modern_style.png';
 
-import { HomeCatalog } from '../HomeCatalog';
-import { HomeCategory } from '../HomeCategory';
-import { HomeFurniture } from '../HomeFurniture';
-import { HomeBestOffes } from '../HomeBestOffes';
-import { HomeTileCollections } from '../HomeTileCollections';
-import { HomeProductionSection } from '../HomeProductionSection';
+import { HomeCatalog } from '../homeComponents/HomeCatalog';
+import { HomeCategory } from '../homeComponents/HomeCategory';
+import { HomeFurniture } from '../homeComponents/HomeFurniture';
+import { HomeBestOffes } from '../homeComponents/HomeBestOffes';
+import { HomeTileCollections } from '../homeComponents/HomeTileCollections';
+import { HomeProductionSection } from '../homeComponents/HomeProductionSection';
 
 export const Home = () => {
   return (
@@ -42,6 +42,9 @@ export const Home = () => {
             </div>
             <div className='home__best--offer'>
                 <HomeBestOffes />
+            </div>
+            <div className='home__tile--collections'>
+                <HomeTileCollections />
             </div>
             <div className='home__production--section grid'>
                 <HomeProductionSection />

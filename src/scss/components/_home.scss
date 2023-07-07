@@ -360,6 +360,9 @@
             padding: 0 63px;
             text-align: center;
         }
+
+        &--card {
+        }
     }
 
     &__button {
@@ -465,4 +468,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.slick-prev {
+    display: none;
 }

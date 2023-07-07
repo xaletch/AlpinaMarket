@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { PageNavigation } from './headerComponents/PageNavigation';
 import { Navigation } from './headerComponents/Navigation';
 import { ProductNavigation } from './headerComponents/ProductNavigation';
@@ -7,18 +7,32 @@ import { LocationPopup } from './headerComponents/LocationPopup';
 import { CallOrWrite } from './headerComponents/CallOrWrite';
 import { ProductMenuTest } from './headerComponents/ProductMenuTest';
 import { LocationMenu } from './headerComponents/LocationMenu';
+import { SearchMenu } from './SearchMenu';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState('Санкт-Петербург')
   const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
 
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState<string>('Белый стул');
+  const inputRef: any = React.useRef<HTMLInputElement>(null);
+
   const handleMouseLeave = () => {
     setSelectedCategoryId(null);
   };
 
+  React.useEffect(() => {
+    if (isSearchOpen) {
+      inputRef.current.focus()
+    }
+  }, [isSearchOpen]);
+
   return (
     <div className='header'>
+      <div className='container'>
+        <SearchMenu inputRef={inputRef} isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} searchValue={searchValue} setSearchValue={setSearchValue}/>
+      </div>
       <div className='header__top'>
         <div className='container grid'>
         <div className='header__top--left header__location flex'>
@@ -83,10 +97,10 @@ export const Header = () => {
       </div>
       <div className='header__bottom--navigation header__navigation flex'>
         <ProductNavigation setSelectedCategoryId={setSelectedCategoryId} />
-        <Search />
+        <Search isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
       </div>
       </div>
-      {selectedCategoryId &&(
+      {selectedCategoryId && (
         <div className='header__navigation--product--block' onMouseLeave={handleMouseLeave} >
           <ProductMenuTest selectedCategoryId={selectedCategoryId} />
         </div>

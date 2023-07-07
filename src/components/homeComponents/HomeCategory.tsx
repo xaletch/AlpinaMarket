@@ -1,5 +1,5 @@
 import React from 'react'
-import { homeCategoryArray } from './arrays/homeCategory'
+import { homeCategoryArray } from '../arrays/homeCategory'
 
 export const HomeCategory = () => {
   return (

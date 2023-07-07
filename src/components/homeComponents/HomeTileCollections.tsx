@@ -1,7 +1,7 @@
 import React from 'react'
 
-import stonelli from "../../src/assets/img/Плитка-stonelli.png"
-import maracesh from "../../src/assets/img/Плитка-maracesh.png"
+import stonelli from "../../assets/img/Плитка-stonelli.png";
+import maracesh from "../../assets/img/Плитка-maracesh.png";
 
 export const HomeTileCollections = () => {
   return (

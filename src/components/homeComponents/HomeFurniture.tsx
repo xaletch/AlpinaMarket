@@ -1,5 +1,5 @@
 import React from 'react'
-import { homeFurnitureArray } from './arrays/homeFurniture'
+import { homeFurnitureArray } from '../arrays/homeFurniture'
 
 export const HomeFurniture = () => {
   return (

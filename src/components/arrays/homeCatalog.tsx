@@ -20,4 +20,20 @@ export const homeCatalog = [
         "imageUrl": bathroom,
         "title": "Ванная"
     },
+    {
+        "imageUrl": bedroom,
+        "title": "Спальня"
+    },
+    {
+        "imageUrl": hallway,
+        "title": "Прихожая"
+    },
+    {
+        "imageUrl": kitchen,
+        "title": "Кухня"
+    },
+    {
+        "imageUrl": bathroom,
+        "title": "Ванная"
+    },
 ]
