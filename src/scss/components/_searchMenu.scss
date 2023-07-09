@@ -9,7 +9,13 @@
         background: #fff;
     }
 
+    &--close {
+        width: 24px;
+        margin-left: auto;
+    }
+
     &--input {
+        margin-top: 35px;
         position: relative;
         input {
             width: 100%;
@@ -32,5 +38,43 @@
         top: 6px;
         right: 8px;
         cursor: pointer;
+    }
+
+    &--found--item {
+        margin-top: 41px;
+        &__card {
+            width: 412px;
+            height: 64px;
+            cursor: pointer;
+
+            &--link {
+                width: 412px;
+                justify-content: space-between;
+            }
+
+            &--left {
+                padding: 8px 0;
+                grid-column: 1 / 11 span;
+            }
+
+            &--title {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+            &--price {
+                margin-top: 8px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0.25px;
+            }
+
+            &--img {
+                width: 64px;
+                height: 64px;
+            }
+        }
     }
 }
