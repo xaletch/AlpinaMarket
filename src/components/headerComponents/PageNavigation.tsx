@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 export const PageNavigation = () => {
   const navigationPage = [
-    {"title": 'О нас', "navigation": "About"}, 
-    {"title":'Наши салоны', "navigation": "Salons"}, 
-    {"title": 'Оплата и доставка', "navigation": "Payment&Delivery"}, 
-    {"title": 'Для бизнеса', "navigation": "Business"}
+    {"title": 'О нас', "navigation": "about"}, 
+    {"title":'Наши салоны', "navigation": "salons"}, 
+    {"title": 'Оплата и доставка', "navigation": "payment&delivery"}, 
+    {"title": 'Для бизнеса', "navigation": "business"}
   ];
 
   return (

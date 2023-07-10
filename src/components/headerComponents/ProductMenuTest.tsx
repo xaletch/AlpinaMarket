@@ -1,4 +1,4 @@
-import React, { SetStateAction, Dispatch } from 'react';
+import React from 'react';
 
 import productNavigate, {productNavigateCard} from './productNavigate/index'
 

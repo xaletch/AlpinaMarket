@@ -8,9 +8,11 @@ html {
     box-sizing: border-box;
     position: relative;
     overflow-x: hidden;
+}
 
-    // colors
-    --primary-hight: #000;
+:root {
+    --primary-hight: rgba(0, 0, 0, 0.60);
+    --title: #000;
     --surface-img: #F6F6F6;
     --secondary: #A6331C;
     --divider: rgba(0, 0, 0, 0.12);

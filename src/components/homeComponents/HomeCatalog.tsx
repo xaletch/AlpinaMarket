@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 
-import { homeCatalog } from '../arrays/homeCatalog'
+import { homeCatalog } from '../arrays/homeCatalog';
 import { CustomSlideToggle } from '../CustomSlideToggle';
 
 export class HomeCatalog extends Component {

@@ -20,6 +20,7 @@
                 font-size: 24px;
                 font-weight: 400;
                 line-height: 32px;
+                color: var(--title);
             }
 
             &--description {
@@ -38,7 +39,7 @@
                 margin-top: 32px;
                 padding: 8px;
                 border-radius: 2px;
-                border: 1px solid var(--primary-hight);
+                border: 1px solid var(--title);
 
                 font-size: 14px;
                 font-weight: 400;
@@ -87,6 +88,7 @@
                 font-size: 24px;
                 font-weight: 400;
                 line-height: 32px;
+                color: var(--title);
             }
         }
 
@@ -135,7 +137,7 @@
                 font-weight: 400;
                 line-height: 16px;
                 letter-spacing: 1.5px;
-                background: var(--primary-hight);
+                background: var(--title);
             }
 
             &--discount {
@@ -165,6 +167,7 @@
                 }
 
                 &--price {
+                    color: var(--title);
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
@@ -172,6 +175,7 @@
             }
 
             &--size {
+                color: var(--title);
                 font-size: 11px;
                 font-weight: 400;
                 line-height: 24px;
@@ -244,12 +248,14 @@
                 justify-content: space-between;
 
                 &__title {
+                    color: var(--title);
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
                 }
 
                 &__price {
+                    color: var(--title);
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
@@ -269,6 +275,7 @@
             grid-column: 5 / 9;
 
             &--title {
+                color: var(--title);
                 font-size: 24px;
                 font-weight: 400;
                 line-height: 32px;
@@ -327,6 +334,7 @@
         padding: 32px;
 
         &__title {
+            color: var(--title);
             font-size: 24px;
             font-weight: 400;
             line-height: 32px;
@@ -345,6 +353,7 @@
         justify-content: space-between;
 
         &--title {
+            color: var(--title);
             font-size: 24px;
             font-weight: 400;
             line-height: 32px;
@@ -359,9 +368,6 @@
         &--card__bottom {
             padding: 0 63px;
             text-align: center;
-        }
-
-        &--card {
         }
     }
 
@@ -413,6 +419,7 @@
         justify-content: space-between;
 
         &--title {
+            color: var(--title);
             font-size: 24px;
             font-weight: 400;
             line-height: 32px;

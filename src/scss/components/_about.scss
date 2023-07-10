@@ -1,0 +1,126 @@
+.about {
+    margin-top: 20px;
+    &__title {
+        color: var(--title);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    &__mission {
+        padding: 64px 0;
+
+        &--description {
+            padding-top: 24px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            color: var(--title);
+        }
+    }
+
+    &__numbers {
+        &--title {
+            padding-bottom: 32px;
+        }
+
+        &--list {
+            gap: 64px;
+            width: 90%;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
+        &--item {
+            width: 200px;
+            text-align: center;
+
+            &--title {
+                color: var(--title);
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 32px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__photos {
+        padding-top: 54px;
+        gap: 16px;
+    }
+
+    &__text {
+        padding: 64px 0;
+        width: 680px;
+        margin: 0 auto;
+
+        &--text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin: 16px 0;
+        }
+    }
+
+    &__movies {
+        margin: 0;
+        justify-content: center;
+        &--img {
+            position: relative;
+        }
+
+        &--svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        &__title {
+            margin-bottom: 32px;
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 0.25px;
+        }
+    }
+}
+
+.will-return {
+    justify-content: start;
+    margin-bottom: 10px;
+
+    &__item {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    &--back {
+        margin-right: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            color: var(--title);
+        }
+    }
+
+    &--page-open {
+        margin-left: 10px;
+        color: #494949;
+        opacity: 0.7;
+        
+        a {
+            cursor: text;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

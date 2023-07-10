@@ -17,11 +17,15 @@ export const ProductNavigation: React.FC<MenuPropsTest> = ({ setSelectedCategory
     setSelectedCategoryId(categoryId);
   };
 
+  // const handleMouseLeave = () => {
+  //   setSelectedCategoryId(null);
+  // };
+
   return (
     <>
       <ul className='header__navigation--list flex'>
         {navigationProduct.map((category, i) =>
-          <li key={i} className={category.className} onMouseEnter={() => handleClickProduct(category.id)} >{category.title}</li>
+          <li key={i} className={category.className} onMouseEnter={() => handleClickProduct(category.id)}>{category.title}</li>
         )}
       </ul>
     </>

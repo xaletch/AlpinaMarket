@@ -1,12 +1,17 @@
 .search__menu {
+    padding-top: 55px;
     width: 100wh;
     height: 100vh;
     background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
     &--content {
         width: 896px;
-        padding-top: 55px;
         margin: 0 auto;
-        background: #fff;
     }
 
     &--close {
@@ -22,30 +27,38 @@
             box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
             outline: none;
             border: none;
-            background: #F6F6F6;
+            background: #f6f6f6;
             border-radius: 4px;
             padding: 10px 8px 10px 12px;
 
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
-            color: #000;
+            color: rgba(0,0,0,.6);
+            transition: width .5s, box-shadow .5s;
         }
-    }
-
-    svg {
-        position: absolute;
-        top: 6px;
-        right: 8px;
-        cursor: pointer;
+        &__svg {
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            cursor: pointer;
+        }
     }
 
     &--found--item {
         margin-top: 41px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
         &__card {
             width: 412px;
-            height: 64px;
+            padding: 11px;
             cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background: #F6F6F6;
+            }
 
             &--link {
                 width: 412px;
@@ -53,7 +66,6 @@
             }
 
             &--left {
-                padding: 8px 0;
                 grid-column: 1 / 11 span;
             }
 
@@ -61,6 +73,7 @@
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 20px;
+                margin-bottom: 8px;
             }
 
             &--price {
@@ -77,4 +90,19 @@
             }
         }
     }
+}
+
+.search__menu--found--search-all__block {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.search__menu--found--search-all {
+    width: 110%;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
 }

@@ -1,6 +1,4 @@
 .header {
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     &__top {
         padding: 10px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -79,6 +77,7 @@
     }
 
     &__telephone {
+        color: var(--title);
         cursor: pointer;
     }
 
@@ -157,19 +156,24 @@
             width: 100vw;
             background: #fff;
             position: absolute;
-            margin-top: 16px;
             box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
             z-index: 99;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
         }
 
         &--list {
             gap: 24px;
+            align-items: center;
         }
 
         &--item {
             font-size: 16px;
             line-height: 24px;
             cursor: pointer;
+
+            &:hover {
+                color: var(--title);
+            }
         }
 
         &--inner {
@@ -192,7 +196,7 @@
             font-weight: 400;
             line-height: 20px;
             outline: none;
-            background: #D9D9D9;
+            background: #f6f6f6;
         }
 
         svg {
@@ -206,6 +210,10 @@
         }
     }
 
+    &__navigation--list {
+        height: 63px;
+    }
+
     &__navigation--item {
         position: relative;
         &:hover {
@@ -215,7 +223,7 @@
                 height: 2px;
                 background: #000;
                 position: absolute;
-                top: 45px;
+                top: 41px;
             }
         }
     }
@@ -271,6 +279,7 @@
         font-weight: 400;
         line-height: 24px;
         margin-bottom: 24px;
+        color: var(--title);
     }
 
     &__product--item {
@@ -280,9 +289,10 @@
         margin-bottom: 24px;
         opacity: 0.9;
         cursor: pointer;
+        transition: 0.3s;
 
         &:hover {
-            opacity: 1;
+            color: var(--title);
         }
     }
 
