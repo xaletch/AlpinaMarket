@@ -1,0 +1,104 @@
+.our-salons {
+    
+    &__title {
+        margin-top: 10px;
+        font-size: 34px;
+        font-weight: bold;
+        line-height: 40px;
+        letter-spacing: 0.25px;
+        color: var(--title);
+    }
+
+    &__address {
+        padding-top: 20px;
+
+        &--item {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+
+        &--line {
+            width: 100%;
+            height: 1px;
+            background: var(--divider);
+        }
+    }
+
+    &__wrapper {
+        margin-top: 32px;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        &--card {
+            width: 448px;
+            padding: 24px;
+            background: #f6f6f6;
+            flex-direction: column;
+            position: relative;
+
+            &__address {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0.15px;
+                color: var(--title);
+            }
+
+            &__address--link {
+                position: absolute;
+                top: 25px;
+                right: 30px;
+
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: var(--title);
+
+                &__border {
+                    width: 100%;
+                    border-bottom: 1px solid var(--title);
+                    transition: width .5s;
+                }
+
+                &:hover &__border {
+                    width: 0%;
+                }
+            }
+            
+            &__list {
+                padding: 22px;
+            }
+
+            &__item {
+                &--title {
+                    margin-bottom: 25px;
+                    flex-direction: column;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: var(--title);
+                    cursor: pointer;
+                }
+
+                &--text {
+                    margin-top: 8px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+
+    &__map {
+        margin-top: 33px;
+    }
+}
+
+.active {
+    color: var(--title);
+    border-bottom: 2px solid var(--title);
+}

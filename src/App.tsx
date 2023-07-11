@@ -7,11 +7,11 @@ import './scss/app.scss'
 import {Header} from './components/Header'
 import { Footer } from './components/Footer';
 
-import { Home } from './components/pages/Home';
-import { About } from './components/pages/About';
-import { Salons } from './components/pages/Salons';
-import { Delivery } from './components/pages/Delivery';
-import { Business } from './components/pages/Business';
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { OurSalons } from './pages/OurSalons';
+import { Delivery } from './pages//Delivery';
+import { Business } from './pages/Business';
 
 interface Product {
   createdAt: string,
@@ -40,7 +40,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='about' element={<About />}></Route>
-          <Route path='salons' element={<Salons />}></Route>
+          <Route path='salons' element={<OurSalons />}></Route>
           <Route path='payment&delivery' element={<Delivery />}></Route>
           <Route path='business' element={<Business/>}></Route>
         </Routes>

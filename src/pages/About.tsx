@@ -1,9 +1,9 @@
 import React from 'react'
 
-import productionSection1 from "../../../src/assets/img/production-section_1.png";
-import { homeCatalog } from '../arrays/homeCatalog';
+import productionSection1 from "../assets/img/1 Ресторан Тургенев, Тюмень.png";
+import { homeCatalog } from '../components/arrays/homeCatalog';
 
-import { Link } from "react-router-dom";
+import { ButtonComeBack } from '../components/ButtonComeBack';
 
 const numbersArray = [
     {
@@ -49,17 +49,7 @@ export const About = () => {
 
   return (
     <div className='about container'>
-        <div className='will-return'>
-            <ul className='will-return__list flex'>
-                <li className='will-return__item will-return--back'>
-                    <Link to='/'>Главная</Link>
-                </li>
-                /
-                <li className='will-return__item will-return--page-open'>
-                    <span>О нас</span>
-                </li>
-            </ul>
-        </div>
+        <ButtonComeBack />
             <h2 className='about__title movies__title'>О нас</h2>
             <div className='home__production--section__slider about__movies flex'>
             <div className='home__production--section__slider--block '>

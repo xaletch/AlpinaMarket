@@ -2,6 +2,7 @@ import React from 'react'
 
 import productionSection1 from "../../../src/assets/img/production-section_1.png"
 import productionSection2 from "../../../src/assets/img/production-section_2.png"
+import { Link } from 'react-router-dom'
 
 export const HomeProductionSection = () => {
   return (
@@ -41,7 +42,9 @@ export const HomeProductionSection = () => {
             </div>
         </div>
         <div className='home__production--section__bottom'>
-            <button className='popular--categories--top__more button__more'>Больше о нас</button>
+            <Link to='about'>
+                <button className='popular--categories--top__more button__more'>Больше о нас</button>
+            </Link>
         </div>
     </>
   )

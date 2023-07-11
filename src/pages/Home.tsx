@@ -1,15 +1,15 @@
 import React from 'react'
 
 // img
-import classic from '../../assets/img/Classic_style.png';
-import modern from '../../assets/img/Modern_style.png';
+import classic from '../assets/img/Classic_style.png';
+import modern from '../assets/img/Modern_style.png';
 
-import { HomeCatalog } from '../homeComponents/HomeCatalog';
-import { HomeCategory } from '../homeComponents/HomeCategory';
-import { HomeFurniture } from '../homeComponents/HomeFurniture';
-import { HomeBestOffes } from '../homeComponents/HomeBestOffes';
-import { HomeTileCollections } from '../homeComponents/HomeTileCollections';
-import { HomeProductionSection } from '../homeComponents/HomeProductionSection';
+import { HomeCatalog } from '../components/homeComponents/HomeCatalog';
+import { HomeCategory } from '../components/homeComponents/HomeCategory';
+import { HomeFurniture } from '../components/homeComponents/HomeFurniture';
+import { HomeBestOffes } from '../components/homeComponents/HomeBestOffes';
+import { HomeTileCollections } from '../components/homeComponents/HomeTileCollections';
+import { HomeProductionSection } from '../components/homeComponents/HomeProductionSection';
 
 export const Home = () => {
   return (
