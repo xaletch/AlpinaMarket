@@ -58,6 +58,7 @@
         }
 
         &--title {
+            color: var(--title);
             font-size: 18px;
             line-height: 18px;
         }
@@ -324,4 +325,8 @@
 
 .stock {
     color: #A6331C;
+}
+
+.city--letter {
+    color: var(--title);
 }

@@ -106,7 +106,7 @@ export const OurSalons = () => {
             ))}
         </div>
         ) : (
-            <div className='our-salons__map' style={{ width: '100%', height: '500px' }}>
+            <div className='our-salons__map' style={{ width: '100%', height: '400px' }}>
                 <YandexMap/>
             </div>
         )}
