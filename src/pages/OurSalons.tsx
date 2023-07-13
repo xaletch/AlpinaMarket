@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 
 import { YandexMap } from '../components/YandexMap';
 
+interface Selected {
+    selected: number | null;
+    onSelected: (id: number) => void;
+}
+
 const addressItem = ["Списком", "На карте"]
 
 const listCard = [
@@ -61,12 +66,7 @@ const listCard = [
     },
 ]
 
-export const OurSalons = () => {
-    const [selected, setSelected] = React.useState<number | null>(0);
-
-    const onSelected = (id: number) => {
-        setSelected(id);
-    }
+export const OurSalons: React.FC<Selected> = ({ selected, onSelected }) => {
 
   return (
     <div className='our-salons container'>

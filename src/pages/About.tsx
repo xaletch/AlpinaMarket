@@ -1,6 +1,6 @@
 import React from 'react'
 
-import productionSection1 from "../assets/img/1 Ресторан Тургенев, Тюмень.png";
+import productionSection1 from "../assets/img/production-section_1.png"
 import { homeCatalog } from '../components/arrays/homeCatalog';
 
 import { ButtonComeBack } from '../components/ButtonComeBack';

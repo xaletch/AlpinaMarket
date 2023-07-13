@@ -23,6 +23,8 @@ interface Product {
 function App() {
   const [searchValue, setSearchValue] = useState<string>('Белый стул');
 
+  const [selected, setSelected] = React.useState<number | null>(0);
+
   const [products, setProducts] = useState<Product[]>([])
 
   const search = searchValue ? `&search=${searchValue}` : '';
@@ -34,14 +36,18 @@ function App() {
       })
   }, [setProducts, searchValue])
   
+  const onSelected = (id: number) => {
+    setSelected(id);
+  }
+
   return (
     <div className="App">
         <Header searchValue={searchValue} setSearchValue={setSearchValue} products={products} />
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='about' element={<About />}></Route>
-          <Route path='salons' element={<OurSalons />}></Route>
-          <Route path='payment&delivery' element={<Delivery />}></Route>
+          <Route path='salons' element={<OurSalons selected={selected} onSelected={onSelected} />}></Route>
+          <Route path='paymentDelivery' element={<Delivery selected={selected} onSelected={onSelected} />}></Route>
           <Route path='business' element={<Business/>}></Route>
         </Routes>
         <Footer />

@@ -5,7 +5,7 @@ export const PageNavigation = () => {
   const navigationPage = [
     {"title": 'О нас', "navigation": "about"}, 
     {"title":'Наши салоны', "navigation": "salons"}, 
-    {"title": 'Оплата и доставка', "navigation": "payment&delivery"}, 
+    {"title": 'Оплата и доставка', "navigation": "paymentDelivery"},
     {"title": 'Для бизнеса', "navigation": "business"}
   ];
 
