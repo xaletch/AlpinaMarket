@@ -42,7 +42,7 @@ export const Header = ({ searchValue, setSearchValue, products }) => {
           </div>
           <CallOrWrite />
           <div className='header__top--navigation'>
-            <PageNavi  gation />
+            <PageNavigation />
           </div>
         </div>
         <LocationMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} setSelectedCity={setSelectedCity} />
