@@ -1,5 +1,6 @@
 import React from 'react'
 import { homeFurnitureArray } from '../arrays/homeFurniture'
+import { ButtonMore } from '../ButtonMore'
 
 export const HomeFurniture = () => {
   return (
@@ -11,7 +12,7 @@ export const HomeFurniture = () => {
                     Мы стремимся к европейскому качеству, поэтому используем фасады 
                         и элементы декора, созданные итальянскими дизайнерами 
                 </p>
-                <button className='home__furniture--left__btn'>Подробнее</button>
+                <ButtonMore />
             </div>
         </div>
         <div className='home__furniture--right flex'>

@@ -8,7 +8,10 @@ export const HomeTileCollections = () => {
     <>
         <div className='home__tile--collections__top flex'>
             <h2 className='home__tile--collections__top--title'>Коллекции ПЛИТКИ</h2>
-            <button className='home__tile--collections--top__more button__more'>Все коллекции</button>
+            <button className='popular--categories--top__more button__more'>
+                Все коллекции
+                <div className='border'></div>
+            </button>
         </div>
         <div className='home__tile--collections__bottom flex'>
             <div className='home__tile--collections__bottom--card--top'>

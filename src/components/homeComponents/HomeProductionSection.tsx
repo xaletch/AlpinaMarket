@@ -43,7 +43,10 @@ export const HomeProductionSection = () => {
         </div>
         <div className='home__production--section__bottom'>
             <Link to='about'>
-                <button className='popular--categories--top__more button__more'>Больше о нас</button>
+                <button className='popular--categories--top__more button__more'>
+                    больше о нас
+                    <div className='border'></div>
+                </button>
             </Link>
         </div>
     </>

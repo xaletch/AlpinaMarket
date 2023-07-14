@@ -1,12 +1,13 @@
 import React from 'react'
 import { homeCategoryArray } from '../arrays/homeCategory'
+import { ButtonMore } from '../ButtonMore'
 
 export const HomeCategory = () => {
   return (
     <>
         <div className='popular--categories__top flex'>
-          <h2 className='popular--categories__top--title'>Каталог по комнатам</h2>
-          <button className='popular--categories--top__more button__more'>подробнее</button>
+          <h2 className='popular--categories__top--title'>Популярные категории</h2>
+          <ButtonMore />
         </div>
         <div className='popular--categories--bottom flex'>
           {homeCategoryArray.map((item, i) => (

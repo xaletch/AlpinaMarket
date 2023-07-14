@@ -6,7 +6,6 @@ export const PageNavigation = () => {
     {"title": 'О нас', "navigation": "about"}, 
     {"title":'Наши салоны', "navigation": "salons"}, 
     {"title": 'Оплата и доставка', "navigation": "paymentDelivery"},
-    {"title": 'Для бизнеса', "navigation": "business"}
   ];
 
   return (

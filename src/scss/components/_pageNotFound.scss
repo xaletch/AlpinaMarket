@@ -1,0 +1,14 @@
+.page-not-found {
+    padding-top: 32px;
+    &__title {
+        text-align: center;
+        font-size: 34px;
+        color: var(--title);
+        line-height: 40px;
+        letter-spacing: 0.25px;
+    }
+
+    &__best--offer {
+        margin-top: 32px;
+    }
+}

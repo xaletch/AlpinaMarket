@@ -7,9 +7,10 @@ import modern from '../assets/img/Modern_style.png';
 import { HomeCatalog } from '../components/homeComponents/HomeCatalog';
 import { HomeCategory } from '../components/homeComponents/HomeCategory';
 import { HomeFurniture } from '../components/homeComponents/HomeFurniture';
-import { HomeBestOffes } from '../components/homeComponents/HomeBestOffes';
+import { HomeBestOffer } from '../components/homeComponents/HomeBestOffer'
 import { HomeTileCollections } from '../components/homeComponents/HomeTileCollections';
 import { HomeProductionSection } from '../components/homeComponents/HomeProductionSection';
+import { ButtonMore } from '../components/ButtonMore';
 
 export const Home = () => {
   return (
@@ -20,14 +21,14 @@ export const Home = () => {
                     <img src={classic} alt='error'/>
                     <div className='product--style--bottom'>
                         <h3 className='product--style--bottom__title'>Классический стиль</h3>
-                        <button className='product--style--bottom__more button__more'>подробнее</button>
+                        <ButtonMore />
                     </div>
                 </div>
                 <div className='product--style__right product--style__card'>
                     <img src={modern} alt='error'/>
                     <div className='product--style--bottom'>
                         <h3 className='product--style--bottom__title'>Современный стиль</h3>
-                        <button className='product--style--bottom__more button__more'>подробнее</button>
+                        <ButtonMore />
                     </div>
                 </div>
             </div>
@@ -41,7 +42,7 @@ export const Home = () => {
                 <HomeFurniture />
             </div>
             <div className='home__best--offer'>
-                <HomeBestOffes />
+                <HomeBestOffer />
             </div>
             <div className='home__tile--collections'>
                 <HomeTileCollections />

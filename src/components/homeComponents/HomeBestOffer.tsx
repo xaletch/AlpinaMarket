@@ -1,12 +1,13 @@
 import React from 'react'
 import { homeBestDealArray } from '../arrays/homeBestDeal'
+import { ButtonMore } from '../ButtonMore'
 
-export const HomeBestOffes = () => {
+export const HomeBestOffer = () => {
   return (
     <>
       <div className='home__best--offer__top flex'>
         <h3 className='home__best--offer__top--title'>Лучшее предложение</h3>
-        <button className='home__best--offer__top--more button__more'>подробнее</button>
+        <ButtonMore />
       </div>
       <div className='home__best--offer__bottom flex'>
       {homeBestDealArray.map((item) => (

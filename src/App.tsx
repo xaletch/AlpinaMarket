@@ -11,7 +11,7 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { OurSalons } from './pages/OurSalons';
 import { Delivery } from './pages//Delivery';
-import { Business } from './pages/Business';
+import { PageNotFound } from './pages/PageNotFound/PageNotFound';
 
 interface Product {
   createdAt: string,
@@ -48,7 +48,7 @@ function App() {
           <Route path='about' element={<About />}></Route>
           <Route path='salons' element={<OurSalons selected={selected} onSelected={onSelected} />}></Route>
           <Route path='paymentDelivery' element={<Delivery selected={selected} onSelected={onSelected} />}></Route>
-          <Route path='business' element={<Business/>}></Route>
+          <Route path='*' element={<PageNotFound/>}></Route>
         </Routes>
         <Footer />
     </div>

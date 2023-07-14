@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { homeCatalog } from '../arrays/homeCatalog';
 import { CustomSlideToggle } from '../CustomSlideToggle';
+import { ButtonMore } from '../ButtonMore';
 
 export class HomeCatalog extends Component {
   render() {
@@ -51,7 +52,7 @@ export class HomeCatalog extends Component {
     <>
       <div className='room--catalog__top flex'>
         <h2 className='room--catalog__top--title'>Каталог по комнатам</h2>
-        <button className='room--catalog--top__more button__more'>подробнее</button>
+        <ButtonMore />
       </div>
       <div className='room--catalog__bottom'>
       <Slider {...settings}>

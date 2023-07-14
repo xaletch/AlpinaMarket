@@ -18,7 +18,7 @@
                 margin: 0 auto;
                 text-align: center;
                 font-size: 24px;
-                font-weight: 400;
+                font-weight: bold;
                 line-height: 32px;
                 color: var(--title);
             }
@@ -86,7 +86,7 @@
 
             &--title {
                 font-size: 24px;
-                font-weight: 400;
+                font-weight: bold;
                 line-height: 32px;
                 color: var(--title);
             }
@@ -169,7 +169,7 @@
                 &--price {
                     color: var(--title);
                     font-size: 16px;
-                    font-weight: 400;
+                    font-weight: bold;
                     line-height: 24px;
                 }
             }
@@ -177,7 +177,7 @@
             &--size {
                 color: var(--title);
                 font-size: 11px;
-                font-weight: 400;
+                font-weight: bold;
                 line-height: 24px;
             }
 
@@ -233,8 +233,9 @@
 
             &--title {
                 font-size: 20px;
-                font-weight: 400;
+                font-weight: bold;
                 line-height: 32px;
+                color: var(--title);
                 text-transform: uppercase;
             }
         }
@@ -277,7 +278,7 @@
             &--title {
                 color: var(--title);
                 font-size: 24px;
-                font-weight: 400;
+                font-weight: bold;
                 line-height: 32px;
             }
 
@@ -336,7 +337,7 @@
         &__title {
             color: var(--title);
             font-size: 24px;
-            font-weight: 400;
+            font-weight: bold;
             line-height: 32px;
         }
 
@@ -355,7 +356,7 @@
         &--title {
             color: var(--title);
             font-size: 24px;
-            font-weight: 400;
+            font-weight: bold;
             line-height: 32px;
         }
     }
@@ -396,15 +397,15 @@
     text-transform: uppercase;
     position: relative;
 
-    &::before {
-        content: "";
-        width: 105%;
-        height: 1px;
-        background: var(--primary-hight);
-        position: absolute;
-        bottom: 0;
-        transition: all 0.3s ease-out;
-    }
+    // &::before {
+    //     content: "";
+    //     width: 105%;
+    //     height: 1px;
+    //     background: var(--primary-hight);
+    //     position: absolute;
+    //     bottom: 0;
+    //     transition: all 0.3s ease-out;
+    // }
 
     &:hover {
         &::before {
@@ -421,7 +422,7 @@
         &--title {
             color: var(--title);
             font-size: 24px;
-            font-weight: 400;
+            font-weight: bold;
             line-height: 32px;
         }
     }
@@ -479,4 +480,16 @@
 
 .slick-prev {
     display: none;
+}
+
+.button__more {
+    .border {
+        width: 100%;
+        border-bottom: 1px solid var(--title);
+        transition: width .5s;
+    }
+
+    &:hover .border {
+        width: 0%;
+    }
 }
