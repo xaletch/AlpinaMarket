@@ -12,30 +12,32 @@ import { About } from './pages/About';
 import { OurSalons } from './pages/OurSalons';
 import { Delivery } from './pages//Delivery';
 import { PageNotFound } from './pages/PageNotFound/PageNotFound';
+import { Cart } from './pages/Cart';
 
 interface Product {
-  createdAt: string,
-  name: string,
-  avatar: string,
+  price: number,
+  title: string,
+  img: string,
   id: string,
+  products: Product[];
 }
 
 function App() {
-  const [searchValue, setSearchValue] = useState<string>('Белый стул');
+  const [searchValue, setSearchValue] = useState<string>('');
 
   const [selected, setSelected] = React.useState<number | null>(0);
 
-  const [products, setProducts] = useState<Product[]>([])
+  const [products, setProducts] = useState<Product[]>([]);
 
   const search = searchValue ? `&search=${searchValue}` : '';
 
   React.useEffect(() => {
       axios.get(`https://64a97f128b9afaf4844ac01b.mockapi.io/Products?&${search}`)
       .then(res => {
-          setProducts(res.data) 
+          setProducts(res.data)
       })
   }, [setProducts, searchValue])
-  
+
   const onSelected = (id: number) => {
     setSelected(id);
   }
@@ -44,11 +46,12 @@ function App() {
     <div className="App">
         <Header searchValue={searchValue} setSearchValue={setSearchValue} products={products} />
         <Routes>
-          <Route path='/' element={<Home />}></Route>
+          <Route path='/' element={<Home products={products} />}></Route>
           <Route path='about' element={<About />}></Route>
           <Route path='salons' element={<OurSalons selected={selected} onSelected={onSelected} />}></Route>
           <Route path='paymentDelivery' element={<Delivery selected={selected} onSelected={onSelected} />}></Route>
-          <Route path='*' element={<PageNotFound/>}></Route>
+          <Route path='*' element={<PageNotFound />}></Route>
+          <Route path='cart' element={<Cart />}></Route>
         </Routes>
         <Footer />
     </div>
