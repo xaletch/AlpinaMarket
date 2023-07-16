@@ -1,6 +1,23 @@
 import React from 'react'
 
-export const CartItem = ({ img, title, price }) => {
+import { useDispatch } from 'react-redux'
+import { deleteProduct, minusProduct, plusProduct } from '../redux/slice/cartSlice';
+
+export const CartItem = ({ id, img, title, price, count }) => {
+  const dispatch = useDispatch();
+
+  const delProduct = () => {
+    dispatch(deleteProduct(id));
+  };
+
+  const minusBtn = () => {
+    dispatch(minusProduct(id));
+  };
+
+  const plusBtn = () => {
+    dispatch(plusProduct(id));
+  };
+
   return (
     <div className='cart__card flex'>
         <div className='cart__card--left'>
@@ -13,9 +30,9 @@ export const CartItem = ({ img, title, price }) => {
                 <a className='cart__product--name'>{title}</a>
               </div>
               <div className='cart__card--right__counter flex'>
-                <div className='cart__card--right__counter--button cart__card--plus flex'>-</div>
-                <div className='cart__card--right__counter--button cart__card--count flex'>2</div>
-                <div className='cart__card--right__counter--button cart__card--minus flex'>+</div>
+                <button disabled={count === 1} className='cart__card--right__counter--button cart__card--plus flex' onClick={minusBtn}>-</button>
+                <div className='cart__card--right__counter--button cart__card--count flex'>{count}</div>
+                <button className='cart__card--right__counter--button cart__card--minus flex' onClick={plusBtn}>+</button>
               </div>
             </div>
             <div></div>
@@ -24,7 +41,7 @@ export const CartItem = ({ img, title, price }) => {
                 <p>{price} руб.</p>
               </div>
             <div className='cart__card--right__delete'>
-              <div className='cart__card--right__button--delete flex'>
+              <div className='cart__card--right__button--delete flex' onClick={delProduct}>
                 <svg fill="#000000" height="800px" width="800px" version="1.1" 
 	                viewBox="0 0 490 490">
                   <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 

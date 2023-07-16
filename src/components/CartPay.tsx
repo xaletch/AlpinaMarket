@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const CartPay = () => {
+import { useDispatch, useSelector } from 'react-redux';
+import { discountTotalPrice } from '../redux/slice/cartSlice';
+import { RootState } from '../redux/store';
+
+export const CartPay = ({ totalPrice }) => {
+  const dispatch = useDispatch();
+  const [couponCode, setCouponCode] = useState('')
+
+  const discountPrice = useSelector((state: RootState) => state.cart.discountPrice)
+
+  const handleCouponChange = (e: any) => {
+    console.log(setCouponCode(e.target.value))
+  }
+
+  const applyCoupon = () => {
+    dispatch(discountTotalPrice({ discount: couponCode }));
+
+    setCouponCode('')
+  };
+
   return (
     <>
       <div className='cart__header--pay'>
@@ -9,18 +28,22 @@ export const CartPay = () => {
       <div className='cart__content--pay'>
         <div className='cart__pay--sum flex'>
           <p className='cart__pay--sum__title'>Сумму заказа</p>
-          <p className='cart__pay--sum__sum'>90000 руб.</p>
+          <p className='cart__pay--sum__sum'>{totalPrice} руб.</p>
+        </div>
+        <div className='cart__pay--sum flex'>
+          <p className='cart__pay--sum__title'>Скидка</p>
+          <p className='cart__pay--sum__sum'>{discountPrice} руб.</p>
         </div>
       </div>
       <div className='cart__line'></div>
       <div className='cart__payment'>
         <div className='cart__payment--input'>
-          <input type="text" className='cart__payment--input__coupon' placeholder='Номер купона' />
-          <button className='cart__payment--input__button'>Применить</button>
+          <input type="text" className='cart__payment--input__coupon' value={couponCode} onChange={handleCouponChange} placeholder='Номер купона (KU6ym)' />
+          <button className='cart__payment--input__button' onClick={applyCoupon} >Применить</button>
         </div>
         <div className='cart__payment--total flex'>
           <p className='cart__payment--total__title'>Итого:</p>
-          <p className='cart__payment--total__price'>10000 руб.</p>
+          <p className='cart__payment--total__price'>{totalPrice - discountPrice} руб.</p>
         </div>
         <button className='cart__payment--go-to-pay'>Перейти к оформлению</button>
       </div>

@@ -5,9 +5,14 @@ import { CartPay } from '../components/CartPay';
 
 import { useSelector } from 'react-redux';
 import { selectCart } from '../redux/slice/cartSlice';
+import { CartEmpty } from '../components/CartEmpty';
 
 export const Cart = () => {
-  const { items } = useSelector(selectCart)
+  const { items, totalPrice } = useSelector(selectCart);
+
+  if (totalPrice === 0) {
+    return <CartEmpty />
+  }
 
   return (
     <div className='cart'>
@@ -18,7 +23,7 @@ export const Cart = () => {
                 {items.map((item) => <CartItem key={item.id} {...item} />)}
               </div>
               <div className='cart__block--pay'>
-                <CartPay />
+                <CartPay totalPrice={totalPrice} />
               </div>
             </div>
         </div>
