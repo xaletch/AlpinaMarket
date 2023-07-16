@@ -11,13 +11,13 @@ export const CartPay = ({ totalPrice }) => {
   const discountPrice = useSelector((state: RootState) => state.cart.discountPrice)
 
   const handleCouponChange = (e: any) => {
-    console.log(setCouponCode(e.target.value))
+    setCouponCode(e.target.value);
   }
 
   const applyCoupon = () => {
     dispatch(discountTotalPrice({ discount: couponCode }));
 
-    setCouponCode('')
+    setCouponCode('');
   };
 
   return (

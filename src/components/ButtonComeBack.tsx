@@ -13,7 +13,7 @@ export const ButtonComeBack = () => {
     '/about': 'О нас',
     '/salons': 'Наши салоны',
     '/paymentDelivery': 'Оплата и доставка',
-    '/business': 'Для бизнеса',
+    '/cart': 'Корзина'
   };
 
   const getPageName = (pathname: string) => {
