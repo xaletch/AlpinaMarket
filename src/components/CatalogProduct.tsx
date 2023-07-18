@@ -15,23 +15,24 @@ type ProductBlockProps = {
     gallery: [];
 };
 
-export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, price, sale, discount, size, gallery }) => {
-  const [cardButton, setCardButton] = useState<boolean>(true);
-  const dispatch = useDispatch();
+export const CatalogProduct: React.FC<ProductBlockProps> = ({ title, img, id, price, discount, size, gallery, sale }) => {
+    const [cardButton, setCardButton] = useState<boolean>(true);
+    
+    const dispatch = useDispatch();
 
-  const handleClickCartAdd = () => {
-    const item: CartItem = {
-      id,
-      title,
-      price,
-      img,
-      count: 0,
-    };
-    dispatch(addProducts(item));
-    setCardButton(false)
-  };
+    const handleClickCartAdd = () => {
+        const item: CartItem = {
+          id,
+          title,
+          price,
+          img,
+          count: 0,
+        };
+        dispatch(addProducts(item));
+        setCardButton(false)
+      };
 
-  return (
+    return (
     <>
         <div className='home__best--offer__card'>
             <div className='home__best--offer__card--top flex'>

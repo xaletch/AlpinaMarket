@@ -124,15 +124,21 @@
 
         &--page {
             align-items: center;
-            gap: 16px;
+            // gap: 16px;
+        }
+
+        &--message, &--favorites, &--basket {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         &--count {
             padding: 1px 3px;
             position: relative;
             justify-content: center;
-            top: -30px;
-            left: 8px;
+            top: -8px;
+            left: -10px;
             background: #A6331C;
             color: #fff;
             border-radius: 60px;

@@ -197,6 +197,18 @@
                     background: #000;
                 }
             }
+
+            &--button {
+                height: 32px;
+                padding: 0 8px;
+                background: var(--title);
+                font-size: 10px;
+                line-height: 14px;
+                letter-spacing: 1.5px;
+                border-radius: 2px;
+                text-transform: uppercase;
+                color: var(--light-color);
+            }
         }
 
         &__gallery--container {

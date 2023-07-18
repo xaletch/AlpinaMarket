@@ -13,6 +13,7 @@ import { OurSalons } from './pages/OurSalons';
 import { Delivery } from './pages//Delivery';
 import { PageNotFound } from './pages/PageNotFound/PageNotFound';
 import { Cart } from './pages/Cart';
+import { Catalog } from './components/Catalog';
 
 interface Product {
   price: number,
@@ -30,6 +31,8 @@ function App() {
   const [products, setProducts] = useState<Product[]>([]);
 
   const search = searchValue ? `&search=${searchValue}` : '';
+
+  console.log(products)
 
   React.useEffect(() => {
       axios.get(`https://64a97f128b9afaf4844ac01b.mockapi.io/Products?&${search}`)
@@ -51,7 +54,8 @@ function App() {
           <Route path='salons' element={<OurSalons selected={selected} onSelected={onSelected} />}></Route>
           <Route path='paymentDelivery' element={<Delivery selected={selected} onSelected={onSelected} />}></Route>
           <Route path='*' element={<PageNotFound />}></Route>
-          <Route path='cart' element={<Cart />}></Route>
+          <Route path='card' element={<Cart />}></Route>
+          <Route path='catalog' element={<Catalog products={products} />}></Route>
         </Routes>
         <Footer />
     </div>

@@ -21,7 +21,7 @@ export const CartItem = ({ id, img, title, price, count }) => {
   return (
     <div className='cart__card flex'>
         <div className='cart__card--left'>
-            <img className='cart__card--left__img' src={img} alt="" />
+            <img className='cart__card--left__img' src={img} alt={title} />
         </div>
         <div className='cart__card--right flex'>
           <div className='cart__card--right--inner flex'>
