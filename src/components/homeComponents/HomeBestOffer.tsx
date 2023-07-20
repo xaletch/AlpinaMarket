@@ -3,7 +3,7 @@ import { ButtonMore } from '../ButtonMore'
 import { ProductBlock } from '../ProductBlock'
 import { Link } from 'react-router-dom';
 
-export const HomeBestOffer = ({ products, cardButton, setCardButton }) => {
+export const HomeBestOffer = ({ products }) => {
 
   const productBestOffer = products.slice(0, 8);
 
@@ -16,7 +16,7 @@ export const HomeBestOffer = ({ products, cardButton, setCardButton }) => {
           </Link>
       </div>
       <div className='home__best--offer__bottom flex'>
-      {productBestOffer.map((obj: any) => <ProductBlock key={obj.id} {...obj} cardButton={cardButton} setCardButton={setCardButton} />)}
+      {productBestOffer.map((obj: any) => <ProductBlock key={obj.id} {...obj} />)}
       </div>
     </>
   )

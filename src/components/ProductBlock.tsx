@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { useDispatch } from "react-redux";
 import { CartItem, addProducts } from '../redux/slice/cartSlice';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 type ProductBlockProps = {
     id: string;
@@ -30,6 +30,10 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
     dispatch(addProducts(item));
     setCardButton(false)
   };
+
+  const handleClickButton = () => {
+    window.scrollTo(0, 0)
+  }
 
   return (
     <>
@@ -60,9 +64,9 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
                   </svg>
                 </button>
               ) : (
-                <Link to='card'>
-                  <button className='home__best--offer__card--button'>В корзине</button>
-                </Link>
+                <NavLink to='/card'>
+                  <button className='home__best--offer__card--button' onClick={handleClickButton}>В корзине</button>
+                </NavLink>
               )}
             </div>
         </div>
