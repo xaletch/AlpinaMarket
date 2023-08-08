@@ -3,9 +3,12 @@ import React, { useCallback, useState } from 'react'
 import debounce from 'lodash/debounce';
 
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { setSearchValue } from '../redux/slice/SearchSlice';
 
-export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, setSearchValue, products, inputRef }) => {
-  const [value, setValue] = useState('')
+export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, products, inputRef }) => {
+  const dispatch = useDispatch()
+  const [value, setValue] = useState('');
 
   const handleClickClose = () => {
     setIsSearchOpen(false);
@@ -14,7 +17,7 @@ export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, setSear
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const updateSearchInput = useCallback(
     debounce((e: any) => {
-      setSearchValue(e);
+      dispatch(setSearchValue(e));
     }, 350),
     []
   );

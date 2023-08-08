@@ -17,7 +17,7 @@ import { selectCart } from '../redux/slice/cartSlice';
 import { RootState } from '../redux/store';
 
 
-export const Header = ({ searchValue, setSearchValue, products }) => {
+export const Header = ({ searchValue, products }) => {
 
   const { items } = useSelector((state: RootState) => selectCart(state))
   const productCount = items.reduce((sum: number, items: any) => sum + items.count, 0)
@@ -42,7 +42,7 @@ export const Header = ({ searchValue, setSearchValue, products }) => {
   return (
     <div className='header'>
       <div className='container'>
-        <SearchMenu inputRef={inputRef} products={products} isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} searchValue={searchValue} setSearchValue={setSearchValue}/>
+        <SearchMenu inputRef={inputRef} products={products} isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} searchValue={searchValue} />
       </div>
       <div className='header__top'>
         <div className='container grid'>

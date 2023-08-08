@@ -2,10 +2,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 
 import cart from './slice/cartSlice';
+import product from './slice/productSlice'
+import search from './slice/SearchSlice'
 
 export const store = configureStore({
     reducer: {
         cart,
+        product,
+        search,
     }, 
 });
 
