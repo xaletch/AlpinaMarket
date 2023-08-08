@@ -6,7 +6,6 @@ import modern from '../assets/img/Modern_style.png';
 
 import { HomeCatalog } from '../components/homeComponents/HomeCatalog';
 import { HomeCategory } from '../components/homeComponents/HomeCategory';
-import { HomeFurniture } from '../components/homeComponents/HomeFurniture';
 import { HomeBestOffer } from '../components/homeComponents/HomeBestOffer'
 import { HomeTileCollections } from '../components/homeComponents/HomeTileCollections';
 import { HomeProductionSection } from '../components/homeComponents/HomeProductionSection';
@@ -37,10 +36,7 @@ export const Home = ({ products }) => {
             </div>
             <div className='popular--categories'>
                 <HomeCategory />
-            </div>
-            <div className='home__furniture flex'>
-                <HomeFurniture />
-            </div>
+            </div>  
             <div className='home__best--offer'>
                 <HomeBestOffer products={products}/>
             </div>
