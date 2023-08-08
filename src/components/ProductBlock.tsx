@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { useDispatch } from "react-redux";
 import { CartItem, addProducts } from '../redux/slice/cartSlice';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 type ProductBlockProps = {
     id: string;
@@ -38,6 +38,7 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
   return (
     <>
         <div className='home__best--offer__card'>
+          <Link to={`/product/${id}`}>
             <div className='home__best--offer__card--top flex'>
               <img className='home__best--offer__card--img' src={img} alt={title} />
             </div>
@@ -47,6 +48,7 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
               <h3 className='home__best--offer__card--bottom--title'>{title}</h3>
               <p className='home__best--offer__card--bottom--price'>{price} ₽</p>
             </div>
+          </Link>
             <p className='home__best--offer__card--size'>{size}</p>
             <div className="home__best--offer__gallery--container flex">
               <div className='home__best--offer__gallery--block flex'>

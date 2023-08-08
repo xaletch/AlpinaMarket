@@ -32,6 +32,8 @@ function App() {
 
   const search = searchValue ? `&search=${searchValue}` : '';
 
+  console.log(products);
+
   React.useEffect(() => {
       axios.get(`https://64a97f128b9afaf4844ac01b.mockapi.io/Products?&${search}`)
       .then(res => {
