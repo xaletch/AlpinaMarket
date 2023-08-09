@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { useDispatch } from "react-redux";
-import { CartItem, addProducts } from '../redux/slice/cartSlice';
+import { addProducts } from '../redux/slice/cartSlice';
 import { Link, NavLink } from 'react-router-dom';
 
 type ProductBlockProps = {
@@ -20,7 +20,7 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
   const dispatch = useDispatch();
 
   const handleClickCartAdd = () => {
-    const item: CartItem = {
+    const item = {
       id,
       title,
       price,
@@ -42,13 +42,13 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
             <div className='home__best--offer__card--top flex'>
               <img className='home__best--offer__card--img' src={img} alt={title} />
             </div>
+          </Link>
             {sale && <p className='home__best--offer__card--sale home__best--offer__top--card'>{sale}</p>}
             {discount && <p className='home__best--offer__card--discount home__best--offer__top--card'>{discount}</p>}
             <div className='home__best--offer__card--bottom flex'>
               <h3 className='home__best--offer__card--bottom--title'>{title}</h3>
               <p className='home__best--offer__card--bottom--price'>{price} ₽</p>
             </div>
-          </Link>
             <p className='home__best--offer__card--size'>{size}</p>
             <div className="home__best--offer__gallery--container flex">
               <div className='home__best--offer__gallery--block flex'>

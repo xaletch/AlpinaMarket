@@ -16,11 +16,15 @@ export interface cartState {
   items: CartItem[];
 };
 
+const price = JSON.parse(localStorage.getItem('cartPrice'));
+// const discount = JSON.parse(localStorage.getItem('cartDiscount'));
+const item = JSON.parse(localStorage.getItem('cart'));
+
 const initialState: cartState = {
-  totalPrice: 0,
-  discountPrice: -0,
-  items: [],
-};
+  totalPrice: price || 0,
+  discountPrice: 0,
+  items: item || [],
+};  
 
 export const cartSlice = createSlice({
     name: 'cart',
@@ -63,7 +67,7 @@ export const cartSlice = createSlice({
         discountTotalPrice(state, action) {
           const { discount } = action.payload;
           
-          if (discount === 'KU6ym') {
+          if (discount === 'KU6ym' || 'ku6ym') {
             state.discountPrice = state.totalPrice * 0.1;
           };
         }

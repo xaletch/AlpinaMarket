@@ -4,11 +4,11 @@ import { CartItem } from '../components/CartItem'
 import { CartPay } from '../components/CartPay';
 
 import { useSelector } from 'react-redux';
-import { selectCart } from '../redux/slice/cartSlice';
 import { CartEmpty } from '../components/CartEmpty';
+import { RootState } from '../redux/store';
 
 export const Cart = () => {
-  const { items, totalPrice } = useSelector(selectCart);
+  const { items, totalPrice } = useSelector((state: RootState) => state.cart);
 
   if (totalPrice === 0) {
     return <CartEmpty />
