@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { useDispatch } from "react-redux";
 import { addProducts } from '../redux/slice/cartSlice';
@@ -18,6 +18,11 @@ type ProductBlockProps = {
 export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, price, sale, discount, size, gallery }) => {
   const [cardButton, setCardButton] = useState<boolean>(true);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    localStorage.getItem('cardButton');
+    localStorage.setItem('cardButton', JSON.stringify(cardButton));
+  }, [cardButton]);
 
   const handleClickCartAdd = () => {
     const item = {
