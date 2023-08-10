@@ -27,6 +27,10 @@ export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, product
       updateSearchInput(e.target.value)
   };
   
+  const handleClickSearchProduct = () => {
+    setIsSearchOpen(false);
+  }
+
   const filteredProducts = products.slice(0, 4);
 
   return (
@@ -69,8 +73,8 @@ export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, product
           {searchValue && (
             <div className='search__menu--found--item flex'>
               {filteredProducts.map((item, index) => (
-                  <div key={index} className='search__menu--found--item__card flex'>
-                    <Link to={item.title} className='search__menu--found--item__card--link flex'>
+                  <div key={index} className='search__menu--found--item__card flex' onClick={handleClickSearchProduct}>
+                    <Link to={`product/${item.id}`} className='search__menu--found--item__card--link flex'>
                     <div className='search__menu--found--item__card--left'>
                       <p className='search__menu--found--item__card--title'>{item.title}</p>
                       <span className='search__menu--found--item__card--price'>{item.price} ₽</span>
@@ -83,7 +87,7 @@ export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, product
           )}
           {products.length > 4 && searchValue && (
             <div className='search__menu--found--search-all__block'>
-              <Link className='search__menu--found--search-all' to='search&All'>ВСЕ РЕЗУЛЬТАТЫ ПОИСКА</Link>
+              <Link className='search__menu--found--search-all' to='search-All'>ВСЕ РЕЗУЛЬТАТЫ ПОИСКА</Link>
             </div>
           )}
         </div>

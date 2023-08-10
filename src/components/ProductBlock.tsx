@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { useDispatch } from "react-redux";
-import { addProducts } from '../redux/slice/cartSlice';
+import { CartItem, addProducts } from '../redux/slice/cartSlice';
 import { Link, NavLink } from 'react-router-dom';
 
 type ProductBlockProps = {
@@ -25,13 +25,14 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
   }, [cardButton]);
 
   const handleClickCartAdd = () => {
-    const item = {
+    const item: CartItem = {
       id,
       title,
       price,
       img,
       count: 0,
     };
+
     dispatch(addProducts(item));
     setCardButton(false)
   };

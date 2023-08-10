@@ -12,6 +12,7 @@ import { HomeProductionSection } from '../components/homeComponents/HomeProducti
 import { ButtonMore } from '../components/ButtonMore';
 
 export const Home = ({ products }) => {
+
   return (
     <div className='home'>
         <div className='container'>
@@ -38,7 +39,7 @@ export const Home = ({ products }) => {
                 <HomeCategory />
             </div>  
             <div className='home__best--offer'>
-                <HomeBestOffer products={products}/>
+                <HomeBestOffer products={products} />
             </div>
             <div className='home__tile--collections'>
                 <HomeTileCollections />

@@ -14,7 +14,7 @@ export const ProductMenuTest: React.FC<MenuProps> = ({ selectedCategoryId }) => 
         {productNavigate.map((product) => (
           product.id === selectedCategoryId ? (
             <div className='navigation--product__block'>
-            <p className='navigation__product--title'>{product.title}</p>  
+            <p className='navigation__product--title'>{product.title}</p>
             <ul className='navigation__product--list'>
               {product.nameFurniture.map((name) => (
                 <li className='navigation__product--item' key={name}>{name}</li>

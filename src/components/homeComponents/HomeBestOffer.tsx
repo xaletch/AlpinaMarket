@@ -3,7 +3,22 @@ import { ButtonMore } from '../ButtonMore'
 import { ProductBlock } from '../ProductBlock'
 import { Link } from 'react-router-dom';
 
-export const HomeBestOffer = ({ products }) => {
+interface ProductProps {
+  id: string;
+  title: string;
+  img: string;
+  price: number;
+  sale: string;
+  discount: string;
+  size: string;
+  gallery: [];
+};
+
+interface Product {
+  products: ProductProps[];
+}
+
+export const HomeBestOffer: React.FC<Product> = ({ products }) => {
 
   const productBestOffer = products.slice(0, 8);
 

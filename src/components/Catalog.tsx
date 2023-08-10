@@ -2,7 +2,7 @@ import React from 'react'
 import { ButtonComeBack } from './ButtonComeBack'
 import { ProductBlock } from './ProductBlock'
 
-export const Catalog = ({ products,  }) => {
+export const Catalog = ({ products }) => {
   return (
     <div className='catalog'>
         <div className='container'>

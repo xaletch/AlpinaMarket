@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
-
+import { ProductBlock } from '../components/ProductBlock';
 interface ProductInfoInterface {
     img: string;
     title: string;
@@ -38,6 +38,7 @@ export const ProductInfo = () => {
             <h2>{product?.title}</h2>
             <p>{product?.price}</p>
         </div>
+        <ProductBlock/>
     </div>
   )
 }
