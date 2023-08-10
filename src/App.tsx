@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchProducts, selectProductData } from './redux/slice/productSlice';
 import { search } from './redux/slice/SearchSlice';
+import { ProductInfo } from './pages/ProductInfo';
 
 function App() {
   const dispatch = useDispatch();
@@ -59,6 +60,7 @@ function App() {
           <Route path='*' element={<PageNotFound />}></Route>
           <Route path='card' element={<Cart />}></Route>
           <Route path='catalog' element={<Catalog products={item} />}></Route>
+          <Route path='product/:id' element={<ProductInfo />}></Route>
         </Routes>
         <Footer />
     </div>
