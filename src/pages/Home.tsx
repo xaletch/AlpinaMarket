@@ -12,7 +12,6 @@ import { HomeProductionSection } from '../components/homeComponents/HomeProducti
 import { ButtonMore } from '../components/ButtonMore';
 
 export const Home = ({ products }) => {
-
   return (
     <div className='home'>
         <div className='container'>

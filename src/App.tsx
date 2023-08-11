@@ -57,7 +57,7 @@ function App() {
           <Route path='about' element={<About />}></Route>
           <Route path='salons' element={<OurSalons selected={selected} onSelected={onSelected} />}></Route>
           <Route path='paymentDelivery' element={<Delivery selected={selected} onSelected={onSelected} />}></Route>
-          <Route path='*' element={<PageNotFound />}></Route>
+          <Route path='*' element={<PageNotFound products={item} />}></Route>
           <Route path='card' element={<Cart />}></Route>
           <Route path='catalog' element={<Catalog products={item} />}></Route>
           <Route path='product/:id' element={<ProductInfo />}></Route>

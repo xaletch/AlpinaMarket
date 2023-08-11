@@ -12,6 +12,8 @@ export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, product
 
   const handleClickClose = () => {
     setIsSearchOpen(false);
+    setValue('');
+    dispatch(setSearchValue(''));
   };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -23,13 +25,15 @@ export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, product
   );
 
   const searchInput = (e: any) => {
-    setValue(e.target.value)
-      updateSearchInput(e.target.value)
+    setValue(e.target.value);
+      updateSearchInput(e.target.value);
   };
   
   const handleClickSearchProduct = () => {
     setIsSearchOpen(false);
-  }
+    setValue('');
+    dispatch(setSearchValue(''));
+  };
 
   const filteredProducts = products.slice(0, 4);
 
