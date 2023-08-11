@@ -18,7 +18,7 @@ export const ProductMenu: React.FC<MenuProps> = ({ selectedCategoryId }) => {
             <p className='navigation__product--title'>{product.title}</p>
             <ul className='navigation__product--list'>
               {product.nameFurniture.map((name) => (
-                <li className='navigation__product--item' key={name}><Link to={name}>{name}</Link></li>
+                <li className='navigation__product--item' key={name.navigationPage}><Link to={`${product.navigation}/${name.navigationPage}`}>{name.navigateName}</Link></li>
               ))}
             </ul>
           </div>

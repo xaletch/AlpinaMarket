@@ -17,10 +17,6 @@ export const ProductNavigation: React.FC<MenuPropsTest> = ({ setSelectedCategory
     setSelectedCategoryId(categoryId);
   };
 
-  // const handleMouseLeave = () => {
-  //   setSelectedCategoryId(null);
-  // };
-
   return (
     <>
       <ul className='header__navigation--list flex'>

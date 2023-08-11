@@ -13,7 +13,7 @@ export const Navigation = () => {
       },
       {
         name: 'ДИЗАЙН-ПРОЕТЫ',
-        navigate: 'design_projects',
+        navigate: 'design-projects',
       },
       {
         name: 'МЕБЕЛЬ НА ЗАКАЗ',
