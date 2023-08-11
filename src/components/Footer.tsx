@@ -2,6 +2,7 @@ import React from 'react'
 import { footerArray } from './arrays/footer'
 
 import pay from "../../src/assets/img/footer_pay.png"
+import { Link } from 'react-router-dom'
 
 export const Footer = () => {
   return (
@@ -15,7 +16,7 @@ export const Footer = () => {
                                 <p className='footer__top--list__title'>{navigation.title}</p>
                                 <ul className='footer__top--list'>
                                     {navigation.titleList.map((item, index) => (
-                                        <li key={index} className='footer__top--item'><a href='#'>{item}</a></li>
+                                        <li key={index} className='footer__top--item'><Link to={item.navigation}>{item.title}</Link></li>
                                     ))}
                                 </ul>
                             </div>

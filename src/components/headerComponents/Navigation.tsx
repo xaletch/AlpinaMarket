@@ -9,15 +9,15 @@ export const Navigation = () => {
       },
       {
         name: 'КОМНАТЫ',
-        navigate: 'page',
+        navigate: 'rooms',
       },
       {
         name: 'ДИЗАЙН-ПРОЕТЫ',
-        navigate: 'page',
+        navigate: 'design_projects',
       },
       {
         name: 'МЕБЕЛЬ НА ЗАКАЗ',
-        navigate: 'page',
+        navigate: 'custom-made_furniture',
       }
     ];
   return (

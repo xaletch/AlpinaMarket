@@ -7,7 +7,7 @@ import { ProductNavigation } from './headerComponents/ProductNavigation';
 import { Search } from './headerComponents/Search';
 import { LocationPopup } from './headerComponents/LocationPopup';
 import { CallOrWrite } from './headerComponents/CallOrWrite';
-import { ProductMenuTest } from './headerComponents/ProductMenuTest';
+import { ProductMenu } from './headerComponents/ProductMenu';
 import { LocationMenu } from './headerComponents/LocationMenu';
 import { SearchMenu } from './SearchMenu';
 
@@ -17,8 +17,6 @@ import { RootState } from '../redux/store';
 
 
 export const Header = ({ searchValue, products }) => {
-  const dispatch = useDispatch();
-
   const { items, totalPrice, discountPrice } = useSelector((state: RootState) => state.cart);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -115,7 +113,7 @@ export const Header = ({ searchValue, products }) => {
       </div>
       {selectedCategoryId && (
         <div className='header__navigation--product--block' onMouseLeave={handleMouseLeave} >
-          <ProductMenuTest selectedCategoryId={selectedCategoryId} />
+          <ProductMenu selectedCategoryId={selectedCategoryId} />
         </div>
       )}
     </div>

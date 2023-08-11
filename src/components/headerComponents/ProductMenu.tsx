@@ -1,12 +1,13 @@
 import React from 'react';
 
 import productNavigate, {productNavigateCard} from './productNavigate/index'
+import { Link } from 'react-router-dom';
 
 interface MenuProps {
   selectedCategoryId: number | null;
 }
 
-export const ProductMenuTest: React.FC<MenuProps> = ({ selectedCategoryId }) => {
+export const ProductMenu: React.FC<MenuProps> = ({ selectedCategoryId }) => {
   return (
     <div className='header__navigation--product'>
     <div className='header__navigation--inner flex'>
@@ -17,7 +18,7 @@ export const ProductMenuTest: React.FC<MenuProps> = ({ selectedCategoryId }) => 
             <p className='navigation__product--title'>{product.title}</p>
             <ul className='navigation__product--list'>
               {product.nameFurniture.map((name) => (
-                <li className='navigation__product--item' key={name}>{name}</li>
+                <li className='navigation__product--item' key={name}><Link to={name}>{name}</Link></li>
               ))}
             </ul>
           </div>
