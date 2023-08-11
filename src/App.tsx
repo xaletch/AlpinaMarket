@@ -49,6 +49,10 @@ function App() {
     setSelected(id);
   }
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="App">
         <Header searchValue={searchValue} products={item} />
