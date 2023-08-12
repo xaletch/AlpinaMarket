@@ -8,6 +8,7 @@ interface MenuProps {
 }
 
 export const ProductMenu: React.FC<MenuProps> = ({ selectedCategoryId }) => {
+
   return (
     <div className='header__navigation--product'>
     <div className='header__navigation--inner flex'>

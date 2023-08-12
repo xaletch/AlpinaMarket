@@ -134,13 +134,16 @@
         }
 
         &--count {
-            padding: 1px 3px;
+            width: 20px;
+            height: 20px;
+            padding: 2px 3px;
             position: relative;
             justify-content: center;
             top: -8px;
             left: -10px;
             background: #A6331C;
             color: #fff;
+            line-height: 15px;
             border-radius: 60px;
             border: 1px solid #A6331C;
             font-size: 12px;
@@ -164,6 +167,7 @@
     &__navigation {
         &--product {
             width: 100vw;
+            height: 454px;
             background: #fff;
             position: absolute;
             box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.10);
@@ -225,16 +229,24 @@
     }
 
     &__navigation--item {
+        line-height: 63px;
         position: relative;
-        &:hover {
-            &::before {
-                content: '';
-                width: 115%;
-                height: 2px;
-                background: #000;
-                position: absolute;
-                top: 41px;
-            }
+    }
+
+    li {
+        cursor: pointer;
+    }
+
+    &__navigation--active {
+        position: relative;
+        color: var(--title);
+        &::before {
+            content: '';
+            width: 115%;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            top: 41px;
         }
     }
 

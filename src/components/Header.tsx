@@ -107,7 +107,7 @@ export const Header = ({ searchValue, products }) => {
         </div>
       </div>
       <div className='header__bottom--navigation header__navigation flex'>
-        <ProductNavigation setSelectedCategoryId={setSelectedCategoryId} />
+        <ProductNavigation setSelectedCategoryId={setSelectedCategoryId} selectedCategoryId={selectedCategoryId} />
         <Search isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
       </div>
       </div>
