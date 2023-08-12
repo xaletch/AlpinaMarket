@@ -1,6 +1,6 @@
 .search__menu {
     padding-top: 55px;
-    width: 100wh;
+    width: 100%;
     height: 100vh;
     background: #fff;
     position: fixed;
@@ -12,6 +12,11 @@
     &--content {
         width: 896px;
         margin: 0 auto;
+
+        // small tablet
+        @include small-tablet {
+            // width: 650px;
+        }
     }
 
     &--close {
@@ -98,7 +103,7 @@
 }
 
 .search__menu--found--search-all {
-    width: 110%;
+    // width: 110%;
     font-size: 10px;
     font-weight: 400;
     line-height: 16px;

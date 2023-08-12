@@ -11,19 +11,32 @@
             align-items: center;
         }
 
+        &--inner {
+            justify-content: space-between;
+            align-items: center;
+
+            @include small-tablet {
+                display: flex;
+            }
+        }
+
         &--left {
             gap: 25px;
-            grid-column: 5 span;
+            grid-column: 1 span;
         }
 
         &--center {
-            grid-column: 2 span;
+            grid-column: 6 / 8;
             align-items: center;
             justify-content: center;
         }
 
         &--navigation {
             grid-column: 5 span;
+
+            @include small-tablet {
+                display: none;
+            }
         }
 
         &--list {
@@ -78,6 +91,7 @@
     }
 
     &__telephone {
+        margin-left: 25px;
         color: var(--title);
         cursor: pointer;
     }
@@ -104,11 +118,21 @@
             grid-column: 5 span;
             gap: 36px;
             align-items: center;
+
+            // small tablet
+            @include small-tablet {
+                display: none;
+            }
         }
 
         &--center {
             justify-content: center;
             grid-column: 2 span;
+
+            // small tablet
+            @include small-tablet {
+                grid-column: 6 / 8;
+            }
         }
 
         &--item {
@@ -178,6 +202,11 @@
         &--list {
             gap: 24px;
             align-items: center;
+
+            // small tablet
+            @include small-tablet {
+                display: none;
+            }
         }
 
         &--item {
@@ -199,6 +228,11 @@
 
     &__input {
         position: relative;
+        // small tablet
+        @include small-tablet {
+            width: 100%;
+            margin-bottom: 16px;
+        }
 
         input {
             width: 329px;
@@ -211,6 +245,11 @@
             line-height: 20px;
             outline: none;
             background: #f6f6f6;
+
+            // small tablet
+            @include small-tablet {
+                width: 100%;
+            }
         }
 
         svg {

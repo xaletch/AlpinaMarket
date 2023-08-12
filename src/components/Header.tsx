@@ -56,14 +56,16 @@ export const Header = ({ searchValue, products }) => {
         <SearchMenu inputRef={inputRef} products={products} isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} searchValue={searchValue} />
       </div>
       <div className='header__top'>
-        <div className='container grid'>
-        <div className='header__top--left header__location flex'>
-          <LocationPopup isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} selectedCity={selectedCity} />
+        <div className='container'>
+          <div className='header__top--inner grid'>
+            <div className='header__top--left header__location flex'>
+              <LocationPopup isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} selectedCity={selectedCity} />
+            </div>
             <p className='header__telephone'>8 800 700 40 24</p>
-          </div>
-          <CallOrWrite />
-          <div className='header__top--navigation'>
-            <PageNavigation />
+            <CallOrWrite />
+            <div className='header__top--navigation'>
+              <PageNavigation />
+            </div>
           </div>
         </div>
         <LocationMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} setSelectedCity={setSelectedCity} />

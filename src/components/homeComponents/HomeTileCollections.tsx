@@ -15,14 +15,14 @@ export const HomeTileCollections = () => {
         </div>
         <div className='home__tile--collections__bottom flex'>
             <div className='home__tile--collections__bottom--card--top'>
-                <img src={stonelli} alt="error" />
+                <img className='home__tile--collections--img' src={stonelli} alt="error" />
                 <div className='home__tile--collections__bottom--card--bottom flex'>
                     <h3 className='home__tile--collections__bottom--card--bottom__title'>Плитка stonelli</h3>
                     <p className='home__tile--collections__bottom--card--bottom__price'>от ₽ 2 000 м.кв.</p>
                 </div>
             </div>
             <div className='home__tile--collections__bottom--card--top'>
-                <img src={maracesh} alt="error" />
+                <img className='home__tile--collections--img' src={maracesh} alt="error" />
                 <div className='home__tile--collections__bottom--card--bottom flex'>
                     <h3 className='home__tile--collections__bottom--card--bottom__title'>Плитка maracesh</h3>
                     <p className='home__tile--collections__bottom--card--bottom__price'>от ₽ 2 000 м.кв.</p>

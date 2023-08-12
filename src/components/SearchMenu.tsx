@@ -21,7 +21,7 @@ export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, product
     debounce((e: any) => {
       dispatch(setSearchValue(e));
     }, 350),
-    []
+    [],
   );
 
   const searchInput = (e: any) => {

@@ -17,24 +17,24 @@ export const Home = ({ products }) => {
         <div className='container'>
             <div className='product--style flex'>
                 <div className='product--style__left product--style__card'>
-                    <img src={classic} alt='error'/>
+                    <img className='product--style--img' src={classic} alt='error'/>
                     <div className='product--style--bottom'>
                         <h3 className='product--style--bottom__title'>Классический стиль</h3>
                         <ButtonMore />
                     </div>
                 </div>
                 <div className='product--style__right product--style__card'>
-                    <img src={modern} alt='error'/>
+                    <img className='product--style--img' src={modern} alt='error'/>
                     <div className='product--style--bottom'>
                         <h3 className='product--style--bottom__title'>Современный стиль</h3>
                         <ButtonMore />
                     </div>
                 </div>
             </div>
-            <div className='room--catalog'>
+            <div className='home__room--catalog room--catalog'>
                 <HomeCatalog />
             </div>
-            <div className='popular--categories'>
+            <div className='home__popular--categories popular--categories'>
                 <HomeCategory />
             </div>  
             <div className='home__best--offer'>
@@ -43,7 +43,7 @@ export const Home = ({ products }) => {
             <div className='home__tile--collections'>
                 <HomeTileCollections />
             </div>
-            <div className='home__production--section grid'>
+            <div className='home__production--section flex'>
                 <HomeProductionSection />
             </div>
         </div>

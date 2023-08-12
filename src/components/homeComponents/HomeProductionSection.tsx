@@ -17,11 +17,11 @@ export const HomeProductionSection = () => {
         </div>
         <div className='home__production--section__slider flex'>
             <div className='home__production--section__slider--block'>
-                <img src={productionSection1} alt="error" />
+                <img className='home__production--section__img' src={productionSection1} alt="error" />
             </div>
-            <div className='home__production--section__slider--block'>
-                <img src={productionSection2} alt="error" />
-            </div>
+            {/* <div className='home__production--section__slider--block'>
+                <img className='home__production--section__img' src={productionSection2} alt="error" />
+            </div> */}
             <div className='home__production--section__slider--turntable'>
                 <svg width="83" height="83" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1422_60948)">
@@ -35,11 +35,11 @@ export const HomeProductionSection = () => {
                 </defs>
                 </svg>
             </div>
-            <div className='home__production--section__slider--slide button__slide flex'>
+            {/* <div className='home__production--section__slider--slide button__slide flex'>
                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 6H17M17 6L12 1M17 6L12 11" stroke="black"/>
                 </svg>
-            </div>
+            </div> */}
         </div>
         <div className='home__production--section__bottom'>
             <Link to='about'>

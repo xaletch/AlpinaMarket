@@ -89,6 +89,11 @@
                 font-weight: bold;
                 line-height: 32px;
                 color: var(--title);
+
+                @include small-tablet {
+                    font-size: 20px;
+                    line-height: 22px
+                }
             }
         }
 
@@ -253,7 +258,16 @@
                 line-height: 32px;
                 color: var(--title);
                 text-transform: uppercase;
+
+                @include small-tablet {
+                    font-size: 20px;
+                    line-height: 22px
+                }
             }
+        }
+
+        &--img {
+            width: 100%;
         }
 
         &__bottom {
@@ -269,6 +283,10 @@
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
+
+                    @include small-tablet {
+                        // width: 15px;
+                    }
                 }
 
                 &__price {
@@ -276,26 +294,38 @@
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
+
+                    @include small-tablet {
+                        // width: 10px;
+                    }
                 }
             }
         }
     }
 
     &__production--section {
+        flex-direction: column;
+        justify-content: center;
         margin-top: 80px;
 
         &__top {
             width: 614px;
+            margin: 0 auto;
             padding: 0 62px;
             flex-direction: column;
             align-items: center;
-            grid-column: 5 / 9;
+            // grid-column: 5 / 9;
 
             &--title {
                 color: var(--title);
                 font-size: 24px;
                 font-weight: bold;
                 line-height: 32px;
+
+                @include small-tablet {
+                    font-size: 20px;
+                    line-height: 22px
+                }
             }
 
             &--description {
@@ -304,12 +334,17 @@
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 20px;
+
+                @include small-tablet {
+                    font-size: 13px;
+                }
             }
         }
         &__slider {
             margin-top: 32px;
             gap: 16px;
-            grid-column: 5 / 9;
+            justify-content: center;
+            // grid-column: 3 / 11;
             position: relative;
 
             &--turntable {
@@ -347,14 +382,26 @@
         background: var(--surface-img);
     }
 
+    &--img {
+        width: 100%;
+    }
+
     &--bottom {
         padding: 32px;
+
+        @include small-tablet {
+            padding: 22px;
+        }
 
         &__title {
             color: var(--title);
             font-size: 24px;
             font-weight: bold;
             line-height: 32px;
+
+            @include small-tablet {
+                font-size: 18px;
+            }
         }
 
         &__more {
@@ -374,6 +421,17 @@
             font-size: 24px;
             font-weight: bold;
             line-height: 32px;
+
+            @include small-tablet {
+                font-size: 20px;
+                line-height: 22px
+            }
+        }
+    }
+
+    &--img {
+        @include small-tablet {
+            width: 100%;
         }
     }
 
@@ -382,8 +440,18 @@
         gap: 16px;
         display: flex;
 
+        @include small-tablet {
+            justify-content: center;
+        }
+
+        &--card {
+            
+            @include small-tablet {
+                width: 170px;
+            }
+        }
+
         &--card__bottom {
-            padding: 0 63px;
             text-align: center;
         }
     }
@@ -394,6 +462,13 @@
         font-weight: 400;
         line-height: 20px;
         user-select: none;
+
+        @include small-tablet {
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
     }
 
     &__button--slide {
@@ -428,6 +503,10 @@
             width: 120%;
         }
     }
+
+    @include small-tablet {
+        font-size: 7px;
+    }
 }
 
 .popular--categories {
@@ -440,12 +519,22 @@
             font-size: 24px;
             font-weight: bold;
             line-height: 32px;
+
+            @include small-tablet {
+                font-size: 20px;
+                line-height: 22px
+            }
         }
     }
 
     &--bottom {
         margin-top: 32px;
         gap: 16px;
+        flex-wrap: wrap;
+
+        @include small-tablet {
+            gap: 18px;
+        }
     }
 
     &__bottom--card {
@@ -476,6 +565,11 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
+
+        @include small-tablet {
+            font-size: 15px;
+            line-height: 24px;
+        }
     }
 }
 

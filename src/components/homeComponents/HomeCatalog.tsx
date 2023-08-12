@@ -13,7 +13,7 @@ export const HomeCatalog = () => {
       <div className='room--catalog__bottom'>
         {homeCatalog.map((obj, index) => (
           <div className='room--catalog__bottom--card' key={index}>
-            <img src={obj.imageUrl} alt="" />
+            <img className='room--catalog--img' src={obj.imageUrl} alt="" />
             <div className='room--catalog__bottom--card__bottom'>
               <button className='room--catalog__button'>{obj.title}</button>
             </div>
