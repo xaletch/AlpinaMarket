@@ -146,9 +146,8 @@
     &__svg {
         display: none;
 
-        &:hover {
+        &--active {
             transform: rotate(180deg);
-            transition: 0.5s;
         }
 
         @include small-tablet {
