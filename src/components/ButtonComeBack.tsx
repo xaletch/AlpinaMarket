@@ -26,6 +26,7 @@ export const ButtonComeBack = () => {
     '/fittings_accessories': 'Фурнитура и комплектующие',
     '/tiles_porcelain': 'Плитка, керамогранит и мозаика',
     '/furniture_order': 'Мебель на заказ',
+    '/search_all': 'все результаты поиска'
     // '/tables-chairs/tables-tables': 'Столы и стулья / Столы и столики',
   };
 

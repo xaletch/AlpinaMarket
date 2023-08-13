@@ -90,8 +90,8 @@ export const SearchMenu = ({ isSearchOpen, setIsSearchOpen, searchValue, product
             </div>
           )}
           {products.length > 4 && searchValue && (
-            <div className='search__menu--found--search-all__block'>
-              <Link className='search__menu--found--search-all' to='search-All'>ВСЕ РЕЗУЛЬТАТЫ ПОИСКА</Link>
+            <div className='search__menu--found--search-all__block' onClick={handleClickSearchProduct}>
+              <Link className='search__menu--found--search-all' to='search_all'>ВСЕ РЕЗУЛЬТАТЫ ПОИСКА</Link>
             </div>
           )}
         </div>
