@@ -9,19 +9,30 @@
     top: 0;
     bottom: 0;
     z-index: 9999;
-    &--content {
-        width: 896px;
-        margin: 0 auto;
 
-        // small tablet
-        @include small-tablet {
-            // width: 650px;
-        }
+    // small tablet
+    @include small-tablet {
+        padding: 50px 40px;
+    }
+
+    &--content {
+        max-width: 896px;
+        margin: 0 auto;
     }
 
     &--close {
         width: 24px;
         margin-left: auto;
+
+        @include small-tablet {
+            width: 20px;
+        }
+
+        svg {
+            @include small-tablet {
+                width: 22px;
+            }
+        }
     }
 
     &--input {
@@ -47,6 +58,10 @@
             top: 6px;
             right: 8px;
             cursor: pointer;
+
+            @include small-tablet {
+                width: 20px;
+            }
         }
     }
 
@@ -63,6 +78,10 @@
 
             &:hover {
                 background: #F6F6F6;
+            }
+
+            @include small-tablet {
+                width: 312px;
             }
 
             &--link {
