@@ -8,10 +8,28 @@
             padding: 32px 0px;
         }
 
+        &--accordion__header {
+            @include small-tablet {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 16px;
+                border-bottom: 1px solid var(--divider);
+            }
+        }
+
+        &--selected__accordion {
+            border: none;
+        }
+
         &--list {
             gap: 16px;
             &__block {
                 width: 332px;
+
+                @include small-tablet {
+                    width: 100%;
+                }
             }
 
             &__title {
@@ -20,6 +38,10 @@
                 line-height: 24px;
                 letter-spacing: 0.15px;
                 margin-bottom: 16px;
+
+                @include small-tablet {
+                    margin: 0;
+                }
             }
 
             &--your--opinion {
@@ -54,16 +76,52 @@
             margin-top: 9px;
             align-items: center;
             gap: 7px;
+
+            @include small-tablet {
+                padding: 8px 16px;
+            }
+        }
+
+        &__accordion--list {
+            display: block;
+
+            @include small-tablet {
+                display: none;
+            }
         }
 
         &--list {
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
+
+            @include small-tablet {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &__active {
+                @include small-tablet {
+                    display: block;
+                    border-bottom: 1px solid var(--divider);
+                }
+            }
+        }
+
+        &--list__block--pay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         &--item {
             margin-bottom: 8px;
+
+            @include small-tablet {
+                padding: 8px 16px;
+            }
         }
 
         &--about--item {
@@ -72,12 +130,29 @@
             line-height: 16px;
             letter-spacing: 0.4px;
 
+            @include small-tablet {
+                padding: 8px 16px;
+            }
+
             &--tel {
                 color: var(--title);
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 20px;
             }
+        }
+    }
+
+    &__svg {
+        display: none;
+
+        &:hover {
+            transform: rotate(180deg);
+            transition: 0.5s;
+        }
+
+        @include small-tablet {
+            display: block;
         }
     }
 
@@ -90,10 +165,22 @@
         &--inner {
             padding: 16px 0px;
             justify-content: space-between;
+
+            @include small-tablet {
+                padding: 32px 0;
+                text-align: center;
+                flex-direction: column;
+                gap: 16px;
+            }
         }
 
         &--left {
             gap: 74px;
+
+            @include small-tablet {
+                gap: 16px;
+                flex-direction: column;
+            }
         }
 
         &--title {
@@ -105,6 +192,10 @@
 
         &--right--title {
             margin-right: 157px;
+
+            @include small-tablet {
+                margin: 0;
+            }
         }
     }
 }

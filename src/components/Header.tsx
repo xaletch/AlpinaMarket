@@ -73,6 +73,15 @@ export const Header = ({ searchValue, products }) => {
       <div className='container'>
       <div className='header__bottom grid'>
         <Navigation />
+        <div className='header__bottom--menu'>
+          <div className='header__bottom--menu__btn'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
+              <rect width="18" height="1.5" rx="0.75" fill="black"/>
+              <rect y="6.5" width="18" height="1.5" rx="0.75" fill="black"/>
+              <rect y="13" width="18" height="1.5" rx="0.75" fill="black"/>
+            </svg>
+          </div>
+        </div>
           <div className='header__bottom--center logo flex'>
             <Link to='/'>
               <svg width="82" height="32" viewBox="0 0 82 32" fill="none" xmlns="http://www.w3.org/2000/svg">

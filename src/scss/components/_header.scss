@@ -113,6 +113,20 @@
         margin-top: 16px;
         font-size: 14px;
         justify-content: space-between;
+        align-items: center;
+
+        &--menu {
+            display: none;
+
+            &__btn {
+                width: 18px;
+                cursor: pointer;
+            }
+
+            @include small-tablet {
+                display: block;
+            }
+        }
 
         &--list {
             grid-column: 5 span;
