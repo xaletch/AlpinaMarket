@@ -18,6 +18,10 @@
             @include small-tablet {
                 display: flex;
             }
+
+            @include mobile {
+                display: flex;
+            }
         }
 
         &--left {
@@ -41,6 +45,10 @@
 
         &--list {
             justify-content: end;
+        }
+
+        @include mobile {
+            font-size: 13px;
         }
     }
 
@@ -78,6 +86,10 @@
 
         &--container {
             padding: 0;
+        }
+
+        @include mobile {
+            display: none;
         }
     }
 

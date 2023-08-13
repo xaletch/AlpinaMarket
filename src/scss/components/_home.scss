@@ -386,6 +386,15 @@
         width: 100%;
     }
 
+    
+    &__right {
+        @include mobile {
+            width: 100%;
+            position: absolute;
+            left: -100%;
+        }
+    }
+
     &--bottom {
         padding: 32px;
 
@@ -408,6 +417,12 @@
             margin-top: 16px;
             // padding: 0 15px;
         }
+    }
+
+    @include mobile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        overflow: hidden;
     }
 }
 
@@ -433,6 +448,22 @@
         @include small-tablet {
             width: 100%;
         }
+
+        @include mobile {
+            width: 172px;                
+        }
+
+        @include mobile-average {
+    width: 156px;            
+        }
+
+        @include mobile-small {
+            max-width: 152px;
+        }
+
+        @include mobile-iphone-4 {
+            width: 132px;
+        }
     }
 
     &__bottom {
@@ -444,10 +475,30 @@
             justify-content: center;
         }
 
+        @include mobile {
+            flex-wrap: wrap;
+        }
+
         &--card {
             
             @include small-tablet {
                 width: 170px;
+            }
+
+            @include mobile {
+            width: 172px;                       
+            }
+
+            @include mobile-average {
+                width: 156px;
+            }
+
+            @include mobile-small {
+                width: 152px;
+            }
+
+            @include mobile-iphone-4 {
+                width: 132px;
             }
         }
 
@@ -487,16 +538,6 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     position: relative;
-
-    // &::before {
-    //     content: "";
-    //     width: 105%;
-    //     height: 1px;
-    //     background: var(--primary-hight);
-    //     position: absolute;
-    //     bottom: 0;
-    //     transition: all 0.3s ease-out;
-    // }
 
     &:hover {
         &::before {
