@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts, selectProductData } from './redux/slice/productSlice';
 import { search } from './redux/slice/SearchSlice';
 import { ProductInfo } from './pages/ProductInfo';
+import { Order } from './pages/Order';
 
 function App() {
   const dispatch = useDispatch();
@@ -62,9 +63,10 @@ function App() {
           <Route path='salons' element={<OurSalons selected={selected} onSelected={onSelected} />}></Route>
           <Route path='paymentDelivery' element={<Delivery selected={selected} onSelected={onSelected} />}></Route>
           <Route path='*' element={<PageNotFound products={item} />}></Route>
-          <Route path='card' element={<Cart />}></Route>
+          <Route path='cart' element={<Cart />}></Route>
           <Route path='catalog' element={<Catalog products={item} />}></Route>
           <Route path='product/:id' element={<ProductInfo />}></Route>
+          <Route path='cart/order' element={<Order />}></Route>
         </Routes>
         <Footer />
     </div>

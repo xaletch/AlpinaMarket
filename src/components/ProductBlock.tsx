@@ -72,7 +72,7 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
                   </svg>
                 </button>
               ) : (
-                <NavLink to='/card'>
+                <NavLink to='/cart'>
                   <button className='home__best--offer__card--button' onClick={handleClickButton}>В корзине</button>
                 </NavLink>
               )}

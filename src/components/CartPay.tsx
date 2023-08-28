@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { discountTotalPrice } from '../redux/slice/cartSlice';
 import { RootState } from '../redux/store';
+import { Link } from 'react-router-dom';
 
 export const CartPay = ({ totalPrice }) => {
   const dispatch = useDispatch();
@@ -45,7 +46,9 @@ export const CartPay = ({ totalPrice }) => {
           <p className='cart__payment--total__title'>Итого:</p>
           <p className='cart__payment--total__price'>{totalPrice - discountPrice} руб.</p>
         </div>
-        <button className='cart__payment--go-to-pay'>Перейти к оформлению</button>
+        <Link to='order'>
+          <button className='cart__payment--go-to-pay'>Перейти к оформлению</button>
+        </Link>
       </div>
     </>
   )

@@ -1,5 +1,4 @@
-// fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+@import 'fonts';
 
 html {
     --container: 1376px;
@@ -11,17 +10,23 @@ html {
 }
 
 :root {
+    --primary-hight-100: #000;
     --primary-hight: rgba(0, 0, 0, 0.60);
     --title: #000;
     --surface-img: #F6F6F6;
     --secondary: #A6331C;
     --divider: rgba(0, 0, 0, 0.12);
     --light-color: #fff;
+    --background-list2: #FAFAFA;
+    --primary-disabled-38: rgba(0, 0, 0, 0.38);
+    --primary-disabled-12: rgba(0, 0, 0, 0.12);
+    --primary-disabled-12: rgba(0, 0, 0, 0.60);
+    --surface: #FFF;
 }
 
 body {
     margin: 0;
-    font-family: Abel, sans-serif;
+    font-family: 'PT Sans';
     color: var(--primary-hight);
 }
 

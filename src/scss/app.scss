@@ -1,6 +1,11 @@
 @import 'settings';
 @import 'mixins';
 
+// components
+
+// page
+@import './components/order';
+
 @import './components/header';
 @import './components/home';
 @import './components/footer';

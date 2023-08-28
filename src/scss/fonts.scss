@@ -1,0 +1,15 @@
+@font-face {
+    font-family: PT Sans;
+    src: url("../fonts/PTSans-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    unicode-range: U+000-5FF; /* Cyrillic character set */
+}
+
+@font-face {
+    font-family:  PT Sans;
+    src: url("../fonts/PTSans-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    unicode-range: U+000-5FF; /* Cyrillic character set */
+}
