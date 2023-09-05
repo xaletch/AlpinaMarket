@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Information } from './Order/Information';
+import { OrderDelivery } from '../components/OrderDelivery';
+import { Item } from '../components/Order/Item';
+import { RootState } from '../redux/store';
+import { useSelector } from 'react-redux';
+import { MenuProduct } from '../components/Order/MenuProduct';
+import { Stage } from '../components/Order/Stage';
 
 export const Order = () => {
+    const { items, totalPrice, } = useSelector((state: RootState) => state.cart);
+    const discountPrice = useSelector((state: RootState) => state.cart.discountPrice);
+
+    const [openMenuProduct, setOpenMenuProduct] = useState<boolean>(false);
+
+    const [checkoutTwo, setCheckoutTwo] = useState<boolean>(false);
 
     return (
         <div className='order'>
@@ -23,10 +35,18 @@ export const Order = () => {
                 </div>
                 <div className='order_content'>
                     <div className='order_content-order'>
-                        <Information />
+                        <Information setCheckoutTwo={setCheckoutTwo} />
+                        {checkoutTwo && <OrderDelivery />}
+
+                        <Stage checkoutTwo={checkoutTwo} />
                     </div>
-                    <div className='order_content-list'></div>
+                    <div className='order_content-list'>
+                        <Item items={items} totalPrice={totalPrice} discountPrice={discountPrice} openMenuProduct={openMenuProduct} setOpenMenuProduct={setOpenMenuProduct}/>
+                    </div>
                 </div>
+            </div>
+            <div className={openMenuProduct === true ? 'order_menu-products order_menu-products_active' : 'order_menu-products'}>
+                <MenuProduct items={items} totalPrice={totalPrice} discountPrice={discountPrice} openMenuProduct={openMenuProduct} setOpenMenuProduct={setOpenMenuProduct}/>
             </div>
         </div>
     )

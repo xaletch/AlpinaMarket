@@ -6,7 +6,7 @@ html {
     --container-width:  calc(var(var(--container) + (var(var(--padding-container) * 2))));
     box-sizing: border-box;
     position: relative;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 :root {
@@ -22,6 +22,7 @@ html {
     --primary-disabled-12: rgba(0, 0, 0, 0.12);
     --primary-disabled-12: rgba(0, 0, 0, 0.60);
     --surface: #FFF;
+    --border-product-all: #EBEBEB;
 }
 
 body {

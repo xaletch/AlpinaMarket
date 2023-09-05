@@ -22,7 +22,7 @@ import { Order } from './pages/Order';
 
 function App() {
   const dispatch = useDispatch();
-  const { item } = useSelector(selectProductData)
+  const { item } = useSelector(selectProductData);
   const { searchValue } = useSelector(search);
   const isSearch = React.useRef(false);
 
