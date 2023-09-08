@@ -23,9 +23,17 @@
         display: flex;
         justify-content: center;
         gap: 16px;
+
+        @include mobile-iphone {
+            flex-direction: column;
+        }
         
         &-order {
             width: 680px;
+
+            @include mobile-iphone {
+                width: 100%;
+            }
         }
 
         &-list {
@@ -33,6 +41,10 @@
             height: 100%;
             padding: 32px;
             background: var(--background-list2);
+
+            @include mobile-iphone {
+                width: 100%;
+            }
 
             &-head {
                 display: flex;
@@ -46,6 +58,10 @@
                     font-weight: 400;
                     line-height: 24px;
                     letter-spacing: 0.15px;
+
+                    @include mobile-iphone {
+                        font-size: 14px;
+                    }
                 }
 
                 &-change {
@@ -71,6 +87,11 @@
                     height: 117px;
                     background: var(--surface-img);
 
+                    @include mobile-iphone {
+                        width: 57px;
+                        height: 57px;
+                    }
+
                     img {
                         width: 100%;
                     }
@@ -85,6 +106,11 @@
                     border: 2px solid var(--border-product-all);
                     cursor: pointer;
 
+                    @include mobile-iphone {
+                        width: 57px;
+                        height: 57px;
+                    }
+
                     &-num {
                         padding: 13px 9px;
 
@@ -93,6 +119,10 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: 20px;
+
+                        @include mobile-iphone {
+                            font-size: 10px;
+                        }
                     }
                 }
             }
@@ -112,6 +142,10 @@
                         font-weight: 400;
                         line-height: 20px;
                         letter-spacing: 0.25px;
+
+                        @include mobile-iphone {
+                            font-size: 12px;
+                        }
                     }
                     
                     &-price {
@@ -121,6 +155,10 @@
                         font-weight: 400;
                         line-height: 20px;
                         letter-spacing: 0.25px;
+
+                        @include mobile-iphone {
+                            font-size: 12px;
+                        }
                     }
 
                     &-discount {
@@ -139,6 +177,7 @@
                     margin-top: 16px;
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
 
                     &_title {
                         color: var(--primary-hight-100);
@@ -147,6 +186,8 @@
                         font-weight: 400;
                         line-height: 24px;
                         letter-spacing: 0.15px;
+
+                        font-size: 14px;
                     }
 
                     &_price {
@@ -156,6 +197,10 @@
                         font-weight: 400;
                         line-height: 24px;
                         letter-spacing: 0.15px;
+
+                        @include mobile-iphone {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -189,6 +234,10 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 32px;
+
+                @include mobile-iphone {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -212,6 +261,10 @@
                 letter-spacing: 0.15px;
                 cursor: pointer;
                 border-bottom: 1px solid var(--primary-disabled-12);
+
+                @include mobile-iphone {
+                    font-size: 12px;
+                }
             }
 
             &-active {
@@ -283,6 +336,10 @@
                 &:focus {
                     border: 1px solid var(--primary-hight-100);
                 }
+
+                @include mobile-iphone {
+                    font-size: 14px;
+                }
             }
 
             label {
@@ -299,7 +356,6 @@
         &-btn {
             margin-top: 32px;
             width: 100%;
-            // height: 48px;
             padding: 16px 8px;
             border-radius: 2px;
             background: var(--primary-hight-100);
@@ -336,6 +392,10 @@
                     font-weight: 400;
                     line-height: 24px;
                     letter-spacing: 0.15px;
+
+                    @include mobile-iphone {
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -378,6 +438,10 @@
                 font-weight: 400;
                 line-height: 20px;
                 letter-spacing: 0.25px;
+
+                @include mobile-iphone {
+                    font-size: 12px;
+                }
             }
 
             &_radio {
@@ -467,15 +531,23 @@
         padding-bottom: 240px;
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -150%;
         bottom: 0;
         background: #fff;
         transition: right 0.1s ease;
         overflow: hidden;
         overflow-y: scroll;
 
+        @include mobile-iphone {
+            width: 100%;
+        }
+
         &::-webkit-scrollbar {
             width: 8px;
+
+            @include mobile-iphone {
+                width: 0;
+            }
         }
 
         &::-webkit-scrollbar-track {
@@ -507,6 +579,10 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
+            @include mobile-iphone {
+                font-size: 16px;
+            }
         }
 
         &_product {
@@ -549,7 +625,11 @@
                 position: fixed;
                 bottom: 0;
                 background: var(--light-color);
-                z-index: 99999999;
+                z-index: 999;
+
+                @include mobile-iphone {
+                    width: 96%;
+                }
             }
         }
     }

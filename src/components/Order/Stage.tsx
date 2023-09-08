@@ -6,9 +6,7 @@ export const Stage = ({ checkoutTwo }) => {
         {stage: "2", name: "Способ доставки"},
         {stage: "3", name: "Сборка"},
         {stage: "4", name: "Оплата"},
-    ];
-
-    console.log(stages)
+    ];  
 
     checkoutTwo && stages.splice(0, 1);
 

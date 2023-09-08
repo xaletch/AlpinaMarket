@@ -112,10 +112,20 @@
             justify-content: center;
             column-gap: 16px;
             row-gap: 24px;
+
+            @include mobile-iphone {
+                justify-content: space-between;
+            }
         }
 
         &__card {
             position: relative;
+
+            @include mobile-iphone {
+                display: flex;
+                flex-direction: column;
+                width: 145px;
+            }
 
             &--favorites {
                 width: 32px;
@@ -139,6 +149,16 @@
 
             &--img {
                 width: 265px;
+                
+                @include small-tablet-2 {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                @include mobile-iphone {
+                    width: 145px;
+                    height: 141px;
+                }
             }
 
             &--sale {
@@ -163,16 +183,34 @@
                 background: #F6F6F6;
                 justify-content: center;
                 align-items: center;
+
+                @include small-tablet-2 {
+                    width: 290px;
+                    height: 280px;
+                }
+
+                @include mobile-iphone {
+                    width: 145px;
+                    height: 160px;
+                }
             }
 
             &--bottom {
                 margin-top: 16px;
                 justify-content: space-between;
+
+                @include mobile-iphone {
+                    flex-direction: column;
+                }
                 
                 &--title {
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
+
+                    @include mobile-iphone {
+                        font-size: 12px;
+                    }
                 }
 
                 &--price {
@@ -180,6 +218,10 @@
                     font-size: 16px;
                     font-weight: bold;
                     line-height: 24px;
+
+                    @include mobile-iphone {
+                        font-size: 12px;
+                    }
                 }
             }
 
@@ -188,6 +230,10 @@
                 font-size: 11px;
                 font-weight: bold;
                 line-height: 24px;
+                
+                @include mobile-iphone {
+                    font-size: 8px;
+                }
             }
 
             &--add--cart {
@@ -213,16 +259,28 @@
                 border-radius: 2px;
                 text-transform: uppercase;
                 color: var(--light-color);
+
+                @include mobile-iphone {
+                    font-size: 8px;
+                }
             }
         }
 
         &__gallery--container {
             margin-top: 16px;
             justify-content: space-between;
+
+            @include mobile-iphone {
+                justify-content: end;
+            }
         }
 
         &__gallery--block {
             gap: 13px;
+
+            @include mobile-iphone {
+                display: none;
+            }
         }
 
         &__gallery--photo {
@@ -274,6 +332,10 @@
             margin-top: 30px;
             gap: 16px;
 
+            @include mobile-iphone {
+                flex-direction: column;
+            }
+
             &--card--bottom {
                 margin-top: 14px;
                 justify-content: space-between;
@@ -309,7 +371,7 @@
         margin-top: 80px;
 
         &__top {
-            width: 614px;
+            max-width: 614px;
             margin: 0 auto;
             padding: 0 62px;
             flex-direction: column;
@@ -326,6 +388,11 @@
                     font-size: 20px;
                     line-height: 22px
                 }
+
+                @include mobile-iphone {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
             }
 
             &--description {
@@ -338,25 +405,38 @@
                 @include small-tablet {
                     font-size: 13px;
                 }
+
+                @include mobile-iphone {
+                    margin-top: 10px;
+                    font-size: 10px;
+                    line-height: 16px;
+                }
             }
         }
         &__slider {
             margin-top: 32px;
             gap: 16px;
             justify-content: center;
-            // grid-column: 3 / 11;
             position: relative;
 
             &--turntable {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translateY(-50%);
+                transform: translate(-50%, -50%);
                 cursor: pointer;
+
+                svg {
+                    width: 60px;
+                }
             }
 
             &--block {
                 position: relative;
+
+                img {
+                    width: 100%;
+                }
             }
 
             &--slide {
@@ -552,6 +632,10 @@
 
 .popular--categories {
     margin-top: 64px;
+
+    @include mobile-iphone {
+        display: none;
+    }
     &__top {
         justify-content: space-between;
 
@@ -588,6 +672,10 @@
             opacity: 1;
         }
 
+        @include small-tablet-2 {
+            width: 200px;
+        }
+
         &--img {
             justify-content: center;
             align-items: center;
@@ -595,6 +683,14 @@
             width: 216px;
             height: 203px;
             background: #F6F6F6;
+
+            @include small-tablet-2 {
+                width: 190px;
+            }
+
+            @include mobile-iphone {
+                width: 100px;
+            }
         }
 
         &__bottom {

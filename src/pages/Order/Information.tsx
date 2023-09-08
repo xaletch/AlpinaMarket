@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
-import { Item } from '../../components/Order/Item';
 
 interface MyForm {
     name: string;

@@ -38,7 +38,6 @@ export const ProductInfo = () => {
             <h2>{product?.title}</h2>
             <p>{product?.price}</p>
         </div>
-        <ProductBlock/>
     </div>
   )
 }

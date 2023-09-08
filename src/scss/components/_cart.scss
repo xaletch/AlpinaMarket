@@ -10,6 +10,10 @@
 
     &__container {
         justify-content: space-between;
+
+        @include mobile-iphone {
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -22,8 +26,13 @@
 
         &--left {
             margin-right: 20px;
+            
             &__img {
                 width: 100px;
+            }
+
+            @include mobile-iphone {
+                margin-right: 12px;
             }
         }
 
@@ -38,6 +47,11 @@
 
             &__counter--title {
                 flex-direction: column;
+
+                @include mobile-iphone {
+                    width: 100px;
+                    text-align: start;
+                }
             }
 
             &__title {
@@ -46,6 +60,11 @@
                 line-height: 24px;
                 letter-spacing: 0.15px;
                 margin-bottom: 8px;
+
+                @include mobile-iphone {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
             }
 
             &__price {
@@ -57,6 +76,18 @@
                     line-height: 20px;
                     color: var(--title);
                     letter-spacing: 0.25px;
+
+                    @include mobile-iphone {
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+
+                &--delete {
+                    @include mobile-iphone {
+                        flex-direction: column-reverse;
+                        justify-content: space-between;
+                    }
                 }
             }
 
@@ -75,6 +106,11 @@
                 cursor: pointer;
                 transition: background .5s;
 
+                @include mobile-iphone {
+                    width: 22px;
+                    height: 22px;
+                }
+
                 &:hover {
                     background: #ebeff2;
                 }
@@ -92,6 +128,11 @@
             font-weight: bold;
             color: var(--title);
             cursor: pointer;
+
+            @include mobile-iphone {
+                width: 28px;
+                height: 28px;
+            }
         }
 
         &--count {
@@ -106,6 +147,10 @@
             background: #f6f6f6;
             margin: 0 1px;
             color: var(--title);
+
+            @include mobile-iphone {
+                height: 28px;
+            }
         }
 
         &--minus {
@@ -119,6 +164,11 @@
             font-weight: bold;
             color: var(--title);
             cursor: pointer;
+
+            @include mobile-iphone {
+                width: 28px;
+                height: 28px;
+            }
         }
 
         svg {
@@ -129,10 +179,14 @@
 
     &__block--pay {
         width: 332px;
-        // height: 300px;
         height: 100%;
         padding: 16px;
         background: #F6F6F6;
+
+        @include mobile-iphone {
+            margin-top: 64px;
+            width: 100%;
+        }
     }
 
     &__header--pay {
@@ -200,6 +254,11 @@
 
                 &:focus {
                     border: 1px solid #000;
+                }
+
+                @include mobile-iphone {
+                    font-size: 12px;
+                    line-height: 18px;
                 }
             }
 
