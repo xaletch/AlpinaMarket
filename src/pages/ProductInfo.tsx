@@ -2,11 +2,15 @@ import React, { useState, useEffect } from 'react'
 
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ProductBlock } from '../components/ProductBlock';
+import { Gallery } from '../components/ProductInfo/Gallery';
+import { ProductSettings } from '../components/ProductInfo/ProductSettings';
+
+
 interface ProductInfoInterface {
     img: string;
     title: string;
     price: number;
+    gallery: string;
 }
 
 export const ProductInfo = () => {
@@ -32,11 +36,12 @@ export const ProductInfo = () => {
     }, [id]);
 
   return (
-    <div className='product--info'>
+    <div className='product-info'>
         <div className='container'>
-            <img src={product?.img} alt="" />
-            <h2>{product?.title}</h2>
-            <p>{product?.price}</p>
+            <div className='product-info_block'>
+                <Gallery img={product?.img} gallery={product?.gallery} />
+                <ProductSettings title={product?.title} price={product?.price} />
+            </div>
         </div>
     </div>
   )

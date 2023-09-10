@@ -1,0 +1,186 @@
+.product-info {
+    margin-top: 32px;
+
+    &_block {
+        display: flex;
+        justify-content: space-between;
+
+        &-gallery {
+            width: 911px;
+
+            &-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--surface-img);
+                height: 607px;
+            }
+
+            img {
+                width: 544px;
+            }
+
+            &-slide {
+                margin-top: 16px;
+                display: flex;
+                gap: 16px;
+            
+                &-item {
+                    width: 100px;
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: var(--surface-img);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-menu {
+            width: 448px;
+
+            &_name {
+                color: var(--primary-hight-100);
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+            }
+
+            &_price {
+                margin-top: 22px;
+                color: var(--primary-hight-100);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0.15px;
+            }
+
+            &_settings {
+                margin-top: 8px;
+
+                &-popup {
+                    border-bottom: 1px solid var(--divider);
+
+                    &-title {
+                        padding: 16px 0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: #000;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                        letter-spacing: 0.25px;
+                        cursor: pointer;
+                    }
+                }
+
+                &-accordion {
+                    padding: 0 24px;
+                    padding-bottom: 26px;
+                    color: var(--primary-hight-100);
+
+                    &_title {
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                    }
+
+                    &_setting {
+                        margin-top: 22px;
+                        display: flex;
+                        justify-content: center;
+                        gap: 12px;
+
+                        &-block {
+                            width: 32px;
+                            height: 32px;
+                            background: #b0e0e6;
+                            border-radius: 100px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &_order {
+                        margin-top: 24px;
+                        text-align: center;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 16px;
+                        letter-spacing: 0.4px;
+                    }
+                    
+                    &_btn {
+                        margin-top: 24px;
+                        padding: 8px;
+                        width: 100%;
+                        border-radius: 2px;
+                        border: 1px solid var(--primary-hight-100);
+
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 16px;
+                        letter-spacing: 0.25px;
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            background: var(--primary-hight-100);
+                            color: var(--primary-on-primary-white-100);
+                        }
+                    }
+                }
+
+                &-unopen {
+                    display: none;
+                }
+
+                &-open {
+                    display: block;
+                }
+            }
+
+            &_btn {
+                margin-top: 24px;
+
+                &-btn {
+                    width: 100%;
+                    padding: 18px 8px;
+                    margin-bottom: 16px;
+                    border-radius: 2px;
+                    border: 1px solid var(--primary-hight-100);
+
+                    text-align: center;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    letter-spacing: 0.25px;
+                    transition: 0.3s ease-in-out;
+                }
+
+                &-pay {
+                    color: var(--primary-on-primary-white-100);
+                    background: var(--primary-hight-100);
+
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+
+                &-question {
+                    &:hover {
+                        background: var(--primary-hight-100);
+                        color: var(--primary-on-primary-white-100);
+                    }
+                }
+            }
+        }
+    }
+}

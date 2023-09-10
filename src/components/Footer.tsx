@@ -9,7 +9,6 @@ export const Footer = () => {
 
     const handleClickAccordion = (index: number) => {
         accordionOpen === index ? setAccordionOpen(null) : setAccordionOpen(index);
-        console.log(accordionOpen);
     }
 
   return (
