@@ -6,7 +6,7 @@ interface PageNames {
   [key: string]: string;
 }
 
-export const ButtonComeBack = () => {
+export const ButtonComeBack = ( { id } ) => {
   const location = useLocation();
 
   const pageNames: PageNames = {
@@ -26,7 +26,8 @@ export const ButtonComeBack = () => {
     '/fittings_accessories': 'Фурнитура и комплектующие',
     '/tiles_porcelain': 'Плитка, керамогранит и мозаика',
     '/furniture_order': 'Мебель на заказ',
-    '/search_all': 'все результаты поиска'
+    '/search_all': 'все результаты поиска',
+    '/product/': '',
     // '/tables-chairs/tables-tables': 'Столы и стулья / Столы и столики',
   };
 
@@ -36,7 +37,7 @@ export const ButtonComeBack = () => {
 
   const selectedCategory = productNavigate.find((category) => category.navigation === 'tables-chairs');
 
-  const category = selectedCategory?.nameFurniture.map((item) => item.navigateName);
+  // const category = selectedCategory?.nameFurniture.map((item) => item.navigateName);
 
     // console.log(category[]);
 

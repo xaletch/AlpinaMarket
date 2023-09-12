@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Gallery } from '../components/ProductInfo/Gallery';
 import { ProductSettings } from '../components/ProductInfo/ProductSettings';
+import { ButtonComeBack } from '../components/ButtonComeBack';
+import { ProductDescription } from '../components/ProductInfo/ProductDescription';
 
 
 interface ProductInfoInterface {
@@ -11,7 +13,7 @@ interface ProductInfoInterface {
     title: string;
     price: number;
     gallery: string;
-}
+};
 
 export const ProductInfo = () => {
     const { id } = useParams();
@@ -38,10 +40,14 @@ export const ProductInfo = () => {
   return (
     <div className='product-info'>
         <div className='container'>
+            <ButtonComeBack />
             <div className='product-info_block'>
                 <Gallery img={product?.img} gallery={product?.gallery} />
                 <ProductSettings title={product?.title} price={product?.price} />
             </div>
+            <div className='product-info_description'>
+                <ProductDescription />
+            </div>  
         </div>
     </div>
   )

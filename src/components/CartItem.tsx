@@ -30,7 +30,7 @@ export const CartItem = ({ id, img, title, price, count }) => {
           <div className='cart__card--right--inner flex'>
             <div className='cart__card--right__counter--title flex'>
               <div className='cart__card--right__title'>
-                <a className='cart__product--name'>{title}</a>
+                <Link to={`/product/${id}`} className='cart__product--name'>{title}</Link>
               </div>
               <div className='cart__card--right__counter flex'>
                 <button disabled={count === 1} className='cart__card--right__counter--button cart__card--plus flex' onClick={minusBtn}>-</button>

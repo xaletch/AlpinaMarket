@@ -13,7 +13,6 @@ export const ProductSettings = ({ title, price }) => {
 
   const handleClickAccordion = (index: number) => {
       accordionOpen === index ? setAccordionOpen(null) : setAccordionOpen(index);
-      console.log(accordionOpen);
   }
 
   return (
@@ -43,7 +42,7 @@ export const ProductSettings = ({ title, price }) => {
                 <p className='product-info_block-menu_settings-accordion_title'>{item.innerName}</p>
                 <div className='product-info_block-menu_settings-accordion_setting'>
                   {item.material.map((item, index) => (
-                    <div className='product-info_block-menu_settings-accordion_setting-block' key={index}>{item}</div>
+                    <div className='product-info_block-menu_settings-accordion_setting-block' key={index} >{item}</div>
                   ))}
                 </div>
                 <p className='product-info_block-menu_settings-accordion_order'><Link to=''>{item.materialOrder}</Link></p>
