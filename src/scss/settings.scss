@@ -22,6 +22,7 @@ html {
     --primary-disabled-38: rgba(0, 0, 0, 0.38);
     --primary-disabled-12: rgba(0, 0, 0, 0.12);
     --primary-disabled-12: rgba(0, 0, 0, 0.60);
+    --primary-disabled-10: rgba(0, 0, 0, 0.10);
     --surface: #FFF;
     --border-product-all: #EBEBEB;
 }
@@ -30,6 +31,8 @@ body {
     margin: 0;
     font-family: 'PT Sans';
     color: var(--primary-hight);
+    position: relative;
+    z-index: 500;
 }
 
 *, *::before, *::after {
@@ -60,6 +63,11 @@ ul {
 
 img {
     user-select: none;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
 }
 
 .container {

@@ -17,12 +17,22 @@ type ProductBlockProps = {
 
 export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, price, sale, discount, size, gallery }) => {
   const [cardButton, setCardButton] = useState<boolean>(true);
+  const [isGallery, setIsGallery] = useState<number>(0);
+
   const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   localStorage.getItem('cardButton');
+  //   localStorage.setItem('cardButton', JSON.stringify(cardButton));
+  // }, [cardButton]);
+
+
   useEffect(() => {
-    localStorage.getItem('cardButton');
-    localStorage.setItem('cardButton', JSON.stringify(cardButton));
-  }, [cardButton]);
+    const storedCardButton = localStorage.getItem(`cardItemAdd_${id}`);
+    if (storedCardButton !== null) {
+       setCardButton(JSON.parse(storedCardButton));
+    }
+ }, [id]);
 
   const handleClickCartAdd = () => {
     const item: CartItem = {
@@ -34,19 +44,25 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
     };
 
     dispatch(addProducts(item));
-    setCardButton(false)
+    setCardButton(false);
+    localStorage.setItem(`cardItemAdd_${id}`, JSON.stringify(false));
   };
 
   const handleClickButton = () => {
-    window.scrollTo(0, 0)
-  }
+    window.scrollTo(0, 0);
+  };
+
+  const onChangeSelectedPhoto = (index: number) => {
+    setIsGallery(index);
+    // console.log(`Photo: ${gallery[index]}`);
+  };
 
   return (
     <>
         <div className='home__best--offer__card'>
-          <Link to={`/product/${id}`}>
+          <Link to={`/product/${id}`} onClick={handleClickButton}>
             <div className='home__best--offer__card--top flex'>
-              <img className='home__best--offer__card--img' src={img} alt={title} />
+              <img className='home__best--offer__card--img' src={img && gallery[isGallery]} alt={title} />
             </div>
           </Link>
             {sale && <p className='home__best--offer__card--sale home__best--offer__top--card'>{sale}</p>}
@@ -59,8 +75,8 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
             <div className="home__best--offer__gallery--container flex">
               <div className='home__best--offer__gallery--block flex'>
               {gallery && gallery.map((photo, index) => (
-                <div className='home__best--offer__gallery--photo flex'>
-                  <div key={index}>{photo}</div>
+                <div className='home__best--offer__gallery--photo flex' key={index} onMouseMove={() => onChangeSelectedPhoto(index)}>
+                  <img src={photo} alt={photo} />
                 </div>
               ))}
               <div className='home__best--offer__gallery--photo flex'>+5</div>

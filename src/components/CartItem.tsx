@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export const CartItem = ({ id, img, title, price, count }) => {
   const dispatch = useDispatch();
-
+  
   const delProduct = () => {
     dispatch(deleteProduct(id));
   };

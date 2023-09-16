@@ -1,19 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { addProducts } from '../../redux/slice/cartSlice';
+import { useDispatch } from 'react-redux';
 
 
-const productSettings = [
-  { name: "Ткань и цвет", innerName: "В наличии на складе", material: [ '', '', '', '', '', '', ], materialOrder: "Материал под заказ", },
-  { name: "Ножки", innerName: "В наличии на складе", material: [ '', '', '', '', ], materialOrder: "Материал под заказ", },
-  { name: "Другой параментр", innerName: "В наличии на складе", material: [ '', '', '', ], materialOrder: "Материал под заказ", },
-]
+const productSettings = [ "Ткань и цвет", "Ножки", "Другой параметр",]
 
-export const ProductSettings = ({ title, price }) => {
+export const ProductSettings = ({ id, img, title, price, innerName, material, materialOrder, setIsModalWindow }) => {
   const [accordionOpen, setAccordionOpen] = React.useState<number | null>(null);
+  const [selectColor, setSelectColor] = React.useState<number>(0);
+
+  const dispatch = useDispatch();
 
   const handleClickAccordion = (index: number) => {
       accordionOpen === index ? setAccordionOpen(null) : setAccordionOpen(index);
-  }
+  };
+
+  const handleClickSelectedColor = (index: number) => {
+    setSelectColor(index);
+  };
+
+  const handleClickPayProduct = () => {
+    const item: CartItem = {
+      id,
+      title,
+      price,
+      img,
+      count: 0,
+    };
+
+    dispatch(addProducts(item));
+    setIsModalWindow(true);
+  };
 
   return (
     <div className='product-info_block-menu'>
@@ -24,7 +42,7 @@ export const ProductSettings = ({ title, price }) => {
           <>
             <div className='product-info_block-menu_settings-popup' key={index}>
               <p className='product-info_block-menu_settings-popup-title' onClick={() => handleClickAccordion(index)}>
-                {item.name}
+                {item}
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <g clip-path="url(#clip0_11338_70873)">
@@ -39,13 +57,13 @@ export const ProductSettings = ({ title, price }) => {
                 </span>
               </p>
               <div className={accordionOpen === index ? 'product-info_block-menu_settings-open product-info_block-menu_settings-accordion' : 'product-info_block-menu_settings-unopen'}>
-                <p className='product-info_block-menu_settings-accordion_title'>{item.innerName}</p>
+                <p className='product-info_block-menu_settings-accordion_title'>{innerName}</p>
                 <div className='product-info_block-menu_settings-accordion_setting'>
-                  {item.material.map((item, index) => (
-                    <div className='product-info_block-menu_settings-accordion_setting-block' key={index} >{item}</div>
+                  {material && material.map((item: any, index) => (
+                    <div className={selectColor === index ? 'product-info_block-menu_settings-accordion_setting-block_active product-info_block-menu_settings-accordion_setting-block' : 'product-info_block-menu_settings-accordion_setting-block'} key={index} onClick={() => handleClickSelectedColor(index)} >{item}</div>
                   ))}
                 </div>
-                <p className='product-info_block-menu_settings-accordion_order'><Link to=''>{item.materialOrder}</Link></p>
+                <p className='product-info_block-menu_settings-accordion_order'><Link to="">{materialOrder}</Link></p>
                 <button className='product-info_block-menu_settings-accordion_btn'>Заказать образцы</button>
               </div>
             </div>
@@ -53,7 +71,7 @@ export const ProductSettings = ({ title, price }) => {
         ))}
       </div>
       <div className='product-info_block-menu_btn'>
-        <button className='product-info_block-menu_btn-pay product-info_block-menu_btn-btn'>Купить</button>
+        <button className='product-info_block-menu_btn-pay product-info_block-menu_btn-btn' onClick={handleClickPayProduct}>Купить</button>
         <button className='product-info_block-menu_btn-question product-info_block-menu_btn-btn'>Задать вопрос</button>
       </div>
     </div>
