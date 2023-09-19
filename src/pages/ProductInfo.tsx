@@ -4,11 +4,9 @@ import axios from 'axios';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Gallery } from '../components/ProductInfo/Gallery';
 import { ProductSettings } from '../components/ProductInfo/ProductSettings';
-import { ButtonComeBack } from '../components/ButtonComeBack';
 import { ProductDescription } from '../components/ProductInfo/ProductDescription';
 import { OrderModalWindow } from '../components/ProductInfo/OrderModalWindow';
 import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store';
 import { OrderSent } from '../components/ProductInfo/OrderSent';
 import { selectItemCount } from '../redux/slice/cartSlice';
 
@@ -49,16 +47,6 @@ export const ProductInfo = () => {
 
         fetchProducts();
     }, [id]);
-
-    // useEffect(() => {
-    //     document.body.style.backgroundColor = !(isModalWindow || isModalWindowTwo) ? 'transparent' : 'rgba(0, 0, 0, 0.38)';
-    //     document.body.style.filter = !(isModalWindow || isModalWindowTwo) ? 'none' : 'brightness(0.5)';
-        
-    //     return () => {
-    //       document.body.style.backgroundColor = 'transparent';
-    //       document.body.style.filter = 'none';
-    //     };
-    //   }, [isModalWindow, isModalWindowTwo]);
     
   return (
     <div className='product-info'>
@@ -66,6 +54,8 @@ export const ProductInfo = () => {
         <div className='container'>
             <Link to='/' className='will-return__item will-return--back'>На главную</Link>
             <div className='product-info_block'>
+                <h2 className='product-info_block-menu_name product-info_name'>{product?.title}</h2>
+                <p className='product-info_block-menu_price product-info_price'>{product?.price} руб.</p>  
                 <Gallery img={product?.img} gallery={product?.gallery} />
                 <ProductSettings setIsModalWindow={setIsModalWindow} id={product?.id} img={product?.img} title={product?.title} price={product?.price} innerName={product?.innerName} material={product?.material} materialOrder={product?.materialOrder} />
             </div>

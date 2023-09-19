@@ -32,9 +32,11 @@ export const ProductDescription = () => {
     return (
         <>
             <div className='product-info_description-head'>
-                {descriptionNav.map((item, index) => (
-                    <div className={activeCategory === index ? 'product-info_description-head-item product-info_description-head-item_active': 'product-info_description-head-item'} key={index} onClick={() => handleClickCategory(index)}>{item}</div>
-                ))}
+                <div className='product-info_description-head_inner'>
+                    {descriptionNav.map((item, index) => (
+                        <div className={activeCategory === index ? 'product-info_description-head-item product-info_description-head-item_active': 'product-info_description-head-item'} key={index} onClick={() => handleClickCategory(index)}>{item}</div>
+                    ))}
+                </div>
             </div>
             <div className='product-info_description-block'>
                 {descriptionInfo.map((item, index) => (

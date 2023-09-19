@@ -6,7 +6,6 @@ html {
     --container-width:  calc(var(var(--container) + (var(var(--padding-container) * 2))));
     box-sizing: border-box;
     position: relative;
-    // overflow-x: hidden;
 }
 
 :root {
@@ -33,6 +32,7 @@ body {
     color: var(--primary-hight);
     position: relative;
     z-index: 500;
+    overflow-x: hidden;
 }
 
 *, *::before, *::after {

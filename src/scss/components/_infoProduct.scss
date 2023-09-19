@@ -2,13 +2,38 @@
     margin-top: 16px;
     position: relative;
 
+    &_name {
+        display: none;
+
+        @include small-tablet {
+            display: block;
+        }
+    }
+
+    &_price {
+        display: none;
+
+        @include small-tablet {
+            display: block;
+        }
+    }
+
     &_block {
         margin-top: 32px;
         display: flex;
         justify-content: space-between;
 
+        @include small-tablet {
+            flex-direction: column;
+        }
+
         &-gallery {
-            width: 911px;
+            max-width: 911px;
+
+            @include small-tablet {
+                width: 100%;
+                margin-top: 26px;
+            }
 
             &-img {
                 display: flex;
@@ -16,10 +41,19 @@
                 align-items: center;
                 background: var(--surface-img);
                 height: 607px;
+
+                @include mobile {
+                    height: 340px;
+                }
             }
 
             img {
                 width: 544px;
+
+                @include small-tablet {
+                    width: 70%;
+                    height: 70%;
+                }
             }
 
             &-slide {
@@ -40,6 +74,12 @@
                         width: 100%;
                         // width: 100px;
                         // height: 100px;
+
+                        @include small-tablet {
+                            width: 90%;
+                            height: 90%;
+                        }
+            
                     }
                 }
             }
@@ -48,12 +88,22 @@
         &-menu {
             width: 448px;
 
+            @include small-tablet {
+                margin: 0 auto;
+                margin-top: 24px;
+                width: 100%;
+            }
+
             &_name {
                 color: var(--primary-hight-100);
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 32px;
+
+                @include small-tablet {
+                    display: none;
+                }
             }
 
             &_price {
@@ -64,6 +114,10 @@
                 font-weight: 400;
                 line-height: 24px;
                 letter-spacing: 0.15px;
+
+                @include small-tablet {
+                    display: none;
+                }
             }
 
             &_settings {
@@ -199,14 +253,35 @@
     &_description {
         margin-top: 64px;
         padding-left: 120px;
-        width: 680px;
+        overflow: hidden;
+
+        @include small-tablet {
+            padding-left: 0;
+            margin: 0 auto;
+            margin-top: 64px;
+        }
 
         &-head {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid var(--divider);
-            gap: 4px;
+            width: 680px;
+            @include small-tablet {
+                width: auto;
+                overflow: hidden;
+            }
+
+            &_inner {
+                display: inline-block;
+                white-space: nowrap;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid var(--divider);
+                gap: 4px;
+
+                @include small-tablet {
+                    justify-content: flex-start;
+                    overflow: auto;
+                }
+            }
 
             &-item {
                 padding: 12px;
@@ -217,6 +292,10 @@
                 line-height: 24px;
                 letter-spacing: 0.15px;
                 cursor: pointer;
+
+                @include small-tablet {
+                    padding: 12px 30px;
+                }
 
                 &_active {
                     color: var(--primary-hight-100);
@@ -237,7 +316,12 @@
         }
 
         &-block {
+            max-width: 680px;
             margin-top: 32px;
+
+            @include mobile {
+                width: 100%;
+            }
 
             &_title {
                 color: var(--primary-hight-100);
@@ -245,6 +329,10 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 32px;
+                
+                @include mobile {
+                    font-size: 20px;
+                }
             }
 
             &_title2 {
@@ -275,6 +363,10 @@
                 width: 100%;
                 height: 453px;
                 background: var(--surface-img);
+
+                @include mobile {
+                    height: 300px;
+                }    
             }
 
             &_characteristics {
@@ -327,9 +419,18 @@
         transform: translate(-50%);
         z-index: 999;
 
+        @include mobile {
+            width: 90%;
+        }
+
+
         &_inner {
             padding: 42px 77px 32px;
             position: relative;
+
+            @include mobile {
+                padding: 32px 37px;
+            }
         }
 
         &_close {
@@ -393,11 +494,19 @@
 
             input {
                 padding: 16px 22px 16px 16px;
+                
+                @include mobile {
+                    padding: 12px 18px 12px 12px;
+                }
             }
 
             textarea {
                 padding: 16px 22px 16px 18px;
                 resize: none;
+                
+                @include mobile {
+                    padding: 12px 18px 12px 14px;
+                }
             }
 
             input, textarea {
@@ -408,9 +517,18 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 24px;
+
+                @include mobile {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
             }
 
             &-personal-data {
+
+                @include mobile {
+                    font-size: 12px;
+                }
 
                 a {
                     border-bottom: 1px solid var(--primary-hight-100);
@@ -443,6 +561,10 @@
             justify-content: center;
             flex-direction: column;
             gap: 24px;
+
+            @include mobile {
+                padding: 36px 37px;
+            }
 
             &_svg {
                 text-align: center;
