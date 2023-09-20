@@ -12,7 +12,7 @@ import { LocationMenu } from './headerComponents/LocationMenu';
 import { SearchMenu } from './SearchMenu';
 
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 
 
@@ -68,7 +68,7 @@ export const Header = ({ searchValue, products }) => {
             </div>
           </div>
         </div>
-        <LocationMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} setSelectedCity={setSelectedCity} />
+        <LocationMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} setSelectedCity={setSelectedCity} selectedCity={selectedCity} />
       </div>
       <div className='container'>
       <div className='header__bottom grid'>

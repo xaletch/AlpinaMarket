@@ -21,14 +21,14 @@
         border: 1px solid var(--title);
 
         font-size: 14px;
+        font-weight: 700;
         line-height: 16px;
         letter-spacing: 0.25px;
         
-        transition: background color .3s ease-in-out;
+        transition: .3s ease-in;
 
         &:hover {
-            background: var(--title);
-            color: var(--light-color);
+            background: #00000008;
         }
     }
 }

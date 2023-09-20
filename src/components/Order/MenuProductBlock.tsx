@@ -19,32 +19,6 @@ export const MenuProductBlock = ( { title, price, img, id, count, totalPrice, di
       dispatch(plusProduct(id));
     };
 
-    // useEffect(() => {
-    //     if (openMenuProduct) {
-    //       document.body.style.overflow = 'hidden';
-    //     } else {
-    //       document.body.style.overflow = 'auto';
-    //     }
-      
-    //     const handleBackgroundClick = (event) => {
-    //         if (event.target === document.body) {
-    //           if (openMenuProduct) {
-    //           }
-    //         }
-    //       }
-
-    //     document.body.style.backgroundColor =  openMenuProduct ? 'rgba(0, 0, 0, 0.38)' : 'transparent';
-    //     document.body.style.filter = openMenuProduct ? 'brightness(0.5)' : 'none'; // добавляем фильтр
-        
-    //     return () => {
-    //       document.body.style.overflow = 'auto';
-    //       document.body.style.backgroundColor = 'transparent';
-    //       document.body.style.filter = 'none';
-    //       document.body.removeEventListener('click', handleBackgroundClick);
-    //     };
-    //   }, [openMenuProduct]);
-
-
     // высчитываю скидку которую даёт магазин (скидка 15%)
     const discount = 15;
     const alpinaDiscount = Math.ceil(totalPrice * (discount / 100));

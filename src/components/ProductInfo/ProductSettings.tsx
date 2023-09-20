@@ -40,7 +40,7 @@ export const ProductSettings = ({ id, img, title, price, innerName, material, ma
       <div className='product-info_block-menu_settings'>
         {productSettings.map((item, index) => (
           <>
-            <div className='product-info_block-menu_settings-popup' key={index}>
+            <div className={accordionOpen === index ? 'product-info_block-menu_settings-popup product-info_block-menu_settings-popup_active' : 'product-info_block-menu_settings-popup'} key={index}>
               <p className='product-info_block-menu_settings-popup-title' onClick={() => handleClickAccordion(index)}>
                 {item}
                 <span>

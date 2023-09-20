@@ -28,7 +28,7 @@
         }
 
         &-gallery {
-            max-width: 911px;
+            width: 911px;
 
             @include small-tablet {
                 width: 100%;
@@ -125,6 +125,12 @@
 
                 &-popup {
                     border-bottom: 1px solid var(--divider);
+
+                    &_active {
+                        padding: 0 8px;
+                        background: var(--surface-img);
+                        border-bottom: none;
+                    }
 
                     &-title {
                         padding: 16px 0;
@@ -409,27 +415,29 @@
     // ModalWindow
 
     &_modal-window {
-        width: 448px;
-        border-radius: 4px;
-        background: var(--surface);
-        box-shadow: 0px 30px 50px 0px var(--primary-disabled-10);
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        transform: translate(-50%);
+        width: 100vw;
+        height: 100vh;
+        background: var(--primary-disabled-10);
+        position: fixed;
+        top: 0;
+        left: 0;
         z-index: 999;
-
-        @include mobile {
-            width: 90%;
-        }
-
 
         &_inner {
             padding: 42px 77px 32px;
-            position: relative;
+            width: 448px;
+            border-radius: 4px;
+            background: var(--surface);
+            box-shadow: 0px 30px 50px 0px var(--primary-disabled-10);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
 
             @include mobile {
                 padding: 32px 37px;
+                width: 80%;
             }
         }
 
@@ -556,14 +564,23 @@
         }
 
         &-sent {
+            width: 448px;
             padding: 56px 77px;
             display: flex;
             justify-content: center;
             flex-direction: column;
+            border-radius: 4px;
+            background: var(--surface);
+            box-shadow: 0px 30px 50px 0px var(--primary-disabled-10);
+            position: absolute;
+            top: 50%;
+            left: 50%;
             gap: 24px;
+            transform: translate(-50%, -50%);
 
             @include mobile {
                 padding: 36px 37px;
+                width: 80%;
             }
 
             &_svg {
