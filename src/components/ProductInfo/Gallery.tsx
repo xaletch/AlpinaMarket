@@ -13,9 +13,9 @@ const handleClickSelectedPhoto = (index: number) => {
     <div className='product-info_block-gallery'>
       <div className='product-info_block-gallery-img'>
         {gallery && gallery.length > 0 ? (
-          <img className='home__best--offer__card--img' src={gallery[isGallery]} alt={img} />
+          <img src={gallery[isGallery]} alt={img} />
         ) : (
-          <img className='home__best--offer__card--img' src={img} alt={img} />
+          <img src={img} alt={img} />
         )}
       </div>
       <div className='product-info_block-gallery-slide'>

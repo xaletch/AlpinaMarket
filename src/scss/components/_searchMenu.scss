@@ -69,12 +69,20 @@
         margin-top: 41px;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include small-tablet {
+            justify-content: center;
+        }
         
         &__card {
             width: 412px;
             padding: 11px;
             cursor: pointer;
             transition: 0.3s;
+
+            @include mobile-average {
+                width: 100%;
+            }
 
             &:hover {
                 background: #F6F6F6;
@@ -87,6 +95,11 @@
             &--link {
                 width: 412px;
                 justify-content: space-between;
+                gap: 10px;
+
+                @include mobile-average {
+                    width: 100%;
+                }
             }
 
             &--left {
@@ -98,6 +111,11 @@
                 font-weight: 400;
                 line-height: 20px;
                 margin-bottom: 8px;
+
+                @include mobile-average {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
             }
 
             &--price {
@@ -106,6 +124,11 @@
                 font-weight: 400;
                 line-height: 20px;
                 letter-spacing: 0.25px;
+
+                @include mobile-average {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
             }
 
             &--img {

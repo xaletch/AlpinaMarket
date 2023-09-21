@@ -39,14 +39,14 @@ export const ProductSettings = ({ id, img, title, price, innerName, material, ma
       <p className='product-info_block-menu_price'>{price} руб.</p>  
       <div className='product-info_block-menu_settings'>
         {productSettings.map((item, index) => (
-          <>
-            <div className={accordionOpen === index ? 'product-info_block-menu_settings-popup product-info_block-menu_settings-popup_active' : 'product-info_block-menu_settings-popup'} key={index}>
+          <div key={index}>
+            <div className={accordionOpen === index ? 'product-info_block-menu_settings-popup product-info_block-menu_settings-popup_active' : 'product-info_block-menu_settings-popup'}>
               <p className='product-info_block-menu_settings-popup-title' onClick={() => handleClickAccordion(index)}>
                 {item}
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <g clip-path="url(#clip0_11338_70873)">
-                      <path d="M16.5899 8.80186L17.7879 9.99984L12 15.7877L6.21213 9.99984L7.41012 8.80186L11.894 13.276L12 13.3817L12.106 13.276L16.5899 8.80186Z" fill="black" stroke="white" stroke-width="0.3"/>
+                    <g clipPath="url(#clip0_11338_70873)">
+                      <path d="M16.5899 8.80186L17.7879 9.99984L12 15.7877L6.21213 9.99984L7.41012 8.80186L11.894 13.276L12 13.3817L12.106 13.276L16.5899 8.80186Z" fill="black" stroke="white" strokeWidth="0.3"/>
                     </g>
                     <defs>
                       <clipPath id="clip0_11338_70873">
@@ -67,7 +67,7 @@ export const ProductSettings = ({ id, img, title, price, innerName, material, ma
                 <button className='product-info_block-menu_settings-accordion_btn'>Заказать образцы</button>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
       <div className='product-info_block-menu_btn'>

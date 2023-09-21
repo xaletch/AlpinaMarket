@@ -13,13 +13,13 @@ export const ProductMenu: React.FC<MenuProps> = ({ selectedCategoryId }) => {
     <div className='header__navigation--product'>
     <div className='header__navigation--inner flex'>
       <ul className='navigation__product-list flex'>
-        {productNavigate.map((product) => (
+        {productNavigate.map((product, index) => (
           product.id === selectedCategoryId ? (
-            <div className='navigation--product__block'>
+            <div className='navigation--product__block' key={index}>
             <p className='navigation__product--title'>{product.title}</p>
             <ul className='navigation__product--list'>
-              {product.nameFurniture.map((name) => (
-                <li className='navigation__product--item' key={name.navigationPage}><Link to={`${product.navigation}/${name.navigationPage}`}>{name.navigateName}</Link></li>
+              {product.nameFurniture.map((name, index) => (
+                <li className='navigation__product--item' key={index} ><Link to={`${product.navigation}/${name.navigationPage}`}>{name.navigateName}</Link></li>
               ))}
             </ul>
           </div>

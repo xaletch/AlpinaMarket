@@ -10,9 +10,9 @@ export const PageNavigation = () => {
 
   return (
     <ul className='header__top--list flex'>
-      {navigationPage.map((navigationName, i) =>
-        <Link to={navigationName.navigation}>
-          <li key={i} className='header__top--item'>{navigationName.title}</li>
+      {navigationPage.map((navigationName, index) =>
+        <Link to={navigationName.navigation} key={index}>
+          <li className='header__top--item'>{navigationName.title}</li>
         </Link>
       )}
     </ul>

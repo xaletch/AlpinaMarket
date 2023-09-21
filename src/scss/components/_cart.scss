@@ -260,16 +260,25 @@
                     font-size: 12px;
                     line-height: 18px;
                 }
+
+                &--activate {
+                    color: var(--color-application);
+                }
             }
 
             &__button {
                 padding: 8px;
-                background: #Fff;
+                background: var(--primary-on-primary-white-100);
                 border-radius: 2px;
 
                 position: absolute;
                 top: 12px;
                 right: 8px;
+
+                &--activate {
+                    background: var(--color-application);
+                    color: var(--primary-on-primary-white-100);
+                }
             }
         }
 

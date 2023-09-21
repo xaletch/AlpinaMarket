@@ -38,7 +38,7 @@ export const ProductInfo = () => {
             try {
                 const { data } = await axios.get(`https://64a97f128b9afaf4844ac01b.mockapi.io/Products/${id}`);
                 setProduct(data);
-                console.log(data)
+                // console.log(data)
             } catch (error) {
                 console.log(error)
                 navigate('/');

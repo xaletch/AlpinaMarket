@@ -27,15 +27,27 @@
         @content;
     }
 }
-  
-@mixin mobile {
-    @media (max-width: (480px)) {
+
+@mixin small-tablet-670 {
+    @media (max-width: (670px)) {
         @content;
     }
 }
 
-@mixin mobile-average {
-    @media (max-width: (400px)) {
+@mixin small-tablet-579 {
+    @media (max-width: (579px)) {
+        @content;
+    }
+}
+
+@mixin small-tablet-535 {
+    @media (max-width: (535px)) {
+        @content;
+    }
+}
+  
+@mixin mobile {
+    @media (max-width: (480px)) {
         @content;
     }
 }
@@ -46,14 +58,33 @@
     }
 }
 
+@mixin mobile-average {
+    @media (max-width: (400px)) {
+        @content;
+    }
+}
+
+
+@mixin mobile-iphone-4 {
+    @media (max-width: (380px)) {
+        @content;
+    }
+}
+
 @mixin mobile-small {
     @media (max-width: (370px)) {
         @content;
     }
 }
 
-@mixin mobile-iphone-4 {
-    @media (max-width: (370px)) {
+@mixin mobile-smallest {
+    @media (max-width: (349px)) {
+        @content;
+    }
+}
+
+@mixin mobile-smallest-2 {
+    @media (max-width: (329px)) {
         @content;
     }
 }

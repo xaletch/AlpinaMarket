@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import city from './city/city'
 
 interface LocationProps {
@@ -7,6 +7,8 @@ interface LocationProps {
     selectedCity: string;
     setSelectedCity: Dispatch<SetStateAction<string>>;
 }
+
+const cityProposed = ["Тюмень", "Санкт-Петербург"];
 
 export const LocationMenu: React.FC<LocationProps> = ({ isMenuOpen, setIsMenuOpen, setSelectedCity, selectedCity }) => {
     const [menuCity, setMenuCity] = useState(false);
@@ -36,6 +38,10 @@ export const LocationMenu: React.FC<LocationProps> = ({ isMenuOpen, setIsMenuOpe
         setMenuCity(false);
         setInputValue('');
     };
+
+    useEffect(() => {
+        localStorage.setItem("city", JSON.stringify(selectedCity));
+    }, [selectedCity]);
 
     return (
         <>
@@ -75,39 +81,15 @@ export const LocationMenu: React.FC<LocationProps> = ({ isMenuOpen, setIsMenuOpe
                             </div>
                         </div>
                         <div className='header__location--selection__city--block__menu--city'>
-                            <div className='header__location--selection__city--block__menu--city--btn'>
-                                <p>Тюмень</p>
-                            </div>
-                            <div className='header__location--selection__city--block__menu--city--btn'>
-                                <p>Санкт-Петербург</p>
-                            </div>
+                            {cityProposed.map((name, index) => (
+                                <div className='header__location--selection__city--block__menu--city--btn' key={index} onClick={() => handleCityClick(name)}>
+                                    <p>{name}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             )}
         </>
-        // <div className={isMenuOpen ? 'header__location--selection header__location' : 'header__location--selectionOff'}>
-        //     <div className='header__location--container container'>
-        //         <div className='header__location--inner'>
-        //             {/* <h2 className='header__location--title'>Выберите город</h2>
-        //             <div className='city'>
-        //                 <ul className='city__list flex'>
-        //                     {city.map((city) => (
-        //                     <div className='city__block' key={city.letter}>
-        //                         <h3 className='city--letter'>{city.letter}</h3>
-        //                         <ul className='city__list'>
-        //                             {city.cityName.map((name) => (
-        //                                 <li className='city__item' key={name} onClick={() => handleCityClick(name)}>
-        //                                     {name}
-        //                                 </li>
-        //                             ))}
-        //                         </ul>
-        //                     </div>
-        //                     ))}
-        //                 </ul>
-        //             </div> */}
-        //         </div>
-        //     </div>
-        // </div>
     )
 }

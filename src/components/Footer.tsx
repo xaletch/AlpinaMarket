@@ -22,8 +22,8 @@ export const Footer = () => {
                                 <p className={accordionOpen === index ? 'footer__top--list__title footer__top--accordion__header footer__top--selected__accordion' : 'footer__top--list__title footer__top--accordion__header'} onClick={() => handleClickAccordion(index)}>{navigation.title}
                                 <span className={accordionOpen === index ? 'footer__svg footer__svg--active' : 'footer__svg'}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <g clip-path="url(#clip0_11226_29615)">
-                                        <path d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z" fill="black" fill-opacity="0.12"/>
+                                    <g clipPath="url(#clip0_11226_29615)">
+                                        <path d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z" fill="black" fillOpacity="0.12"/>
                                     </g>
                                     <defs>
                                         <clipPath id="clip0_11226_29615">

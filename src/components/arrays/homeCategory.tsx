@@ -1,7 +1,7 @@
 import armchairs from "../../assets/img/Кресла.png";
 import tables from "../../assets/img/Столы.png";
 import chairs from "../../assets/img/Стулья.png";
-import cabinets from "../../assets/img/Шкафы, комоды и тумбы.png";
+import cabinets from "../../assets/img/closet.jpg";
 import beds from "../../assets/img/Кровати.png";
 import sofas from "../../assets/img/Диваны.png";
 

@@ -94,6 +94,11 @@
                     font-size: 20px;
                     line-height: 22px
                 }
+
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
             }
         }
 
@@ -120,11 +125,48 @@
 
         &__card {
             position: relative;
+            justify-content: space-between;
 
-            @include mobile-iphone {
+            @include small-tablet-670 {
+                width: 260px;
+            };
+
+            @include small-tablet-579 {
+                width: 240px;
                 display: flex;
                 flex-direction: column;
-                width: 145px;
+            }
+
+            @include small-tablet-535 {
+                width: 210px;
+            }
+
+            @include mobile {
+                width: 180px;
+            }
+
+            @include mobile-iphone {
+                width: 172px;
+            }
+
+            @include mobile-average {
+                width: 160px;
+            }
+
+            @include mobile-iphone-4 {
+                width: 155px;
+            }
+
+            @include mobile-small {
+                width: 146px;
+            }
+
+            @include mobile-smallest {
+                width: 136px;
+            }
+
+            @include mobile-smallest-2 {
+                width: 130px;
             }
 
             &--favorites {
@@ -155,9 +197,28 @@
                     height: 250px;
                 }
 
+                @include small-tablet-670 {
+                    width: 90%;
+                    height: auto;
+                };
+
+                @include mobile {
+                    width: 145px;
+                    height: 141px;
+                }    
+
                 @include mobile-iphone {
                     width: 145px;
                     height: 141px;
+                }
+
+                @include mobile-small {
+                    width: 90%;
+                }
+
+                @include mobile-smallest {
+                    width: 90%;
+                    height: 120px;
                 }
             }
 
@@ -175,6 +236,12 @@
                 line-height: 16px;
                 letter-spacing: 1.5px;
                 background: var(--secondary);
+
+                @include mobile-iphone {
+                    font-size: 8px;
+                    line-height: 14px;
+                }
+
             }
 
             &--top {
@@ -189,9 +256,36 @@
                     height: 280px;
                 }
 
-                @include mobile-iphone {
-                    width: 145px;
+                @include small-tablet-670 {
+                    width: 100%;
+                };
+
+                @include small-tablet-579 {
+                    height: 260px;
+                }
+
+                @include small-tablet-535 {
+                    height: 230px;
+                }
+
+                @include mobile {
+                    width: 100%;
                     height: 160px;
+                }
+
+
+                @include mobile-iphone {
+                    width: 100%;
+                    height: 160px;
+                }
+
+                @include mobile-small {
+                    width: 100%;
+                }
+
+                @include mobile-smallest {
+                    width: 100%;
+                    height: 140px;
                 }
             }
 
@@ -199,7 +293,7 @@
                 margin-top: 16px;
                 justify-content: space-between;
 
-                @include mobile-iphone {
+                @include small-tablet-2 {
                     flex-direction: column;
                 }
                 
@@ -207,6 +301,11 @@
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
+
+                    @include mobile {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
 
                     @include mobile-iphone {
                         font-size: 12px;
@@ -219,6 +318,12 @@
                     font-weight: bold;
                     line-height: 24px;
 
+                    @include mobile {
+                        margin-top: 4px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
                     @include mobile-iphone {
                         font-size: 12px;
                     }
@@ -230,9 +335,15 @@
                 font-size: 11px;
                 font-weight: bold;
                 line-height: 24px;
+
+                @include mobile {
+                    font-size: 10px;
+                    line-height: 22px;
+                }
                 
                 @include mobile-iphone {
                     font-size: 8px;
+                    line-height: 20px;
                 }
             }
 
@@ -247,9 +358,14 @@
                     fill: #fff;
                     background: #000;
                 }
+
+                @include small-tablet-579 {
+                    margin-left: auto;
+                }
             }
 
             &--button {
+                width: 86px;
                 height: 32px;
                 padding: 0 8px;
                 background: var(--title);
@@ -259,6 +375,42 @@
                 border-radius: 2px;
                 text-transform: uppercase;
                 color: var(--light-color);
+
+                @include small-tablet-579 {
+                    width: 240px;
+                }
+
+                @include small-tablet-535 {
+                    width: 210px;
+                }
+
+                @include mobile {
+                    width: 180px;
+                }
+
+                @include mobile-iphone {
+                    width: 172px;
+                }
+    
+                @include mobile-average {
+                    width: 160px;
+                }
+    
+                @include mobile-iphone-4 {
+                    width: 155px;
+                }
+    
+                @include mobile-small {
+                    width: 146px;
+                }
+    
+                @include mobile-smallest {
+                    width: 136px;
+                }
+    
+                @include mobile-smallest-2 {
+                    width: 130px;
+                }
 
                 @include mobile-iphone {
                     font-size: 8px;
@@ -270,6 +422,12 @@
             margin-top: 16px;
             justify-content: space-between;
 
+            @include small-tablet-579 {
+                flex-direction: column-reverse;
+                align-items:baseline;
+                gap: 10px;
+            }
+
             @include mobile-iphone {
                 justify-content: end;
             }
@@ -278,8 +436,10 @@
         &__gallery--block {
             gap: 13px;
 
-            @include mobile-iphone {
-                display: none;
+            @include mobile {
+                width: 100%;
+                gap: 8px;
+                justify-content: space-between;
             }
         }
 
@@ -298,6 +458,16 @@
 
             transition: 0.3s ease-in-out;
             opacity: 0.8;
+
+            @include mobile-iphone-4 {
+                width: 28px;
+                height: 28px;
+            }
+
+            @include mobile-smallest-2 {
+                width: 26px;
+                height: 26px;
+            }
 
             img {
                 width: 86%;
@@ -325,6 +495,11 @@
                     font-size: 20px;
                     line-height: 22px
                 }
+
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
             }
         }
 
@@ -336,7 +511,7 @@
             margin-top: 30px;
             gap: 16px;
 
-            @include mobile-iphone {
+            @include mobile {
                 flex-direction: column;
             }
 
@@ -350,8 +525,9 @@
                     font-weight: 400;
                     line-height: 24px;
 
-                    @include small-tablet {
-                        // width: 15px;
+                    @include mobile {
+                        font-size: 14px;
+                        line-height: 16px;
                     }
                 }
 
@@ -361,8 +537,9 @@
                     font-weight: 400;
                     line-height: 24px;
 
-                    @include small-tablet {
-                        // width: 10px;
+                    @include mobile {
+                        font-size: 14px;
+                        line-height: 16px;
                     }
                 }
             }
@@ -380,7 +557,10 @@
             padding: 0 62px;
             flex-direction: column;
             align-items: center;
-            // grid-column: 5 / 9;
+
+            @include mobile {
+                padding: 0 20px;
+            }
 
             &--title {
                 color: var(--title);
@@ -393,7 +573,7 @@
                     line-height: 22px
                 }
 
-                @include mobile-iphone {
+                @include mobile {
                     font-size: 16px;
                     line-height: 18px;
                 }
@@ -407,13 +587,14 @@
                 line-height: 20px;
 
                 @include small-tablet {
+                    margin-top: 16px;
                     font-size: 13px;
                 }
 
                 @include mobile-iphone {
                     margin-top: 10px;
                     font-size: 10px;
-                    line-height: 16px;
+                    line-height: 14px;
                 }
             }
         }
@@ -495,6 +676,11 @@
             @include small-tablet {
                 font-size: 18px;
             }
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 18px;
+            }
         }
 
         &__more {
@@ -525,6 +711,11 @@
                 font-size: 20px;
                 line-height: 22px
             }
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 18px;
+            }
         }
     }
 
@@ -538,7 +729,7 @@
         }
 
         @include mobile-average {
-    width: 156px;            
+            width: 156px;            
         }
 
         @include mobile-small {
@@ -637,9 +828,6 @@
 .popular--categories {
     margin-top: 64px;
 
-    @include mobile-iphone {
-        display: none;
-    }
     &__top {
         justify-content: space-between;
 
@@ -653,6 +841,11 @@
                 font-size: 20px;
                 line-height: 22px
             }
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 18px;
+            }
         }
     }
 
@@ -662,7 +855,7 @@
         flex-wrap: wrap;
 
         @include small-tablet {
-            gap: 18px;
+            justify-content: center;
         }
     }
 
@@ -680,6 +873,15 @@
             width: 200px;
         }
 
+        @include mobile {
+            width: 150px;
+        }
+
+        @include mobile-small {
+            gap: 10px;
+            width: 130px;
+        }
+
         &--img {
             justify-content: center;
             align-items: center;
@@ -688,12 +890,18 @@
             height: 203px;
             background: #F6F6F6;
 
-            @include small-tablet-2 {
-                width: 190px;
+            @include small-tablet {
+                width: 100%;
             }
 
-            @include mobile-iphone {
-                width: 100px;
+            @include mobile {
+                padding: 10px;
+                height: 130px;
+            }
+
+            img {
+                width: 90%;
+                height: auto;
             }
         }
 
@@ -710,6 +918,11 @@
         @include small-tablet {
             font-size: 15px;
             line-height: 24px;
+        }
+
+        @include mobile-small {
+            font-size: 14px;
+            line-height: 18px;
         }
     }
 }

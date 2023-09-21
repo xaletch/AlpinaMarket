@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+
+import { Link, useNavigate } from 'react-router-dom';
+
 import { Information } from './Order/Information';
 import { OrderDelivery } from '../components/OrderDelivery';
 import { Item } from '../components/Order/Item';
@@ -15,6 +17,12 @@ export const Order = () => {
     const [openMenuProduct, setOpenMenuProduct] = useState<boolean>(false);
 
     const [checkoutTwo, setCheckoutTwo] = useState<boolean>(false);
+
+    const navigate = useNavigate()
+
+    if (items.length <= 0) {
+        return navigate(-1);
+    };
 
     return (
         <div className='order'>

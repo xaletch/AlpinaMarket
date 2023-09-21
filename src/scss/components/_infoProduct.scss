@@ -42,6 +42,14 @@
                 background: var(--surface-img);
                 height: 607px;
 
+                @include small-tablet-2 {
+                    height: 500px;
+                }
+
+                @include small-tablet-535 {
+                    height: 450px;
+                }
+
                 @include mobile {
                     height: 340px;
                 }
@@ -52,7 +60,6 @@
 
                 @include small-tablet {
                     width: 70%;
-                    height: 70%;
                 }
             }
 
@@ -60,6 +67,10 @@
                 margin-top: 16px;
                 display: flex;
                 gap: 16px;
+
+                @include mobile {
+                    margin-top: 10px;
+                }
             
                 &-item {
                     width: 100px;
@@ -70,10 +81,18 @@
                     background: var(--surface-img);
                     cursor: pointer;
 
+                    @include small-tablet-670 {
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                    @include small-tablet-535 {
+                        width: 80px;
+                        height: 80px;
+                    }
+
                     img {
                         width: 100%;
-                        // width: 100px;
-                        // height: 100px;
 
                         @include small-tablet {
                             width: 90%;
@@ -314,7 +333,7 @@
                         bottom: 0;
                         right: 0;
                         left: 0;
-                        border-radius: 2px 2px 0px 0px;
+                        border-radius: 4px 4px 0px 0px;
                         background: var(--primary-hight-100, #000);
                     }
                 }
@@ -439,6 +458,11 @@
                 padding: 32px 37px;
                 width: 80%;
             }
+
+            @include mobile-iphone-4 {
+                padding: 28px 30px;
+                width: 90%;
+            }
         }
 
         &_close {
@@ -474,8 +498,17 @@
                 align-items: center;
                 background: var(--surface-img);
 
+                @include mobile-iphone {
+                    width: 100px;
+                    height: 100px;
+                }
+
                 img {
                     width: 100px;
+
+                    @include mobile-iphone {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -506,6 +539,10 @@
                 @include mobile {
                     padding: 12px 18px 12px 12px;
                 }
+
+                @include mobile-iphone-4 {
+                    padding: 10px 16px 10px 10px;
+                }
             }
 
             textarea {
@@ -514,6 +551,10 @@
                 
                 @include mobile {
                     padding: 12px 18px 12px 14px;
+                }
+
+                @include mobile-iphone-4 {
+                    padding: 10px 16px 10px 12px;
                 }
             }
 
@@ -530,12 +571,21 @@
                     font-size: 14px;
                     line-height: 22px;
                 }
+
+                @include mobile-iphone-4 {
+                    font-size: 12px;
+                    list-style: 18px;
+                }
             }
 
             &-personal-data {
 
                 @include mobile {
                     font-size: 12px;
+                }
+
+                @include mobile-iphone-4 {
+                    font-size: 11px;
                 }
 
                 a {
@@ -560,6 +610,11 @@
                 font-weight: 400;
                 line-height: 16px;
                 letter-spacing: 0.25px;
+
+                @include mobile-iphone {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
             }
         }
 
@@ -583,6 +638,11 @@
                 width: 80%;
             }
 
+            @include mobile-iphone-4 {
+                padding: 28px 30px;
+                width: 90%;
+            }
+
             &_svg {
                 text-align: center;
             }
@@ -597,6 +657,11 @@
                     font-weight: 400;
                     line-height: 24px;
                     letter-spacing: 0.15px;
+
+                    @include mobile-iphone {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
                 }
 
                 p {
@@ -607,6 +672,11 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 20px;
+
+                    @include mobile-iphone {
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
                 }
             }
         }

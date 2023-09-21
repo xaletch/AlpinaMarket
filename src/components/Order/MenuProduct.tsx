@@ -1,21 +1,6 @@
 import React from 'react'
 import { MenuProductBlock } from './MenuProductBlock';
 
-// interface ItemsInterface {
-//     title: string;
-//     price: number;
-//     img: string;
-//     id: number;
-//     count: number;
-// }
-
-// interface MenuInterface {
-//     items: ItemsInterface[];
-//     totalPrice: number;
-//     discountPrice: number;
-//     openMenuProduct: boolean;
-// }
-
 export const MenuProduct = ({ items, totalPrice, discountPrice, openMenuProduct, setOpenMenuProduct }) => {
 
     const handleCloseMenu = () => {

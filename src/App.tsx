@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Routes, Route } from "react-router-dom"
 
 import './scss/app.scss'
@@ -31,11 +31,7 @@ function App() {
   const getProducts = async () => {
     const search = searchValue ? `&search=${searchValue}` : '';
 
-    dispatch(
-      fetchProducts({
-        search,
-      })
-    );
+    dispatch(fetchProducts({search}));
   };
 
   React.useEffect(() => {

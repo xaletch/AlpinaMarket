@@ -25,6 +25,7 @@ html {
     --surface: #FFF;
     --border-product-all: #EBEBEB;
     --primary-hover-btn: #00000008;
+    --color-application: #06D202;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
     color: var(--primary-hight);
     position: relative;
     z-index: 500;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 *, *::before, *::after {

@@ -69,7 +69,7 @@ export const OrderModalWindow = ( { img, title, price, count, id, setIsModalWind
             <textarea {...register('commented')} placeholder='Ваш комментарий'></textarea>
             <div className='product-info_modal-window_form-personal-data'>
               <input type="checkbox" {...register('checkbox', { required: true })} />
-              <label>Согласен с условиями обработки <Link to='personal-data'>персональных данных</Link></label>
+              <label>Согласен с условиями обработки <br/> <Link to='personal-data'>персональных данных</Link></label>
             </div>
             <button className='product-info_modal-window_form-btn' type='submit'>Отправить</button>
           </div>
