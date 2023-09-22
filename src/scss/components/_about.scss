@@ -5,6 +5,11 @@
         font-size: 24px;
         font-weight: bold;
         line-height: 32px;
+
+        @include small-tablet {
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
 
     &__mission {
@@ -18,10 +23,21 @@
             line-height: 24px;
             letter-spacing: 0.15px;
             color: var(--title);
+
+            @include small-tablet {
+                font-size: 18px;
+                line-height: 23px;
+            }
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
     }
 
     &__numbers {
+
         &--title {
             padding-bottom: 32px;
         }
@@ -31,6 +47,13 @@
             width: 90%;
             margin: 0 auto;
             justify-content: space-around;
+
+            @include small-tablet {
+                width: 100%;
+                gap: 32px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
 
         &--item {
@@ -43,6 +66,31 @@
                 font-weight: bold;
                 line-height: 32px;
                 margin-bottom: 20px;
+
+                @include mobile {
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-bottom: 26px;
+                }
+            }
+
+            &--text {
+                color: var(--primary-medium-60);
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+
+                @include small-tablet {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
         }
     }
@@ -54,7 +102,7 @@
 
     &__text {
         padding: 64px 0;
-        width: 680px;
+        max-width: 680px;
         margin: 0 auto;
 
         &--text {
@@ -78,6 +126,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             cursor: pointer;
+
+            @include mobile {
+                width: 18%;
+            }
         }
 
         &__title {
@@ -123,4 +175,13 @@
             opacity: 1;
         }
     }
+}
+
+.movies__title {
+    margin-bottom: 32px;
+    color: var(--primary-hight-100);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.15px;
 }

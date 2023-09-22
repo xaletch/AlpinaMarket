@@ -98,10 +98,10 @@ export const Information = ( { setCheckoutTwo } ) => {
                         <p className='order_information-block_data-info'>{data.telephone}</p>
                     </div>
                 ))}
-                <p className='order_information-block_data-edit button__more' onClick={handleClickEdit}>
+                <div className='order_information-block_data-edit button__more' onClick={handleClickEdit}>
                     Изменить
                     <div className='border'></div>
-                </p>
+                </div>
             </div>
         </div>
     )

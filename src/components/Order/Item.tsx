@@ -25,10 +25,10 @@ export const Item = ({ items, totalPrice, discountPrice, openMenuProduct, setOpe
             <div className='order_content-list-head'>
                 <h3>Состав заказа</h3>
                 <div className='order_content-list-head-change'>
-                    <p className='popular--categories--top__more button__more' onClick={handleClickProductMenu}>
+                    <div className='popular--categories--top__more button__more' onClick={handleClickProductMenu}>
                     изменить
                     <div className='border'></div>
-                    </p>
+                    </div>
                 </div>
             </div>
             <div className='order_content-list-product'>

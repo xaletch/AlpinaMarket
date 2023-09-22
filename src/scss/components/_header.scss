@@ -73,6 +73,13 @@
                 z-index: 999;
                 user-select: none;
 
+                @include small-tablet {
+                    top: 40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    user-select: none;
+                }
+
                 h3 {
                     color: var(--primary-hight-100);
                     font-size: 14px;

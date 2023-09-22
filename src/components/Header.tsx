@@ -14,22 +14,24 @@ import { SearchMenu } from './SearchMenu';
 
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
+import { MobileMenu } from './headerComponents/MobileMenu';
 
 
 export const Header = ({ searchValue, products }) => {
   const { items, totalPrice, discountPrice } = useSelector((state: RootState) => state.cart);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMobileMenu, setIsMobileMenu] = useState(false);
   const [selectedCity, setSelectedCity] = useState(() => {
     const savedCity = localStorage.getItem("city");
     return savedCity ? JSON.parse(savedCity) : "Москва";
   });
   const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
-
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   
   const inputRef: any = React.useRef<HTMLInputElement>(null);
   const localeStorageRef = React.useRef(false);
+  
 
   React.useEffect(() => {
     if (localeStorageRef.current) {
@@ -52,6 +54,10 @@ export const Header = ({ searchValue, products }) => {
       inputRef.current.focus()
     }
   }, [isSearchOpen]);
+
+  const handleClickOpenMobileMenu = () => {
+    setIsMobileMenu(true);
+  }
 
   return (
     <div className='header'>
@@ -76,8 +82,9 @@ export const Header = ({ searchValue, products }) => {
       <div className='container'>
       <div className='header__bottom grid'>
         <Navigation />
+
         <div className='header__bottom--menu'>
-          <div className='header__bottom--menu__btn'>
+          <div className='header__bottom--menu__btn header_menu-bnt' onClick={handleClickOpenMobileMenu}>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
               <rect width="18" height="1.5" rx="0.75" fill="black"/>
               <rect y="6.5" width="18" height="1.5" rx="0.75" fill="black"/>
@@ -85,6 +92,7 @@ export const Header = ({ searchValue, products }) => {
             </svg>
           </div>
         </div>
+
           <div className='header__bottom--center logo flex'>
             <Link to='/'>
               <svg width="82" height="32" viewBox="0 0 82 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -128,6 +136,11 @@ export const Header = ({ searchValue, products }) => {
       {selectedCategoryId && (
         <div className='header__navigation--product--block' onMouseLeave={handleMouseLeave} >
           <ProductMenu selectedCategoryId={selectedCategoryId} />
+        </div>
+      )}
+      {isMobileMenu && (
+        <div className={isMobileMenu ? 'header_menu header_menu-activate' : 'header_menu'}>
+          <MobileMenu isMobileMenu={isMobileMenu} setIsMobileMenu={setIsMobileMenu} selectedCity={selectedCity} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} setSelectedCity={setSelectedCity} />
         </div>
       )}
     </div>

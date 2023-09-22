@@ -4,6 +4,21 @@ import kitchen from '../../../assets/img/navigation_kitchen.png';
 import hallway from '../../../assets/img/navigation_hallway.png';
 import children from '../../../assets/img/navigation_children.png';
 import office from '../../../assets/img/navigation_office.png';
+import bed from '../../../assets/img/mobileMenuBed.png';
+
+export const navigationProduct = [
+    { title: 'Мебель', id: 1, navigate: 1, img: bed, },
+    { title: 'Мебельная фурнитура и комплектующие', id: 1, navigate: 2, img: bed, },
+    { title: 'Товары для дома', id: 1, navigate: 3, img: bed, },
+    { title: 'Плитка, керамогранит и мозаика', id: 1, navigate: 4, img: bed, },
+    { title: 'Акции', id: 1, navigate: 5, },
+    { title: "Спальня", img: bedroom, id: 2, },
+    { title: "Гостиная", img: livingRoom, id: 2, },
+    { title: "Кухня", img: kitchen, id: 2, },
+    { title: "Прихожая", img: hallway, id: 2, },
+    { title: "Детская", img: children, id: 2, },
+    { title: "Офис", img: office, id: 2, },
+];
 
 const productNavigate = [
     {
@@ -23,7 +38,7 @@ const productNavigate = [
             navigationPage: "dining-groups",
         },
         ],
-        "id" : 1,
+        id : 1,
     },
     {
         title : "Мягкая мебель",
@@ -58,7 +73,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 1,
+        id : 1,
     },
     {
         title : "Шкафы",
@@ -93,7 +108,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 1,
+        id : 1,
     },
     {
         "title" : "Кухни",
@@ -116,7 +131,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 1,
+        id : 1,
     },
     {
         "title" : "Кровати и матрасы",
@@ -143,7 +158,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 1,
+        id : 1,
     },
     {
         "title" : "Ручки и накладки",
@@ -162,7 +177,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 2,
+        id : 2,
     },
     {
         "title" : "Петли и механизмы",
@@ -181,7 +196,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 2,
+        id : 2,
     },
     {
         "title" : "Крепежные элементы",
@@ -200,7 +215,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 2,
+        id : 2,
     },
     {
         "title" : "Замки и ключи",
@@ -219,7 +234,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 2,
+        id : 2,
     },
     {
         "title" : "Механизмы раскладывания",
@@ -234,7 +249,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 2,
+        id : 2,
     },
     {
         "title" : "Постельное белье",
@@ -257,7 +272,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 3,
+        id : 3,
     },
     {
         "title" : "Кухонная посуда и принадлежности",
@@ -288,7 +303,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 3,
+        id : 3,
     },
     {
         "title" : "Предметы интерьера",
@@ -315,7 +330,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 3,
+        id : 3,
     },
     {
         "title" : "Ванная комната и сантехника",
@@ -338,7 +353,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 3,
+        id : 3,
     },
     {
         "title" : "Декоративные элементы",
@@ -361,7 +376,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 3,
+        id : 3,
     },
     {
         "title" : "Керамическая плитка",
@@ -376,7 +391,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 4,
+        id : 4,
     },
     {
         title : "Натуральный камень",
@@ -391,7 +406,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 4,
+        id : 4,
     },
     {
         title : "Керамогранит",
@@ -406,7 +421,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 4,
+        id : 4,
     },
     {
         title : "Металлическая плитка или мозаика",
@@ -417,7 +432,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 4,
+        id : 4,
     },
     {
         title : "Дизайнерская плитка",
@@ -428,7 +443,7 @@ const productNavigate = [
             navigationPage: "",
         },
         ],
-        "id" : 4,
+        id : 4,
     },
 ];
 
@@ -436,32 +451,32 @@ export const productNavigateCard = [
     {
         title: "Спальня",
         "imageUrl" : bedroom,
-        "id" : 0,
+        id : 5,
     },
     {
         title: "Гостиная",
         "imageUrl" : livingRoom,
-        "id" : 0,
+        id : 5,
     },
     {
         title: "Кухня",
         "imageUrl" : kitchen,
-        "id" : 0,
+        id : 5,
     },
     {
         title: "Прихожая",
         "imageUrl" : hallway,
-        "id" : 0,
+        id : 5,
     },
     {
         title: "Детская",
         "imageUrl" : children,
-        "id" : 0,
+        id : 5,
     },
     {
         title: "Офис",
         "imageUrl" : office,
-        "id" : 0,
+        id : 5,
     },
 ]
 

@@ -33,9 +33,10 @@ export const LocationMenu: React.FC<LocationProps> = ({ isMenuOpen, setIsMenuOpe
 
     const filteredCities = city.filter((item) => item.toLowerCase().startsWith(inputValue.toLowerCase()));
     
-    const handleCityClick = (cityName: string) => { 
+    const handleCityClick = (cityName: string) => {
         setSelectedCity(cityName);
         setMenuCity(false);
+        setIsMenuOpen(false);
         setInputValue('');
     };
 
