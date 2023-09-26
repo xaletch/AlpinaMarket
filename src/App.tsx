@@ -19,6 +19,7 @@ import { fetchProducts, selectProductData } from './redux/slice/productSlice';
 import { search } from './redux/slice/SearchSlice';
 import { ProductInfo } from './pages/ProductInfo';
 import { Order } from './pages/Order';
+import { Cookie } from './components/Cookie';
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <div className="App">
+        {/* <Cookie /> */}
         <Header searchValue={searchValue} products={item} />
         <Routes>
           <Route path='/' element={<Home products={item} />}></Route>

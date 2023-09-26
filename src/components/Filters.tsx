@@ -25,21 +25,21 @@ const category: CategoryItem[] = [
     { name : 'По размеру скидки'},
   ];
 
-export const Sort = () => {
+export const Filters = ({ setOpenMenuFilter }) => {
     const [sortPopupMenu, setSortPopupMenu] = useState<boolean>(false);
 
   return (
-    <div className='sort'>
-        <div className="sort_wrapper">
-            <div className="sort_filters">
-                <ul className='sort_filters-list'> 
+    <div className='filter'>
+        <div className="filter_wrapper">
+            <div className="filter_filters">
+                <ul className='filter_filters-list'> 
                     {category.map((item, index) => (
-                        <li className={`sort_filters-item ${item.className}`} key={index}>{item.name}</li>
+                        <li className={`filter_filters-item ${item.className}`} key={index} onClick={() => setOpenMenuFilter(true)}>{item.name}</li>
                     ))}
                 </ul>
             </div>
-            <div className='sort_popup-wrapper'>
-                <div className="sort-label" onClick={() => setSortPopupMenu(!sortPopupMenu)}>
+            <div className='filter_popup-wrapper'>
+                <div className="filter-label" onClick={() => setSortPopupMenu(!sortPopupMenu)}>
                     <span >Сначала популярные</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g clipPath="url(#clip0_2285_157918)">
@@ -52,10 +52,10 @@ export const Sort = () => {
                         </defs>
                     </svg>
                 </div>
-                <div className="sort_popup" style={sortPopupMenu ? {maxHeight: '240px'} : {}}>
+                <div className="filter_popup" style={sortPopupMenu ? {maxHeight: '240px'} : {}}>
                     <ul>
                         {sortList.map((item, index) => (
-                            <li key={index} className={'sort_popup-item'}>{item.name}</li>
+                            <li key={index} className={'filter_popup-item'}>{item.name}</li>
                         ))}
                     </ul>
                 </div>
