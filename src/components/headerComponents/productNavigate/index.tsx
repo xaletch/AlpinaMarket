@@ -12,12 +12,12 @@ export const navigationProduct = [
     { title: 'Товары для дома', id: 1, navigate: 3, img: bed, },
     { title: 'Плитка, керамогранит и мозаика', id: 1, navigate: 4, img: bed, },
     { title: 'Акции', id: 1, navigate: 5, },
-    { title: "Спальня", img: bedroom, id: 2, },
-    { title: "Гостиная", img: livingRoom, id: 2, },
-    { title: "Кухня", img: kitchen, id: 2, },
-    { title: "Прихожая", img: hallway, id: 2, },
-    { title: "Детская", img: children, id: 2, },
-    { title: "Офис", img: office, id: 2, },
+    { name: "Спальня", image: bedroom, id: 2, },
+    { name: "Гостиная", image: livingRoom, id: 2, },
+    { name: "Кухня", image: kitchen, id: 2, },
+    { name: "Прихожая", image: hallway, id: 2, },
+    { name: "Детская", image: children, id: 2, },
+    { name: "Офис", image: office, id: 2, },
 ];
 
 const productNavigate = [

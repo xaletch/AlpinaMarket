@@ -20,7 +20,7 @@ const handleClickSelectedPhoto = (index: number) => {
       </div>
       <div className='product-info_block-gallery-slide'>
         {gallery && gallery.map((item: any, index: any) => (
-          <div className='product-info_block-gallery-slide-item' key={index} onClick={() => handleClickSelectedPhoto(index)} >
+          <div className='product-info_block-gallery-slide-item' style={isGallery === index ? {border: '1px solid #000'} : {}} key={index} onClick={() => handleClickSelectedPhoto(index)} >
             <img src={item} alt={item} />
           </div>
         ))}

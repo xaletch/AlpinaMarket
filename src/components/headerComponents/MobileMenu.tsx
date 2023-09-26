@@ -19,8 +19,7 @@ const navigation = [
 
 export const MobileMenu = ({ isMobileMenu, selectedCity, setIsMobileMenu, isMenuOpen, setIsMenuOpen, setSelectedCity }) => {
     const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
-    const [selectedCategories, setSelectedCategories] = useState<number | null>(null);
-    // const [previousCategory, setPreviousCategory] = useState<number | null>(null);
+    const [selectedCategories, setSelectedCategories] = useState<number[]>([]);
 
     const handleClickCloseMobileMenu = () => {
         setIsMobileMenu(false);
@@ -29,12 +28,11 @@ export const MobileMenu = ({ isMobileMenu, selectedCity, setIsMobileMenu, isMenu
 
     const handleClickSelectedCategory = (index: number) => {
         setSelectedCategory(index);
-        // setPreviousCategory(selectedCategory);
-        // console.log('category id: ',setPreviousCategory(selectedCategory));
+        setSelectedCategories((prevCategory) => [...prevCategory, index]);
     };
 
     console.log(selectedCategory);
-    // console.log(previousCategory);
+    console.log(selectedCategories);
 
     const handleClick = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -45,9 +43,7 @@ export const MobileMenu = ({ isMobileMenu, selectedCity, setIsMobileMenu, isMenu
     };
 
     const handleClickComeBack = () => {
-        // setSelectedCategory(previousCategory);
-        setSelectedCategory(null);
-        setSelectedCategories(null);
+        setSelectedCategories(prevCategory => prevCategory.slice(0, -1));
     };
 
     return (
@@ -59,7 +55,11 @@ export const MobileMenu = ({ isMobileMenu, selectedCity, setIsMobileMenu, isMenu
                             <path d="M19 8.5L1 8.5M1 8.5L6.29412 14M1 8.5L6.29412 3" stroke="black" strokeWidth="1.5" strokeLinejoin="round"/>
                         </svg>
                     </div>
-                    {categories.map((item, index) => item.id === selectedCategory && <h2 className='header_menu-head_title' key={index}>{item.title}</h2>)}
+                    {selectedCategories.map((categoryId, index) => (
+                        <h2 className='header_menu-head_title' key={index}>
+                            {categories.find(item => item.id === selectedCategory)?.title}
+                        </h2>
+                    ))}
                     <div className='header_menu-head_close' onClick={handleClickCloseMobileMenu}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                             <rect x="16" y="17" width="21.3483" height="1.5" rx="0.75" transform="rotate(-135 16 17)" fill="black"/>
@@ -91,12 +91,15 @@ export const MobileMenu = ({ isMobileMenu, selectedCity, setIsMobileMenu, isMenu
                     </ul>
                 </div>
             </div>
-            {selectedCategory && (
+            {selectedCategories && selectedCategories.length > 0 && (
                 <MobileMenuCategory navigationProduct={navigationProduct} selectedCategory={selectedCategory} selectedCategories={selectedCategories} setSelectedCategories={setSelectedCategories} />
             )}
-            {selectedCategories && (
+            {/* {selectedCategories && (
                 <MobileMenuCategoryCatalog selectedCategories={selectedCategories} />
-            )}
+            )} */}
+            {/* {selectedCategories && (
+                <MobileMenuCategoryCatalog selectedCategories={selectedCategories} />
+            )} */}
         </>
     )
 }

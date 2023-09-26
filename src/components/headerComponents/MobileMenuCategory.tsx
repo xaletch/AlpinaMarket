@@ -4,8 +4,6 @@ export const MobileMenuCategory = ({ navigationProduct, selectedCategory, select
 
     const handleClickCategory = (index: number) => {
         setSelectedCategories(index);
-        // setPreviousCategory(selectedCategories);
-        // console.log(selectedCategories);
     };
 
     return (
@@ -16,7 +14,7 @@ export const MobileMenuCategory = ({ navigationProduct, selectedCategory, select
                         item.id === selectedCategory && (
                             <div className='header_menu-category-menu_list-item' key={index} onClick={() => handleClickCategory(item.navigate)}>
                                 <div className='header_menu-category-menu_list-img'>
-                                    {item.img ? (<img src={item.img} alt={item.title}/>)
+                                    {item.img && item.img ? (<img src={item.img} alt={item.title}/>)
                                     :
                                     (
                                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,8 +31,8 @@ export const MobileMenuCategory = ({ navigationProduct, selectedCategory, select
                                     )}
                                 </div>
                                 {/* <div className='navigation__card' key={index}>
-                                    <img className='navigation__card--img' src={item.img} alt="error" />
-                                    <span className='navigation__card--title'>{item.title}</span>
+                                    <img className='navigation__card--img' src={item.image} alt="error" />
+                                    <span className='navigation__card--title'>{item.name}</span>
                                 </div> */}
                                 <li className='header_menu-category-menu_item'>{item.title}</li>
                             </div>

@@ -21,6 +21,7 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
 
   const dispatch = useDispatch();
 
+  const galleries = gallery.slice(0, 3)
 
   useEffect(() => {
     const storedCardButton = localStorage.getItem(`cardItemAdd_${id}`);
@@ -69,12 +70,14 @@ export const ProductBlock: React.FC<ProductBlockProps> = ({ img, title, id, pric
             <p className='home__best--offer__card--size'>{size}</p>
             <div className="home__best--offer__gallery--container flex">
               <div className='home__best--offer__gallery--block flex'>
-              {gallery && gallery.map((photo, index) => (
+              {galleries && galleries.map((photo, index) => (
                 <div className='home__best--offer__gallery--photo flex' key={index} onMouseMove={() => onChangeSelectedPhoto(index)}>
                   <img src={photo} alt={photo} />
                 </div>
               ))}
-              <div className='home__best--offer__gallery--photo flex'>+5</div>
+              <Link to={`/product/${id}`}>
+                {gallery.length - 3 > 0 && (<div className='home__best--offer__gallery--photo flex'>+{gallery.length - 3}</div>)}
+              </Link>
               </div>
               {cardButton === false ? (
                 <button className='home__best--offer__card--add--cart' onClick={handleClickCartAdd}>

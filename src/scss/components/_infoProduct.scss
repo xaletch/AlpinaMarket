@@ -79,6 +79,10 @@
                     align-items: center;
                     justify-content: center;
                     background: var(--surface-img);
+                    border-width: 1px;
+                    border-color: transparent;
+                    border-style: solid;
+                    transition: border-color .5s;
                     cursor: pointer;
 
                     @include small-tablet-670 {

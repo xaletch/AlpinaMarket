@@ -1,6 +1,7 @@
 import React from 'react'
 import { ButtonComeBack } from './ButtonComeBack'
 import { ProductBlock } from './ProductBlock'
+import { Sort } from './Sort'
 
 export const Catalog = ({ products }) => {
   return (
@@ -8,6 +9,7 @@ export const Catalog = ({ products }) => {
         <div className='container'>
             <ButtonComeBack />
             <h2 className='cart__title'>Каталог</h2>
+            <Sort />
             <div className='home__best--offer__bottom flex'>
                 {products.map((obj: any ) => <ProductBlock key={obj.id} {...obj}/> )}
             </div>
