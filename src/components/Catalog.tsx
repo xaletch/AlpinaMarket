@@ -6,7 +6,7 @@ import { FilterMenu } from "./FilterMenu/FilterMenu";
 
 export const Catalog = ({ products }) => {
   const [openMenuFilter, setOpenMenuFilter] = useState<boolean>(false);
-  console.log(openMenuFilter);
+  
   return (
     <div className='catalog'>
         <div className='container'>

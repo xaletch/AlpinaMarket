@@ -7,6 +7,7 @@ type CategoryItem = {
 
 type SortItem = {
     name: string;
+    id: number;
 };
 
 const category: CategoryItem[] = [
@@ -18,15 +19,21 @@ const category: CategoryItem[] = [
 ]
   
   export const sortList: SortItem[] = [
-    { name : 'Сначала дешёвые'},
-    { name : 'Сначала дорогие'},
-    { name : 'Сначала новые'},
-    { name : 'Сначала популярные'},
-    { name : 'По размеру скидки'},
+    { name : 'Сначала дешёвые', id: 1},
+    { name : 'Сначала дорогие', id: 2},
+    { name : 'Сначала новые', id: 3},
+    { name : 'Сначала популярные', id: 4},
+    { name : 'По размеру скидки', id: 5},
   ];
 
 export const Filters = ({ setOpenMenuFilter }) => {
     const [sortPopupMenu, setSortPopupMenu] = useState<boolean>(false);
+    const [selectSort, setSelectSort] = useState<string>("Сначала популярные");
+
+    const handleSelectSort = (index: string) => {
+        setSelectSort(index);
+        setSortPopupMenu(false);
+    };
 
   return (
     <div className='filter'>
@@ -40,7 +47,7 @@ export const Filters = ({ setOpenMenuFilter }) => {
             </div>
             <div className='filter_popup-wrapper'>
                 <div className="filter-label" onClick={() => setSortPopupMenu(!sortPopupMenu)}>
-                    <span >Сначала популярные</span>
+                    <span >{selectSort}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g clipPath="url(#clip0_2285_157918)">
                             <path d="M7.58658 8.41312L7.40981 8.23673L7.23322 8.41331L5.82322 9.82331L5.64645 10.0001L5.82322 10.1769L11.8232 16.1769L12 16.3536L12.1768 16.1769L18.1768 10.1769L18.3536 10.0001L18.1768 9.82331L16.7668 8.41331L16.5902 8.23673L16.4134 8.41312L12 12.8169L7.58658 8.41312Z" fill="black" stroke="white" strokeWidth="0.5"/>
@@ -55,7 +62,7 @@ export const Filters = ({ setOpenMenuFilter }) => {
                 <div className="filter_popup" style={sortPopupMenu ? {maxHeight: '240px'} : {}}>
                     <ul>
                         {sortList.map((item, index) => (
-                            <li key={index} className={'filter_popup-item'}>{item.name}</li>
+                            <li key={index} className={selectSort === item.name ? 'filter_popup-item filter_popup-item_active' : 'filter_popup-item'} onClick={() => handleSelectSort(item.name)}>{item.name}</li>
                         ))}
                     </ul>
                 </div>

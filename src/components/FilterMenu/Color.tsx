@@ -35,7 +35,7 @@ export const Color = () => {
         <div className={colorPopupActive ? 'filter_menu-color_name' : 'filter_menu-popup-name'} onClick={handleColorPopup}>
             <span>Цвет</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                <path d="M2.58658 1.41287L2.40981 1.23648L2.23322 1.41307L0.823223 2.82307L0.646447 2.99984L0.823223 3.17662L6.82322 9.17662L7 9.3534L7.17678 9.17662L13.1768 3.17662L13.3536 2.99984L13.1768 2.82307L11.7668 1.41307L11.5902 1.23648L11.4134 1.41287L7 5.81668L2.58658 1.41287Z" fill="black" stroke="white" stroke-width="0.5"/>
+                <path d="M2.58658 1.41287L2.40981 1.23648L2.23322 1.41307L0.823223 2.82307L0.646447 2.99984L0.823223 3.17662L6.82322 9.17662L7 9.3534L7.17678 9.17662L13.1768 3.17662L13.3536 2.99984L13.1768 2.82307L11.7668 1.41307L11.5902 1.23648L11.4134 1.41287L7 5.81668L2.58658 1.41287Z" fill="black" stroke="white" strokeWidth="0.5"/>
             </svg>
         </div>
         <div className={colorPopupActive ? 'filter_menu-color-popup filter_menu-color-popup_active' : 'filter_menu-color-popup filter_menu-popup'}>

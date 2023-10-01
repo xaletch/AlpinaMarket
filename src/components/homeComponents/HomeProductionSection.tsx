@@ -5,6 +5,10 @@ import productionSection2 from "../../../src/assets/img/production-section_2.png
 import { Link } from 'react-router-dom'
 
 export const HomeProductionSection = () => {
+    const handleClickAbout = () => {
+        window.scrollTo(0, 0);
+    };
+
   return (
     <>
         <div className='home__production--section__top flex'>
@@ -34,7 +38,7 @@ export const HomeProductionSection = () => {
             </div>
         </div>
         <div className='home__production--section__bottom'>
-            <Link to='about'>
+            <Link to='about' onClick={handleClickAbout}>
                 <button className='popular--categories--top__more button__more'>
                     больше о нас
                     <div className='border'></div>
