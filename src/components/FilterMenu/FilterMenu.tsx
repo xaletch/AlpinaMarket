@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { Color } from './Color';
 
 const filter = [
     { all: "Мебель", under: [
@@ -14,8 +15,8 @@ const filter = [
         { name: "Прихожая", className: "", id: 9},
         { name: "Детская", className: "", id: 10},
         { name: "Садовая мебель", className: "", id: 11},
-    ]}
-]
+    ]},
+];
 
 export const FilterMenu = ({ openMenuFilter, setOpenMenuFilter }) => {
     const [filterSelectedFurniture, setFilterSelectedFurniture] = useState<number>(0);
@@ -61,6 +62,11 @@ export const FilterMenu = ({ openMenuFilter, setOpenMenuFilter }) => {
                         ))}
                     </ul>
                 </div>
+                <Color />
+            </div>
+            <div className='filter_menu-bottom'>
+                <div className='filter_menu-bottom-btn filter_menu-bottom-btn_clear'>Очистить</div>
+                <div className='filter_menu-bottom-btn filter_menu-bottom-btn_apply' onClick={handleClickCloseMenuFilter}>Применить</div>
             </div>
         </div>
         {openMenuFilter && (<div className="filter_menu-shadow" onClick={handleClickCloseMenuFilter}></div>)}

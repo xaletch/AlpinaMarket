@@ -193,6 +193,124 @@
                 }
             }
         }
+
+        &-color {
+            &_name {
+                padding: 30px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                span {
+                    color: var(--primary-hight-100);
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 20px;
+                }
+
+                svg {
+                    transform: rotate(-180deg);
+                    transition: .4s;
+                }
+            }
+
+            &-popup {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .5s;
+
+                &_active {
+                    max-height: 960px;
+                    transition: max-height .5s;
+                }
+            }
+        }
+
+        &-popup-name {
+            padding: 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            span {
+                color: var(--primary-hight-100);
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 20px;
+            }
+        }
+
+        &-popup {
+            padding-top: 8px;
+
+            &-item {
+                margin-bottom: 24px;
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+
+                span {
+                    margin-left: 12px;
+                    color: var(--primary-hight-100);
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+
+                input {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        &-bottom {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            background: var(--surface);
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-btn {
+                width: 115px;
+                padding: 8px;
+                border-radius: 2px;
+                text-align: center;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 0.25px;
+                cursor: pointer;
+
+                &_clear {
+                    color: var(--primary-hight-100);
+                    border: 1px solid var(--primary-hight-100);
+
+                    &:hover {
+                        background-color: var(--surface-img);
+                        transition: background-color .5s;
+                    }
+                }
+
+                &_apply {
+                    background: var(--primary-hight-100);
+                    color: var(--surface);
+
+                    &:hover {
+                        opacity: 0.8;
+                        transition: opacity .5s;
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ButtonComeBack } from './ButtonComeBack';
 import { ProductBlock } from './ProductBlock';
 import { Filters } from './Filters';
-import { FilterMenu } from "./FilterMenu";
+import { FilterMenu } from "./FilterMenu/FilterMenu";
 
 export const Catalog = ({ products }) => {
   const [openMenuFilter, setOpenMenuFilter] = useState<boolean>(false);

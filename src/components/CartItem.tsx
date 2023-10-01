@@ -9,6 +9,7 @@ export const CartItem = ({ id, img, title, price, count }) => {
   
   const delProduct = () => {
     dispatch(deleteProduct(id));
+    localStorage.removeItem(`cardItemAdd_${id}`);
   };
 
   const minusBtn = () => {

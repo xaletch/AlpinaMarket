@@ -35,20 +35,6 @@ export const ButtonComeBack = ( { id } ) => {
     return pageNames[pathname] || '';
   };
 
-  const selectedCategory = productNavigate.find((category) => category.navigation === 'tables-chairs');
-
-  // const category = selectedCategory?.nameFurniture.map((item) => item.navigateName);
-
-    // console.log(category[]);
-
-  // console.log(`Главная / ${selectedCategory?.title} / ${selectedCategory?.nameFurniture[0].navigateName}`);
-
-  // const selectedCategory = productNavigate.find(category => category === "tables-tables");
-
-  // const navigationPath = `Главная / ${selectedCategory?.title} / ${selectedCategory?.nameFurniture[0].navigateName}`;
-
-  // console.log(navigationPath);
-
   return (
     <>
       <ul className='will-return__list flex'>
