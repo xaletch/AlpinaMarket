@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AlpinaMarket/static/css/main.7ffba18b.css",
+    "main.css": "/AlpinaMarket/static/css/main.98983729.css",
     "main.js": "/AlpinaMarket/static/js/main.4e0da0fc.js",
     "static/js/787.cda612ba.chunk.js": "/AlpinaMarket/static/js/787.cda612ba.chunk.js",
     "static/media/mobileMenuBed.png": "/AlpinaMarket/static/media/mobileMenuBed.f029937276cc313cab6b.png",
@@ -27,12 +27,12 @@
     "static/media/navigation_kitchen.png": "/AlpinaMarket/static/media/navigation_kitchen.b2bb2beaf4b05af4643e.png",
     "static/media/navigation_living-room.png": "/AlpinaMarket/static/media/navigation_living-room.0d8b0c69d234a37d5655.png",
     "index.html": "/AlpinaMarket/index.html",
-    "main.7ffba18b.css.map": "/AlpinaMarket/static/css/main.7ffba18b.css.map",
+    "main.98983729.css.map": "/AlpinaMarket/static/css/main.98983729.css.map",
     "main.4e0da0fc.js.map": "/AlpinaMarket/static/js/main.4e0da0fc.js.map",
     "787.cda612ba.chunk.js.map": "/AlpinaMarket/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ffba18b.css",
+    "static/css/main.98983729.css",
     "static/js/main.4e0da0fc.js"
   ]
 }
