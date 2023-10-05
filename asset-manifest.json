@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/AlpinaMarket/static/css/main.7ffba18b.css",
+    "main.js": "/AlpinaMarket/static/js/main.4e0da0fc.js",
+    "static/js/787.cda612ba.chunk.js": "/AlpinaMarket/static/js/787.cda612ba.chunk.js",
+    "static/media/mobileMenuBed.png": "/AlpinaMarket/static/media/mobileMenuBed.f029937276cc313cab6b.png",
+    "static/media/Плитка-stonelli.png": "/AlpinaMarket/static/media/Плитка-stonelli.91bbaac0788c7646ba6a.png",
+    "static/media/Classic_style.png": "/AlpinaMarket/static/media/Classic_style.19894b73465c192a7dee.png",
+    "static/media/Modern_style.png": "/AlpinaMarket/static/media/Modern_style.adf96cc8cd6076f78ac4.png",
+    "static/media/production-section_1.png": "/AlpinaMarket/static/media/production-section_1.e4fe3799b71312fe9eb8.png",
+    "static/media/Плитка-maracesh.png": "/AlpinaMarket/static/media/Плитка-maracesh.e3ccec8ecd5431a6ec11.png",
+    "static/media/PTSans-Bold.ttf": "/AlpinaMarket/static/media/PTSans-Bold.1e36fd283a2e48f6e810.ttf",
+    "static/media/PTSans-Regular.ttf": "/AlpinaMarket/static/media/PTSans-Regular.e3e84715a716918b83f5.ttf",
+    "static/media/catalog_hallway.png": "/AlpinaMarket/static/media/catalog_hallway.dd7fc5696a68913f90d6.png",
+    "static/media/catalog_kitchen.png": "/AlpinaMarket/static/media/catalog_kitchen.9ae315d7e9eb75dd1659.png",
+    "static/media/catalog_bedroom.png": "/AlpinaMarket/static/media/catalog_bedroom.cd8e5f66e7cf564a060e.png",
+    "static/media/catalog_bathroom.png": "/AlpinaMarket/static/media/catalog_bathroom.dc63d8ecc91cc8c3d3b9.png",
+    "static/media/Стулья.png": "/AlpinaMarket/static/media/Стулья.9349128452780861c5dd.png",
+    "static/media/Кресла.png": "/AlpinaMarket/static/media/Кресла.46d00615ad2b10565c1a.png",
+    "static/media/navigation_office.png": "/AlpinaMarket/static/media/navigation_office.8179e17631527ad123d8.png",
+    "static/media/navigation_children.png": "/AlpinaMarket/static/media/navigation_children.58de122f88ddd7a92606.png",
+    "static/media/navigation_bedroom.png": "/AlpinaMarket/static/media/navigation_bedroom.a3d61b514b220fef1fee.png",
+    "static/media/Диваны.png": "/AlpinaMarket/static/media/Диваны.2ce3044853b39eb370ad.png",
+    "static/media/Кровати.png": "/AlpinaMarket/static/media/Кровати.836c351cea4baed2452a.png",
+    "static/media/Столы.png": "/AlpinaMarket/static/media/Столы.f5308966b033909a483f.png",
+    "static/media/navigation_hallway.png": "/AlpinaMarket/static/media/navigation_hallway.a0015e91afe6fc4f4e09.png",
+    "static/media/navigation_kitchen.png": "/AlpinaMarket/static/media/navigation_kitchen.b2bb2beaf4b05af4643e.png",
+    "static/media/navigation_living-room.png": "/AlpinaMarket/static/media/navigation_living-room.0d8b0c69d234a37d5655.png",
+    "index.html": "/AlpinaMarket/index.html",
+    "main.7ffba18b.css.map": "/AlpinaMarket/static/css/main.7ffba18b.css.map",
+    "main.4e0da0fc.js.map": "/AlpinaMarket/static/js/main.4e0da0fc.js.map",
+    "787.cda612ba.chunk.js.map": "/AlpinaMarket/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ffba18b.css",
+    "static/js/main.4e0da0fc.js"
+  ]
+}
