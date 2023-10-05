@@ -54,7 +54,7 @@ function App() {
     <div className="App">
         <Header searchValue={searchValue} products={item} />
         <Routes>
-          <Route path='/' element={<Home products={item} />}></Route>
+          <Route path='AlpinaMarket' element={<Home products={item} />}></Route>
           <Route path='about' element={<About />}></Route>
           <Route path='salons' element={<OurSalons selected={selected} onSelected={onSelected} />}></Route>
           <Route path='paymentDelivery' element={<Delivery selected={selected} onSelected={onSelected} />}></Route>
