@@ -387,6 +387,10 @@
             font-size: 12px;
             user-select: none;
         }
+
+        @include small-tablet {
+            display: flex;
+        }
     }
 
     &__you--profile {

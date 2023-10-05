@@ -11,8 +11,8 @@ export const fetchProducts = createAsyncThunk(
   'product/fetchProductsStatus',
   async (params: searchProductParams) => {
     const { search } = params;
-    // const { data } = await axios.get(`https://64a97f128b9afaf4844ac01b.mockapi.io/Products?&${search}`);
-    const { data } = await axios.get(`http://localhost:5000/products?search=${search}`);
+    const { data } = await axios.get(`https://64a97f128b9afaf4844ac01b.mockapi.io/Products?&${search}`);
+    // const { data } = await axios.get(`http://localhost:5000/products?search=${search}`);
     // const { data } = await axios.get('http://localhost:5000/products?search=' + search);
     return data;
   }
