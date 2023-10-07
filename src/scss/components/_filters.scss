@@ -18,6 +18,23 @@
                     opacity: 0.8;
                 }
             } 
+
+            @include small-tablet {
+                display: none;
+            }
+        }
+
+        &-open {
+            display: none;
+
+            img {
+                width: 23px;
+                height: 25px;
+            }
+
+            @include small-tablet {
+                display: block;
+            }
         }
 
         &-item {
@@ -48,6 +65,11 @@
         position: relative;
         user-select: none;
         cursor: pointer;
+
+        @include small-tablet {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &-label {
@@ -61,6 +83,23 @@
             font-weight: 400;
             line-height: 24px;
             letter-spacing: 0.15px;
+        }
+
+        @include small-tablet {
+            display: none;
+        }
+
+        &_tablet {
+            display: none;
+            
+            img {
+                width: 20px;
+                cursor: pointer;
+            }
+
+            @include small-tablet {
+                display: block;
+            }
         }
     }
 

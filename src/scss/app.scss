@@ -24,3 +24,17 @@
 
 // cookie
 @import './components/cookie';
+
+.catalog_wrapper-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
+
+    @include small-tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

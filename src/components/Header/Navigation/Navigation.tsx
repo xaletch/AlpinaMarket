@@ -5,7 +5,7 @@ export const Navigation = () => {
     const navigation = [
       {
         name: 'КАТАЛОГ',
-        navigate: 'catalog',
+        navigate: 'AlpinaMarket/catalog',
       },
       {
         name: 'КОМНАТЫ',

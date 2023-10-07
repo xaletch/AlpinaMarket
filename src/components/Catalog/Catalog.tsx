@@ -14,7 +14,7 @@ export const Catalog = ({ products }) => {
           <ButtonComeBack />
           <h2 className='cart__title'>Каталог</h2>
           <Filters setOpenMenuFilter={setOpenMenuFilter} />
-          <div className='home__best--offer__bottom flex'>
+          <div className='catalog_wrapper-card home__best--offer__bottom flex'>
               {products.map((obj: any ) => <ProductBlock key={obj.id} {...obj}/> )}
           </div>
         </div>
