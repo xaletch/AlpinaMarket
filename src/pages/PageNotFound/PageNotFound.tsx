@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { HomeBestOffer } from '../../components/homeComponents/HomeBestOffer'
-import { ButtonComeBack } from '../../components/ButtonComeBack'
+import { HomeBestOffer } from '../../components/Home/BestOffer/HomeBestOffer';
+import { ButtonComeBack } from '../../components/ButtonComeBack/ButtonComeBack';
 
 export const PageNotFound = ({ products }) => {
   return (
